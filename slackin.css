@@ -1,0 +1,5 @@
+.splash .logos,
+.splash .logos + p,
+footer {
+  display: none;
+}
