@@ -1,0 +1,43 @@
+root {
+  --breakpoint-large: 60em;
+  --breakpoint-medium: 30em;
+}
+.bg-su-light-orange {
+  background-color: #F4A726;
+}
+.bg-su-dark-orange {
+  background-color: #FF5A17;
+}
+.bg-su-washed-orange {
+  background-color: #FCE5BC;
+}
+.bg-su-light-blue {
+  background-color: #C3ECF7;
+}
+.bg-su-dark-blue {
+  background-color: #02ACE3;
+}
+
+.objfit-cover  {
+  object-fit: cover;
+}
+
+@media (--breakpoint-large) {
+  .objfit-contain-l {
+    object-fit: contain;
+  }
+}
+
+@media (max-width: 60em) {
+  .br--top-nl {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+}
+
+.boxshadow-hover {
+  transition: box-shadow .3s;  
+}
+.boxshadow-hover:hover {
+  box-shadow: 0px 2px 8px 4px rgba(0,0,0,.2);
+}
