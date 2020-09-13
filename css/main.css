@@ -45,6 +45,13 @@ root {
   box-shadow: 0px 2px 8px 4px rgba(0,0,0,.2);
 }
 
+.ba-hover-dark-orange {
+  transition: box-shadow .2s;  
+}
+.ba-hover-dark-orange:hover {
+  box-shadow: 0px 0px 0px 2px #FF5A17;
+}
+
 .r-340 {
     transform: rotate(340deg);
 }
