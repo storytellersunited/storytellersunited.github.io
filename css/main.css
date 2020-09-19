@@ -28,12 +28,6 @@ root {
   object-fit: cover;
 }
 
-@media (--breakpoint-large) {
-  .objfit-contain-l {
-    object-fit: contain;
-  }
-}
-
 @media (max-width: 60em) {
   .br--top-nl {
     border-bottom-left-radius: 0;
