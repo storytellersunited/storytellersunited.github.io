@@ -116,7 +116,7 @@
                     <p class="f6 f5-l lh-copy">
                       TheirStory is an online platform that helps with facilitating, recording and digitally archiving meaningful conversations now and for future generations.
                     </p>
-                    <p class="f6 lh-copy mv0 i">by Alexa Steinbrück &amp; Zack Ellis</p>
+                    <p class="f6 lh-copy mv0 i">by <img data-username="Alexa" class="br-100 w2 dib v-mid"> Alexa Steinbrück &amp; <img data-username="zack" class="br-100 w2 dib v-mid"> Zack Ellis</p>
                   </div>
                 </div>
               </a>
@@ -134,7 +134,7 @@
                     <p class="f6 f5-l lh-copy">
                       Centered on workshops engaging Somali communities in London, Nomad explores the creative use of immersive and web-based technology to contextualise archival Somali objects with the people and traditions to which they belong.
                     </p>
-                    <p class="f6 lh-copy mv0 i">by <img src="https://ca.slack-edge.com/T14SUV8BA-UD4FRNJ06-4d06a9fa5d68-32" alt="profile picture of Alexa" title="Alexa" class="br-100 w2 dib v-mid"> Alexa Steinbrück &amp; <img data-username="Alexa" class="br-100 w2 dib v-mid"> Sophie Dixon</p>
+                    <p class="f6 lh-copy mv0 i">by <img data-username="Alexa" class="br-100 w2 dib v-mid"> Alexa Steinbrück &amp; <img data-username="Sophie" class="br-100 w2 dib v-mid"> Sophie Dixon</p>
                   </div>
                 </div>
               </a>
@@ -152,7 +152,7 @@
                     <p class="f6 f5-l lh-copy">
                       Captured is an interactive installation, which captures your face and creates a new identity for you in a collective scenario taking place in the virtual world.
                     </p>
-                    <p class="f6 lh-copy mv0 i">by Alexa Steinbrück, Hanna Haaslahti, Alap Parikh &amp; Tyler Henry</p>
+                    <p class="f6 lh-copy mv0 i">by <img data-username="Alexa" class="br-100 w2 dib v-mid"> Alexa Steinbrück, <img data-username="Alap Parikh" class="br-100 w2 dib v-mid"> Alap Parikh, Hanna Haaslahti, &amp; Tyler Henry</p>
                   </div>
                 </div>
               </a>
@@ -298,8 +298,12 @@
         var profilePics = document.querySelectorAll('img[data-username]');
         for (var i = 0; i < profilePics.length; i++) {
           let username = profilePics[i].getAttribute('data-username')
-          console.log("username", username);
-          profilePics[i].setAttribute('src', members[username].profilePic)
+          try {
+            profilePics[i].setAttribute('alt', `profile picture of ${username}`)
+            profilePics[i].setAttribute('src', members[username].profilePic)
+          } catch (e) {
+            console.error('error:', e.message);
+          }
         }
       });
   </script>
