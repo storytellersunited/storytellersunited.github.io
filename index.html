@@ -134,7 +134,7 @@
                     <p class="f6 f5-l lh-copy">
                       Centered on workshops engaging Somali communities in London, Nomad explores the creative use of immersive and web-based technology to contextualise archival Somali objects with the people and traditions to which they belong. Nomad is a collaborative project by Mnemoscene and Abira Hussein.
                     </p>
-                    <p class="f6 lh-copy mv0 i">by Alexa Steinbrück &amp; Sophie Dixon</p>
+                    <p class="f6 lh-copy mv0 i">by <img src="https://ca.slack-edge.com/T14SUV8BA-UD4FRNJ06-4d06a9fa5d68-32" alt="profile picture of Alexa" title="Alexa" class="br-100 w2 dib v-mid"> Alexa Steinbrück &amp; <img data-username="Alexa" class="br-100 w2 dib v-mid"> Sophie Dixon</p>
                   </div>
                 </div>
               </a>
@@ -291,6 +291,18 @@
       <a class="dib white hover-no-underline mr3 mr4-m mr5-l mb3" href="https://github.com/storytellersunited" target="_blank">GitHub<i class="w1 v-mid pl1" data-feather="external-link"></i></a>
     </div>
   </footer>
+  <script>
+    fetch('https://storytellers.link/members.json')
+      .then(response => response.json())
+      .then(members => {
+        var profilePics = document.querySelectorAll('img[data-username]');
+        for (var i = 0; i < profilePics.length; i++) {
+          let username = profilePics[i].getAttribute('data-username')
+          console.log("username", username);
+          profilePics[i].setAttribute('src', members[username].profilePic)
+        }
+      });
+  </script>
   <script>
     feather.replace()
   </script>
