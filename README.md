@@ -1,6 +1,6 @@
 Storytellers.link
 ===
 
-A diverse & inclusive community of innovative storytellers.
+A friendly community of innovative storytellers with diversity at its core.
 
 more soon ... 🚀
