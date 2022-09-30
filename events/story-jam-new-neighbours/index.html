@@ -23,6 +23,7 @@
   <link rel="stylesheet" href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css"/>
   <link rel="stylesheet" type="text/css" href="/css/main.css">
   <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+  <script src="https://unpkg.com/petite-vue@0.4.1/dist/petite-vue.iife.js" defer init></script>
   <style>
     .full-width {
       width: 100vw;
@@ -73,36 +74,20 @@
       </nav>
       <img class="w-100 mb4 mw8" src="./img/story-jam-new-neighbours.png" alt="Story Jam: New Neighbours">
       <div class="measure-wide tl center f4">
-
         <h2 id="prototypes">Explore the prototypes</h2>
         <p>
         Five teams worked for three days to brainstorm, design and develop a prototype of an innovative, interdisciplinary, intercultural storytelling project. Explore their documentation below.
         </p>
-        <div class="full-width ph3 ph4-m ph5-l flex justify-center flex-wrap f5">
-          <!-- A: Complementality -->
-          <article class="w-100 w-50-m w-third-l mw6 tc pv2 pa2-sm pa3-m pa4-l">
-            <iframe src="https://hackdash.org/embed/projects/632ae1446d202d739f69ce01?hide=prg," width="100%" height="450" frameborder="0" allowtransparency="true" title="Hackdash"></iframe>
+        <div class="full-width ph3 ph4-m ph5-l flex justify-center flex-wrap f5" v-scope="{ projectIds: [
+          '632ae1446d202d739f69ce01',
+          '6329f37c6d202d739f69cdf6',
+          '632b1aea6d202d739f69ce03',
+          '632adf2a6d202d739f69cdff',
+          '632adaf16d202d739f69cdfc',
+        ]}">
+          <article v-for="projectId in projectIds" class="w-100 w-50-m w-third-l mw6 tc pv2 pa2-sm pa3-m pa4-l">
+            <iframe :src="`https://hackdash.org/embed/projects/${projectId}?hide=prg`" width="100%" height="450" frameborder="0" allowtransparency="true" title="Hackdash"></iframe>
           </article>
-
-          <!-- C: Gorba -->
-          <article class="w-100 w-50-m w-third-l mw6 tc pv2 pa2-sm pa3-m pa4-l">
-            <iframe src="https://hackdash.org/embed/projects/6329f37c6d202d739f69cdf6?hide=prg," width="100%" height="450" frameborder="0" allowtransparency="true" title="Hackdash"></iframe>
-          </article>
-
-          <!-- D: Nothing Happens Here: A Space to Connect -->
-          <article class="w-100 w-50-m w-third-l mw6 tc pv2 pa2-sm pa3-m pa4-l">
-            <iframe src="https://hackdash.org/embed/projects/632b1aea6d202d739f69ce03?hide=prg," width="100%" height="450" frameborder="0" allowtransparency="true" title="Hackdash"></iframe>
-          </article>
-
-          <!-- E: Transactive memories -->
-          <article class="w-100 w-50-m w-third-l mw6 tc pv2 pa2-sm pa3-m pa4-l">
-            <iframe src="https://hackdash.org/embed/projects/632adf2a6d202d739f69cdff?hide=prg," width="100%" height="450" frameborder="0" allowtransparency="true" title="Hackdash"></iframe>
-          </article>
-
-          <!-- F: Exploring Neighbourness -->
-          <article class="w-100 w-50-m w-third-l mw6 tc pv2 pa2-sm pa3-m pa4-l">
-            <iframe src="https://hackdash.org/embed/projects/632adaf16d202d739f69cdfc?hide=prg," width="100%" height="450" frameborder="0" allowtransparency="true" title="Hackdash"></iframe>
-          </article>          
         </div>
 
         <h2 id="what-will-we-do">What will we do?</h2>
@@ -214,135 +199,131 @@
 
         <h2 id="mentors-and-speakers">Mentors and Speakers</h2>
         <p>During the Story Jam and the preceding kick off event, you are supported by a team of mentors and speakers who bring a diverse range of experience and expertise. More mentors and speakers will be announced in the run-up to the event.</p>
-        <div class="full-width pa3 pa4-m pa5-l flex justify-center flex-wrap f5">
-          <article class="w-100 w-50-m w-third-l mw6 tc pv2 pa2-sm pa3-m pa4-l">
-            <img src="./img/pic-yigit-aksakoglu.jpg" class="br-100 h4 w4 dib" style="object-fit: cover;" alt="Yiğit Aksakoğlu">
-            <h1 class="f3 mb2">Yiğit Aksakoğlu</h1>
-            <h2 class="f5 fw4 gray mt0 su-dark-orange"><a href="https://mahalle.art/" target="_blank" class="su-dark-orange no-underline">Founder Mahalle Art &amp; Kultur</a></h2>
-            <div class="tl">
+        <div class="full-width pa3 pa4-m pa5-l flex justify-center flex-wrap f5" v-scope="{ mentors: [
+          {
+            name: 'Yiğit Aksakoğlu',
+            title: `<a href=https://mahalle.art/ target=_blank class=su-dark-orange no-underline>Founder Mahalle Art &amp; Kultur</a>`,
+            image: './img/pic-yigit-aksakoglu.jpg',
+            bio: `
               <p>Yiğit completed his undergraduate degree at Yıldız Technical University’s Civil Engineering Faculty. He received his MSc degree on NGO Management from the London School of Economics and Political Sciences with the Chevening Scholarship. Afterwards, he completed a postgraduate degree on International Cooperation and Development at the Barcelona University.</p> 
               <p>For more than 20 years, he worked on topics ranging from minority rights to environment. He has developed, implemented and scaled up interventions with NGOs, universities, companies and the public sector.</p>
               <p>Recently and involuntarily, he is resettled to the Netherlands. He has established Mahalle Art & Kultur as a social enterprise in order to contribute to employment efforts of people with a refugee/paperless/asylum seeking/in exile backgrounds in arts and culture related sectors.</p> 
               <p>He is the father of two young girls and enjoys watching them becoming adults. </p>
-            </div>
-          </article>
-          
-          <article class="w-100 w-50-m w-third-l mw6 tc pv2 pa2-sm pa3-m pa4-l">
-            <img src="./img/pic-shadi-alhakimi.jpg" class="br-100 h4 w4 dib" style="object-fit: cover;" alt="Shadi Alhakimi">
-            <h1 class="f3 mb2">Shadi Alhakimi</h1>
-            <h2 class="f5 fw4 gray mt0 su-dark-orange">Social entrepreneur &amp; engineer</h2>
-            <div class="tl">
-              <p>Shadi is a coffee enthusiast, social entrepreneur, security engineer, data analyst, web developer and network engineer focused on social impact with excellent R&D skills. He has participated in numerous projects including software development plans, ICT technology research, tendering, e-government applications, web design and social entrepreneurship projects. He has received several awards, certificates and conference papers covering some of these issues.</p>
-            </div>
-          </article>
-
-          <article class="w-100 w-50-m w-third-l mw6 tc pv2 pa2-sm pa3-m pa4-l">
-            <img src="./img/pic-eefje-blankevoort.jpg" class="br-100 h4 w4 dib" style="object-fit: cover;" alt="Eefje Blankevoort">
-            <h1 class="f3 mb2">Eefje Blankevoort</h1>
-            <h2 class="f5 fw4 gray mt0 su-dark-orange"><a href="https://www.prospektor.nl/" target="_blank" class="su-dark-orange no-underline">Writer/filmmaker, master &amp; director of Storytelling Agency Prospektor</a></h2>
-            <div class="tl">
-              <p>Eefje (1978) studied History at the University of Amsterdam. Between 2002 and 2006 she regularly spent time in Iran where she studied, complied an archive for the International Institute of Social History and worked on her book Stiekem kan hier alles (You can do anything here in secret). Since then, Eefje has developed into an all-rounder in journalism, writing articles and books, as well as creating interactive projects, exhibitions and documentary films. Besides her work as a journalist, Eefje is a committee member of the Mezrab Storytelling Centre, and Grensloos Geluid (Sound without Borders).</p>
-            </div>
-          </article>
-
-          <article class="w-100 w-50-m w-third-l mw6 tc pv2 pa2-sm pa3-m pa4-l">
-            <img src="./img/pic-ann-cassano.jpg" class="br-100 h4 w4 dib" style="object-fit: cover;" alt="Ann Cassano">
-            <h1 class="f3 mb2">Ann Cassano</h1>
-            <h2 class="f5 fw4 gray mt0 su-dark-orange"><a href="http://www.theworldmakers.org/" target="_blank" class="su-dark-orange no-underline">Co-founder The World Makers Foundation</a></h2>
-            <div class="tl">
-              <p>Ann Cassano has a background in psychology and cultural anthropology. Since 2008 she has worked on asylum issues, alongside refugees. She is a certified facilitator in Lewis-Deep Democracy and Theory U, and she has read a lot on design thinking and system innovation. In 2019, together with friends, she started The World Makers Foundation, a community of artisans with a minority background. They build upon the diversity of creative talent, skills and heritage newcomers bring with them and provide a platform for their work. They collaborate with local artists and designers. They use the aesthethic force of art and design as a means to connect people and build community. Otherwise Ann reads, writes, and dances flamenco. She is captivated by the art of failure, and by mending.</p>
-            </div>
-          </article>
-
-          <article class="w-100 w-50-m w-third-l mw6 tc pv2 pa2-sm pa3-m pa4-l">
-            <img src="./img/pic-anna-desponds.jpg" class="br-100 h4 w4 dib" style="object-fit: cover;" alt="Anna Desponds">
-            <h1 class="f3 mb2">Anna Desponds</h1>
-            <h2 class="f5 fw4 gray mt0 su-dark-orange">Podcaster &amp; researcher</a></h2>
-            <div class="tl">
+            `,
+          },
+          {
+            name: 'Shadi Alhakimi',
+            title: `Social entrepreneur &amp; engineer`,
+            image: './img/pic-shadi-alhakimi.jpg',
+            bio: `<p>Shadi is a coffee enthusiast, social entrepreneur, security engineer, data analyst, web developer and network engineer focused on social impact with excellent R&D skills. He has participated in numerous projects including software development plans, ICT technology research, tendering, e-government applications, web design and social entrepreneurship projects. He has received several awards, certificates and conference papers covering some of these issues.</p>`,
+          },
+          {
+            name: 'Eefje Blankevoort',
+            title: `<a href=https://www.prospektor.nl/ target=_blank class=su-dark-orange no-underline>Writer/filmmaker, master &amp; director of Storytelling Agency Prospektor</a>`,
+            image: './img/pic-eefje-blankevoort.jpg',
+            bio: `<p>Eefje (1978) studied History at the University of Amsterdam. Between 2002 and 2006 she regularly spent time in Iran where she studied, complied an archive for the International Institute of Social History and worked on her book Stiekem kan hier alles (You can do anything here in secret). Since then, Eefje has developed into an all-rounder in journalism, writing articles and books, as well as creating interactive projects, exhibitions and documentary films. Besides her work as a journalist, Eefje is a committee member of the Mezrab Storytelling Centre, and Grensloos Geluid (Sound without Borders).</p>`,
+          },
+          {
+            name: 'Ann Cassano',
+            title: `<a href=http://www.theworldmakers.org/ target=_blank class=su-dark-orange no-underline>Co-founder The World Makers Foundation</a>`,
+            image: './img/pic-ann-cassano.jpg',
+            bio: `<p>Ann Cassano has a background in psychology and cultural anthropology. Since 2008 she has worked on asylum issues, alongside refugees. She is a certified facilitator in Lewis-Deep Democracy and Theory U, and she has read a lot on design thinking and system innovation. In 2019, together with friends, she started The World Makers Foundation, a community of artisans with a minority background. They build upon the diversity of creative talent, skills and heritage newcomers bring with them and provide a platform for their work. They collaborate with local artists and designers. They use the aesthethic force of art and design as a means to connect people and build community. Otherwise Ann reads, writes, and dances flamenco. She is captivated by the art of failure, and by mending.</p>`,
+          },
+          {
+            name: 'Anna Desponds',
+            title: `Podcaster &amp; researcher</a>`,
+            image: './img/pic-anna-desponds.jpg',
+            bio: `
               <p>An ambassador of the Storytellers United community, Anna is a podcaster and researcher, combining a career as a curator in the audiovisual industries with interest in intercultural studies. She holds an MA in interdisciplinary humanities and has been designing award-winning audience experiences at the intersection of audiovisual arts and innovation for almost 15 years. She has collaborated with most important Polish media outlets, brought multimedia storytelling experiences to life, and facilitated over a hundred talks, Q&As, and workshops in physical and online settings.</p>
-              <p>As a researcher at the Berlin-based boutique consulting agency <a href="https://www.catalysts.agency/" target="_blank" class="su-dark-orange no-underline">The Catalysts</a>, Anna helps conceive industry programs for leading audiovisual institutions. She's also an intercultural educator focusing on local history narratives. Anna likes to create meaningful connections between remote concepts, as well as between people. As a child, she wanted to be an anthropologist and her dream came true. Her creative medium of choice is food.</p>
-            </div>
-          </article>
-
-          <article class="w-100 w-50-m w-third-l mw6 tc pv2 pa2-sm pa3-m pa4-l">
-            <img src="./img/pic-joscha-jaeger.jpg" class="br-100 h4 w4 dib" style="object-fit: cover;" alt="Joscha Jäger">
-            <h1 class="f3 mb2">Joscha Jäger</h1>
-            <h2 class="f5 fw4 gray mt0 su-dark-orange"><a href="https://filmicweb.org/" target="_blank" class="su-dark-orange no-underline">Creative technologist &amp; researcher</a></h2>
-            <div class="tl">
+              <p>As a researcher at the Berlin-based boutique consulting agency <a href='https://www.catalysts.agency/' target='_blank' class='su-dark-orange no-underline'>The Catalysts</a>, Anna helps conceive industry programs for leading audiovisual institutions. She's also an intercultural educator focusing on local history narratives. Anna likes to create meaningful connections between remote concepts, as well as between people. As a child, she wanted to be an anthropologist and her dream came true. Her creative medium of choice is food.</p>
+            `,
+          },
+          {
+            name: 'Joscha Jäger',
+            title: `<a href=https://filmicweb.org/ target=_blank class=su-dark-orange no-underline>Creative technologist &amp; researcher</a>`,
+            image: './img/pic-joscha-jaeger.jpg',
+            bio: `
               <p>Joscha Jäger is a Creative Technologist and Researcher, working in the field of web-based film and video search engines, with a strong focus on film as information architecture and web-native media format.</p>
-
-              <p>Roughly 13 years ago, he started to develop a broad interest in the domain of digital archives, interactive time-based media and search user interfaces that he is since pursuing in different projects and activities. Joscha has been co-organizing the “<a href="https://wsicc.net/" target="_blank" class="su-dark-orange no-underline">Workshop on Interactive Content Consumption</a>” (WSICC) at ACM TVX for three years, has previously served as a mentor at Storytellers United Hack Jams and is continuously developing the “<a href="https://frametrail.org/" target="_blank" class="su-dark-orange no-underline">FrameTrail</a>” Open Hypervideo Environment.</p>
-
-              <p>For the last 5 years, his main focus is on making parliamentary debates more transparent, accessible and understandable in the "<a href="https://openparliament.tv/" target="_blank" class="su-dark-orange no-underline">Open Parliament TV</a>" project.</p>
-            </div>
+              <p>Roughly 13 years ago, he started to develop a broad interest in the domain of digital archives, interactive time-based media and search user interfaces that he is since pursuing in different projects and activities. Joscha has been co-organizing the “<a href='https://wsicc.net/' target='_blank' class='su-dark-orange no-underline'>Workshop on Interactive Content Consumption</a>” (WSICC) at ACM TVX for three years, has previously served as a mentor at Storytellers United Hack Jams and is continuously developing the “<a href='https://frametrail.org/' target='_blank' class='su-dark-orange no-underline'>FrameTrail</a>” Open Hypervideo Environment.</p>
+              <p>For the last 5 years, his main focus is on making parliamentary debates more transparent, accessible and understandable in the '<a href='https://openparliament.tv/' target='_blank' class='su-dark-orange no-underline'>Open Parliament TV</a>' project.</p>
+            `,
+          },
+          {
+            name: 'Sahand Sahebdivani',
+            title: `<a href=https://www.sahebdivani.com/ target=_blank class=su-dark-orange no-underline>Storyteller, founder Mezrab Storytelling School &amp; Mezrab Cultural Center</a>`,
+            image: './img/pic-sahand-sahebdivani.jpg',
+            bio: `<p>Sahand was born in Iran and raised in the Netherlands where he studied storytelling, screenplay writing and music. Since 2004 he operates the <a href='https://mezrab.nl/' target='_blank' class='su-dark-orange no-underline'>Mezrab Cultural Centre</a>, a renowned centre for storytelling and other arts. He’s worked both in Dutch and Persian language media as a writer and programme maker on a variety of cultural, social and political issues. When he’s not in Amsterdam he’s touring the world with his band, his story shows and/or his storytelling workshops.</p>`,
+          },
+          {
+            name: 'Klasien van de Zandschulp',
+            title: `<a href=https://www.klasien.nl/ target=_blank class=su-dark-orange no-underline>Interactive artist &amp; designer</a>`,
+            image: './img/pic-klasien-van-de-zandschulp.jpg',
+            bio: `
+              <p>Klasien is an Amsterdam-based interactive artist and creative director at studio <a href='https://www.affectlab.org/' target='_blank' class='su-dark-orange no-underline'>affect lab</a>. She designs story-based and participatory experiences, blending digital/physical and online/offline interactions. Her work explores sensory design, embodiment, rituals, augmented realities, human interaction and (radical) thoughts around our daily technology consumption.</p>
+              <p>In collaboration with <a href='https://emiliebaltz.com/' target='_blank' class='su-dark-orange no-underline'>Emilie Baltz</a> she created the futuristic cooking show called '<a href='https://www.klasien.nl/futurist-cookbook' target='_blank' class='su-dark-orange no-underline'>EAT TECH KITCHEN</a>' (winner IDFA Doclab Immersive Non-Fiction Award 2018) and in collaboration with Natalie Dixon she created '<a href='https://www.goodneighbours.net/' target='_blank' class='su-dark-orange no-underline'>Good Neighbours</a>': an interactive performance about intimate surveillance and the micro-politics of neighbourhoods (winner Dutch Design Award 2022, nominated for Gouden Kalf Digitale Cultuur 2022). During the recent lockdown she created '<a href='https://distancedisco.nl/' target='_blank' class='su-dark-orange no-underline'>DISTANCE DISCO</a>', a virtual dancefloor for techno romances!</p>
+            `,
+          },
+        ]}">
+          <article v-for="mentor in mentors" class="w-100 w-50-m w-third-l mw6 tc pv2 pa2-sm pa3-m pa4-l">
+            <img :src="mentor.image" class="br-100 h4 w4 dib" style="object-fit: cover;" :alt="mentor.name">
+            <h1 class="f3 mb2">{{mentor.name}}</h1>
+            <h2 v-html="mentor.title" class="f5 fw4 gray mt0 su-dark-orange"></h2>
+            <div v-html="mentor.bio" class="tl"></div>
           </article>
-
-          <article class="w-100 w-50-m w-third-l mw6 tc pv2 pa2-sm pa3-m pa4-l">
-            <img src="./img/pic-sahand-sahebdivani.jpg" class="br-100 h4 w4 dib" style="object-fit: cover;" alt="Sahand Sahebdivani">
-            <h1 class="f3 mb2">Sahand Sahebdivani</h1>
-            <h2 class="f5 fw4 gray mt0"><a href="https://www.sahebdivani.com/" target="_blank" class="su-dark-orange no-underline">Storyteller, founder Mezrab Storytelling School &amp; Mezrab Cultural Center</a></h2>
-            <div class="tl">
-              <p>Sahand was born in Iran and raised in the Netherlands where he studied storytelling, screenplay writing and music. Since 2004 he operates the <a href="https://mezrab.nl/" target="_blank" class="su-dark-orange no-underline">Mezrab Cultural Centre</a>, a renowned centre for storytelling and other arts. He’s worked both in Dutch and Persian language media as a writer and programme maker on a variety of cultural, social and political issues. When he’s not in Amsterdam he’s touring the world with his band, his story shows and/or his storytelling workshops.</p>
-            </div>
-          </article>
-
-          <article class="w-100 w-50-m w-third-l mw6 tc pv2 pa2-sm pa3-m pa4-l">
-            <img src="./img/pic-klasien-van-de-zandschulp.jpg" class="br-100 h4 w4 dib" style="object-fit: cover;" alt="Klasien van de Zandschulp">
-            <h1 class="f3 mb2">Klasien van de Zandschulp</h1>
-            <h2 class="f5 fw4 gray mt0"><a href="https://www.klasien.nl/" target="_blank" class="su-dark-orange no-underline">Interactive artist &amp; designer</a></h2>
-            <div class="tl">
-              <p>Klasien is an Amsterdam-based interactive artist and creative director at studio <a href="https://www.affectlab.org/" target="_blank" class="su-dark-orange no-underline">affect lab</a>. She designs story-based and participatory experiences, blending digital/physical and online/offline interactions. Her work explores sensory design, embodiment, rituals, augmented realities, human interaction and (radical) thoughts around our daily technology consumption.</p>
-              <p>In collaboration with <a href="https://emiliebaltz.com/" target="_blank" class="su-dark-orange no-underline">Emilie Baltz</a> she created the futuristic cooking show called '<a href="https://www.klasien.nl/futurist-cookbook" target="_blank" class="su-dark-orange no-underline">EAT TECH KITCHEN</a>' (winner IDFA Doclab Immersive Non-Fiction Award 2018) and in collaboration with Natalie Dixon she created '<a href="https://www.goodneighbours.net/" target="_blank" class="su-dark-orange no-underline">Good Neighbours</a>': an interactive performance about intimate surveillance and the micro-politics of neighbourhoods (winner Dutch Design Award 2022, nominated for Gouden Kalf Digitale Cultuur 2022). During the recent lockdown she created '<a href="https://distancedisco.nl/" target="_blank" class="su-dark-orange no-underline">DISTANCE DISCO</a>', a virtual dancefloor for techno romances!</p>
-            </div>
-          </article>
-
         </div>
 
         <h2 id="about-the-organisers">About the organisers</h2>
 
-        <div class="full-width pa3 pa4-m flex justify-center flex-wrap flex-nowrap-l f5">
-          <article class="w-100 w-50-m w-third-l mw6 tc pv2 pa2-sm pa3-m pa4-l">
-            <img src="./img/pic-paulien-dresscher.jpg" class="br-100 h4 w4 dib" style="object-fit: cover;" alt="Paulien Dresscher">
-            <h1 class="f3 mb2">Paulien Dresscher</h1>
-            <h2 class="f5 fw4 gray mt0 su-dark-orange"><a href="http://www.dresscher.nl/" target="_blank" class="su-dark-orange no-underline"> Researcher &amp; Curator</a></h2>
-            <div class="tl">
-              <p>Paulien Dresscher is working as a curator and researcher in the field of culture and digital media. For the Netherlands Film Festival she is organizing the Digital Culture Programme. She is living with her husband, daughter, cat and dog on a sailing ship in the center of Amsterdam and holds a Bachelor degree of Media and Fine Arts from Minerva Academy in Groningen, as well as both Master degree in New Media and Research Master degree in Media Studies from the University of Amsterdam.</p>
-            </div>
+        <div class="full-width pa3 pa4-m flex justify-center flex-wrap flex-nowrap-l f5" v-scope="{ organisers: [
+          {
+            name: 'Paulien Dresscher',
+            title: `<a href='http://www.dresscher.nl/' target='_blank' class='su-dark-orange no-underline'> Researcher &amp; Curator</a>`,
+            image: './img/pic-paulien-dresscher.jpg',
+            bio: `<p>Paulien Dresscher is working as a curator and researcher in the field of culture and digital media. For the Netherlands Film Festival she is organizing the Digital Culture Programme. She is living with her husband, daughter, cat and dog on a sailing ship in the center of Amsterdam and holds a Bachelor degree of Media and Fine Arts from Minerva Academy in Groningen, as well as both Master degree in New Media and Research Master degree in Media Studies from the University of Amsterdam.</p>`,
+          },
+          {
+            name: 'Philo van Kemenade',
+            title: `<a href='https://phivk.com/' target='_blank' class='su-dark-orange no-underline'>Cultural Technologist &amp; Community Organiser</a>`,
+            image: 'https://phivk.com/bio/img/philo_van_kemenade.jpg',
+            bio: `<p>Philo van Kemenade creates tools, stories and things in between to amplify human connection with arts and culture. He helps cultural heritage organisations innovate to make their digital collections more accessible. In 2013, Philo initiated the Storytellers United network to create space for interdisciplinary practice around innovative forms of storytelling. He has a background in Artificial Intelligence and Cognitive Science. Currently based in his home town Amsterdam, Philo has previously lived in Japan, the UK, Slovakia and Austria.</p>`,
+          },
+        ]}">
+          <article v-for="organiser in organisers" class="w-100 w-50-m w-third-l mw6 tc pv2 pa2-sm pa3-m pa4-l">
+            <img :src="organiser.image" class="br-100 h4 w4 dib" style="object-fit: cover;" :alt="organiser.name">
+            <h1 class="f3 mb2">{{organiser.name}}</h1>
+            <h2 v-html="organiser.title" class="f5 fw4 gray mt0 su-dark-orange"></h2>
+            <div v-html="organiser.bio" class="tl"></div>
           </article>
-
-          <article class="w-100 w-50-m w-third-l mw6 tc pv2 pa2-sm pa3-m pa4-l">
-            <img src="https://phivk.com/bio/img/philo_van_kemenade.jpg" class="br-100 h4 w4 dib" style="object-fit: cover;" alt="Philo van Kemenade">
-            <h1 class="f3 mb2">Philo van Kemenade</h1>
-            <h2 class="f5 fw4 gray mt0"><a href="https://phivk.com/" target="_blank" class="su-dark-orange no-underline">Cultural Technologist &amp; Community Organiser</a></h2>
-            <div class="tl">
-              <p>Philo van Kemenade creates tools, stories and things in between to amplify human connection with arts and culture. He helps cultural heritage organisations innovate to make their digital collections more accessible. In 2013, Philo initiated the Storytellers United network to create space for interdisciplinary practice around innovative forms of storytelling. He has a background in Artificial Intelligence and Cognitive Science. Currently based in his home town Amsterdam, Philo has previously lived in Japan, the UK, Slovakia and Austria.
-              </p>
-            </div>
-          </article>
-
         </div>
 
-        <div class="full-width pa3 pa4-m flex justify-center flex-wrap flex-nowrap-l f5">
-          <article class="w-100 w-50-m w-third-l mw6 pv2 pa2-sm pa3-m pa4-l">
-            <h1 class="f3">Storytellers United</h1>
-            <img class="mw3 mw4-l fl pa2 pa3-l" src="./img/logo-su.png" alt="logo Storytellers United">
-            <p class="f5"><a class="su-dark-orange hover-no-underline" href="https://storytellers.link/" target="_blank" rel="noopener">Storytellers United</a> is an international network of media makers, technologists and designers interested in innovative forms of storytelling. Since 2013, SU has partnered with film festivals, universities and broadcasters to explore the future of storytelling in hands-on, multi-disciplinary sprints. These 'Story Jams' mix story, code and creativity with fun and community. Hailing from different time zones and professional backgrounds, members enjoy sharing via community channels: from upcoming events to ongoing projects and from useful tools to exciting opportunities.</p>
+        <div class="full-width pa3 pa4-m flex justify-center flex-wrap flex-nowrap-l f5" v-scope="{ partners: [
+          {
+            name: 'Storytellers United',
+            image: './img/logo-su.png',
+            bio: `<p class='f5'><a class='su-dark-orange hover-no-underline' href='https://storytellers.link/' target='_blank' rel='noopener'>Storytellers United</a> is an international network of media makers, technologists and designers interested in innovative forms of storytelling. Since 2013, SU has partnered with film festivals, universities and broadcasters to explore the future of storytelling in hands-on, multi-disciplinary sprints. These 'Story Jams' mix story, code and creativity with fun and community. Hailing from different time zones and professional backgrounds, members enjoy sharing via community channels: from upcoming events to ongoing projects and from useful tools to exciting opportunities.</p>`,
+          },
+          {
+            name: 'Sound &amp; Vision',
+            image: './img/logo-beng.png',
+            bio: `
+              <p class='f5'><a class='su-dark-orange hover-no-underline' href='https://www.beeldengeluid.nl/en'>Sound &amp; Vision</a> in Hilversum manages one of the world's largest digitised media archives for radio, television, YouTube videos, objects, written press, podcasts and games. They preserve the daily growing media collection as heritage for eternity. At the same time, they closely follow all movements in the global media landscape, including developments in the online and digital domain.</p>
+              <p class='f5'>The starting point for all activities of Sound and Vision is the importance of free media for our democracy, to contribute to an open, free, inclusive and media-minded society. They illuminate current affairs from a media-historical perspective and show how you yourself can use media to tell your story, but they also show the influence of media on your personal life and on society. They do this in various ways: online and in the museums in Hilversum and The Hague, but also at partner locations. At schools, they offer a wide range of workshops on media literacy and they also stimulate academic and journalistic research. As an organisation or in cooperation with universities, festivals, organisations at home and abroad as well as relevant companies, they organise countless public activities, workshops, debates and lectures for young and old - and now also this Story Jam.</p>
+            `,
+          },
+          {
+            name: 'Netherlands Film Festival',
+            image: './img/logo-nff.png',
+            bio: `
+              <p class='f5'><a class='su-dark-orange hover-no-underline' href='https://www.filmfestival.nl/' target='_blank' rel='noopener'>The Netherlands Film Festival</a> (NFF) is involved in this project as a platform. One of its pillars is the Digital Culture Programme. Like SU and parts of Beeld &amp; Geluid, this department focuses on the development of alternative forms of Storytelling, in which technology and new media play a role. It takes a critical look at the social impact and possibilities of technology and the opportunities this offers for new forms of storytelling. The target groups are festival visitors and filmmakers interested in innovation, as well as digital artists engaged in narrative productions.</p>
+              <p class='f5'>By providing a venue for this Story Jam, NFF wants to give a new impulse to the professional field in the Netherlands. It wants to be an inspiring platform and stage for up-and-coming talent and inspire new makers by bringing in national and international experts and opening up new networks.</p>
+            `,
+          },
+        ]}">
+          <article v-for="partner in partners" class="w-100 w-50-m w-third-l mw6 pv2 pa2-sm pa3-m pa4-l">
+            <h1 class="f3">{{partner.name}}</h1>
+            <img class="mw3 mw4-l fl pa2 pa3-l" :src="partner.image" :alt="`logo ${partner.name}`">
+            <div v-html="partner.bio"></div>
           </article>
-
-          <article class="w-100 w-50-m w-third-l mw6 pv2 pa2-sm pa3-m pa4-l">
-            <h1 class="f3">Sound &amp; Vision</h1>
-            <img class="mw3 mw4-l fl pa2 pa3-l" src="./img/logo-beng.png" alt="logo NFF">
-            <p class="f5"><a class="su-dark-orange hover-no-underline" href="https://www.beeldengeluid.nl/en">Sound &amp; Vision</a> in Hilversum manages one of the world's largest digitised media archives for radio, television, YouTube videos, objects, written press, podcasts and games. They preserve the daily growing media collection as heritage for eternity. At the same time, they closely follow all movements in the global media landscape, including developments in the online and digital domain.</p>
-            <p class="f5">The starting point for all activities of Sound and Vision is the importance of free media for our democracy, to contribute to an open, free, inclusive and media-minded society. They illuminate current affairs from a media-historical perspective and show how you yourself can use media to tell your story, but they also show the influence of media on your personal life and on society. They do this in various ways: online and in the museums in Hilversum and The Hague, but also at partner locations. At schools, they offer a wide range of workshops on media literacy and they also stimulate academic and journalistic research. As an organisation or in cooperation with universities, festivals, organisations at home and abroad as well as relevant companies, they organise countless public activities, workshops, debates and lectures for young and old - and now also this Story Jam.</p>
-          </article>
-
-          <article class="w-100 w-50-m w-third-l mw6 pv2 pa2-sm pa3-m pa4-l">
-            <h1 class="f3">Netherlands Film Festival</h1>
-            <img class="mw3 mw4-l fl pa2 pa3-l" src="./img/logo-nff.png" alt="logo B&G">
-            <p class="f5"><a class="su-dark-orange hover-no-underline" href="https://www.filmfestival.nl/" target="_blank" rel="noopener">The Netherlands Film Festival</a> (NFF) is involved in this project as a platform. One of its pillars is the Digital Culture Programme. Like SU and parts of Beeld &amp; Geluid, this department focuses on the development of alternative forms of Storytelling, in which technology and new media play a role. It takes a critical look at the social impact and possibilities of technology and the opportunities this offers for new forms of storytelling. The target groups are festival visitors and filmmakers interested in innovation, as well as digital artists engaged in narrative productions.</p>
-            <p class="f5">By providing a venue for this Story Jam, NFF wants to give a new impulse to the professional field in the Netherlands. It wants to be an inspiring platform and stage for up-and-coming talent and inspire new makers by bringing in national and international experts and opening up new networks.</p>
-          </article>
-
         </div>
 
         <h2 id="supported-by">Supported by</h2>
