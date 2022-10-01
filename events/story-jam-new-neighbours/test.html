@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"> 
+  <title>Story Jam: New Neighbours &middot; Storytellers United</title>
+  <!--  Essential META Tags -->
+  <meta property="og:title" content="Story Jam: New Neighbours" />
+  <meta property="og:description" content="Make social impact with stories that connect, at the intersection of storytelling and technology. Collaborate with storytellers from different disciplines and cultural backgrounds. Develop innovative stories under healthy time pressure, with inspiring input and professional guidance.">
+  <meta name="description" content="Make social impact with stories that connect, at the intersection of storytelling and technology. Collaborate with storytellers from different disciplines and cultural backgrounds. Develop innovative stories under healthy time pressure, with inspiring input and professional guidance.">
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://storytellers.link/events/story-jam-new-neighbours" />
+  <meta property="og:image" content="https://storytellers.link/events/story-jam-new-neighbours/img/story-jam-new-neighbours.png" />
+  <meta name="twitter:card" content="summary_large_image">
+  <!--  Non-Essential, But Recommended -->
+  <meta property="og:site_name" content="Storytellers United">
+  <meta name="twitter:image:alt" content="Story Jam: New Neighbours">
+  <!-- Slack Unfurling -->
+  <meta name="twitter:label1" value="Where" />
+  <meta name="twitter:data1" value="Utrecht, the Netherlands" />
+  <meta name="twitter:label2" value="When" />
+  <meta name="twitter:data2" value="19 - 21 September 2022" />
+
+  <link rel="stylesheet" href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css"/>
+  <link rel="stylesheet" type="text/css" href="/css/main.css">
+  <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+  <script src="https://unpkg.com/petite-vue@0.4.1/dist/petite-vue.iife.js" defer init></script>
+  <script type="module">
+    import PhotoSwipeLightbox from 'https://unpkg.com/photoswipe/dist/photoswipe-lightbox.esm.js';
+
+    const lightbox = new PhotoSwipeLightbox({
+      gallery: '#my-gallery',
+      children: 'a',
+      pswpModule: () => import('https://unpkg.com/photoswipe'),
+    });
+
+    lightbox.init();
+  </script>
+  <link rel="stylesheet" href="https://unpkg.com/photoswipe@5.2.2/dist/photoswipe.css"/>
+  <style>
+    .full-width {
+      width: 100vw;
+      position: relative;
+      left: 50%;
+      right: 50%;
+      margin-left: -50vw;
+      margin-right: -50vw;
+    }
+  </style>
+</head> 
+<body class="sans-serif bg-su-washed-orange">
+  <div class="pa3 pa4-m pa5-l">
+    <header>
+      <nav class="flex justify-between items-center">
+        <a href="/">
+          <img 
+          src="/img/logo-storytellersunited-200px.png"
+          alt="Logo Storytellers United"
+          class="mw3"
+          >
+        </a>
+        <a class="no-underline f4 fw4 black br-pill ph3 pv2 bg-animate hover-bg-black-20" href="../../">← back</a>
+      </nav>
+    </header>
+
+    <section class="tc">
+
+        <h2>photoswipe</h2>
+        <div class="pswp-gallery" id="my-gallery">
+          <a
+            href="https://cdn.photoswipe.com/photoswipe-demo-images/photos/1/img-2500.jpg"
+            data-pswp-width="1875"
+            data-pswp-height="2500"
+            target="_blank"
+          >
+            <img
+              src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/1/img-200.jpg"
+              alt=""
+            />
+          </a>
+          <a
+            href="https://cdn.photoswipe.com/photoswipe-demo-images/photos/2/img-2500.jpg"
+            data-pswp-width="1669"
+            data-pswp-height="2500"
+            target="_blank"
+          >
+            <img
+              src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/2/img-200.jpg"
+              alt=""
+            />
+          </a>
+          <a
+            href="https://lh3.googleusercontent.com/PSbB-yefXfJqPRErgCXaQrXYmAgxdjns19TfydFxi_Y8C1tH7vQc03wwGP9HYfHtzPovn9QIGItJvTGV1XpYbD_pjhPwNxSc7woj-29d9KfsqbtbvHl3n7TXSA_ztadesuwoKwEtyj0=w1920"
+            data-pswp-width="1920"
+            data-pswp-height="1280"
+            target="_blank"
+          >
+            <img
+              src="https://lh3.googleusercontent.com/PSbB-yefXfJqPRErgCXaQrXYmAgxdjns19TfydFxi_Y8C1tH7vQc03wwGP9HYfHtzPovn9QIGItJvTGV1XpYbD_pjhPwNxSc7woj-29d9KfsqbtbvHl3n7TXSA_ztadesuwoKwEtyj0=w200"
+              alt=""
+            />
+          </a>
+        </div>
+
+
+      </div>
+    </section>
+  </div>
+</body> 
+</html>
