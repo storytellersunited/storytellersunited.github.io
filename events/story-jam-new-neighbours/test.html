@@ -65,40 +65,62 @@
     <section class="tc">
 
         <h2>photoswipe</h2>
-        <div class="pswp-gallery" id="my-gallery">
+        <div class="pswp-gallery" id="my-gallery" v-scope="{ photos: [
+          
+          {
+            href: 'https://lh3.googleusercontent.com/KdC0ajXi41orniWmk5jIkBg2kyKTkeQZqorW52kQlNfSQoHKKt36suE8LTFTlA7U68cKhiMTmxq-wmPjfFHHAwPe_drGq22nt1HaVk6mxrNNlj0xabqGPOP6SyrOydnpEREYzDWgt6Q',
+            width: '1920',
+            height: '1436',
+          },
+          {
+            href: 'https://lh3.googleusercontent.com/qp-ti0m3yILdqSFPG_Lvl-2E6sDV3e-gBvEuKKcbR1LFaIYvCZ0hj2gkpecXGPH4-ERK5b-W_qZKixBJcDEOvS4EoWWPNf0TwTeqe_O-8OldwyHL9gVD4Bp83-bSinP7SQmovNvEVvQ',
+            width: '1920',
+            height: '1436',
+          },
+          {
+            href: 'https://lh3.googleusercontent.com/r62TLMsz5DLXQ3-327w-lBfa9cM14Zg4BBN2zjF0XuKfwzQfzL3f7HQp0PuAzW0lsjnU_hOK_dJDvGwSQ02oRX8qFaQ1b54rXrIohBn_xCRW4Dz1ZgDAfqvFxwVQQbusz0fyV8Jh_z8',
+            width: '1920',
+            height: '1436',
+          },
+          {
+            href: 'https://lh3.googleusercontent.com/dWSRd8qXAUKH3DIkmLufGuvEYSacnLvusAiH_PWd4jCvqjwUvtHJeaQSKMXsvGrruaIKPegpfqKHx0DYQG1bbC6KdDOUG7C3r7eRPkwI9SCADUZ-OOkYYNXOFyx4RM5DY98U_owf_lY',
+            width: '1920',
+            height: '1436',
+          },
+          {
+            href: 'https://lh3.googleusercontent.com/eXd-EjRYs8aeptZx74IKZloJ1OZ0Q1A77Ut3LWZes6ZTXN3dVoW_EmpKCe1mIhreqZLdGYJrpJPiNEqTRqfo72YPgaZ8_hum9-VK7E58f4lOdpAiHEZtIEe1kc2ZNScRpZm8K63FDBg',
+            width: '1920',
+            height: '1436',
+          },
+          {
+            href: 'https://lh3.googleusercontent.com/dmHorHrK-SnOvfJpdNx4uTwq-t3pJmdp6mQRhYnKyz5ylL4cpas2VpPA3rld_jG9ZzvHh7ZRetUiFi5wQ2PRnU5xeYwUS8_6GydmQSMClax-9St-1bacK94OhQvkPSM1B0terTL4PgY',
+            width: '1920',
+            height: '1436',
+          },
+          {
+            href: 'https://lh3.googleusercontent.com/jn7VbvU1bArJST99-Am2xp2S75L2XQYbgwfI-Gq26_mq7-_vdoFxSN4g1FKz6LsArnFfcNcTAyFQfXSlG3Cpxm8kH2QIZvTMIsf5Rso2xIggUYUXulYjw7czn5Xt2ZHmIbIFPGY2YY8',
+            width: '1920',
+            height: '1436',
+          },
+          {
+            href: 'https://lh3.googleusercontent.com/AHSksAvPdRPGrUSXsFvN3N6i2pHszCdq0FGzQehuE18nROwjCw--jXWO_1TXK9S2khfy1lJsObG_228PmpH-PhQBhLarNHu6OKvkCPWuJ5fFRShrpcJfhrqYQNVCfPKLQuRWPt-ENZ4',
+            width: '1920',
+            height: '1436',
+          },
+        ]}">
           <a
-            href="https://cdn.photoswipe.com/photoswipe-demo-images/photos/1/img-2500.jpg"
-            data-pswp-width="1875"
-            data-pswp-height="2500"
+            v-for="photo in photos"
+            :href="`${photo.href}=w1920`"
+            :data-pswp-width="photo.width"
+            :data-pswp-height="photo.height"
             target="_blank"
           >
             <img
-              src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/1/img-200.jpg"
+              :src="`${photo.href}=w200`"
               alt=""
             />
           </a>
-          <a
-            href="https://cdn.photoswipe.com/photoswipe-demo-images/photos/2/img-2500.jpg"
-            data-pswp-width="1669"
-            data-pswp-height="2500"
-            target="_blank"
-          >
-            <img
-              src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/2/img-200.jpg"
-              alt=""
-            />
-          </a>
-          <a
-            href="https://lh3.googleusercontent.com/PSbB-yefXfJqPRErgCXaQrXYmAgxdjns19TfydFxi_Y8C1tH7vQc03wwGP9HYfHtzPovn9QIGItJvTGV1XpYbD_pjhPwNxSc7woj-29d9KfsqbtbvHl3n7TXSA_ztadesuwoKwEtyj0=w1920"
-            data-pswp-width="1920"
-            data-pswp-height="1280"
-            target="_blank"
-          >
-            <img
-              src="https://lh3.googleusercontent.com/PSbB-yefXfJqPRErgCXaQrXYmAgxdjns19TfydFxi_Y8C1tH7vQc03wwGP9HYfHtzPovn9QIGItJvTGV1XpYbD_pjhPwNxSc7woj-29d9KfsqbtbvHl3n7TXSA_ztadesuwoKwEtyj0=w200"
-              alt=""
-            />
-          </a>
+          
         </div>
 
 
