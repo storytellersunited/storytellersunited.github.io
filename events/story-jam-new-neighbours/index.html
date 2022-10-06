@@ -26,6 +26,7 @@
   <script src="https://unpkg.com/petite-vue@0.4.1/dist/petite-vue.iife.js" defer init></script>
   <script type="module">
     import PhotoSwipeLightbox from 'https://unpkg.com/photoswipe/dist/photoswipe-lightbox.esm.js';
+    import PhotoSwipeDynamicCaption from 'https://unpkg.com/photoswipe-dynamic-caption-plugin/photoswipe-dynamic-caption-plugin.esm.js';
 
     const lightbox = new PhotoSwipeLightbox({
       gallery: '#my-gallery',
@@ -33,9 +34,15 @@
       pswpModule: () => import('https://unpkg.com/photoswipe'),
     });
 
+    const captionPlugin = new PhotoSwipeDynamicCaption(lightbox, {
+      // Plugins options, for example:
+      type: 'auto',
+    });
+
     lightbox.init();
   </script>
   <link rel="stylesheet" href="https://unpkg.com/photoswipe@5.2.2/dist/photoswipe.css"/>
+  <link rel="stylesheet" href="https://unpkg.com/photoswipe-dynamic-caption-plugin/photoswipe-dynamic-caption-plugin.css">
   <style>
     .full-width {
       width: 100vw;
@@ -108,13 +115,13 @@
           <div class="pswp-gallery" id="my-gallery" v-scope="{ photos: [
             {href: 'https://lh3.googleusercontent.com/KdC0ajXi41orniWmk5jIkBg2kyKTkeQZqorW52kQlNfSQoHKKt36suE8LTFTlA7U68cKhiMTmxq-wmPjfFHHAwPe_drGq22nt1HaVk6mxrNNlj0xabqGPOP6SyrOydnpEREYzDWgt6Q', width: '1920', height: '1436'},
             {href: 'https://lh3.googleusercontent.com/qp-ti0m3yILdqSFPG_Lvl-2E6sDV3e-gBvEuKKcbR1LFaIYvCZ0hj2gkpecXGPH4-ERK5b-W_qZKixBJcDEOvS4EoWWPNf0TwTeqe_O-8OldwyHL9gVD4Bp83-bSinP7SQmovNvEVvQ', width: '1920', height: '1436'},
-            {href: 'https://lh3.googleusercontent.com/mWMGglVG2EEt1Aa7_4yXEzIE0CCU43Uph-EjaPYc9rCMycP6BZ8AmRmU8WErh6aReJRNFTk9r5ToCY9_J6aRnQMC2VhkdIv1iXXdekiFRDjz0MhJsC10ho1qtO0STLPYuXFAlmEMoN4', width: '1920', height: '1280'},
-            {href: 'https://lh3.googleusercontent.com/ZiJXCT_uYkP9Yp53hRh2uNVLMwmw2Alwr6blRtXLTUbZO29OXNtT2ntTPraR0aiguX_ivJnOB-7rO9FcGtILX-qceuWrUjv_vJC4D5J_StBEw24MuUpBnE8FjrWOzaGDzRykbTvykh8', width: '1280', height: '1920'},
-            {href: 'https://lh3.googleusercontent.com/67XMwH6l_rZLxa7zKVPa_y-bHYGT2pATJBeAVAq0dtmBOZ5wMT6olAhumNF8FA63GM3uaFhX6zZWyeWosGtyAdsn13kd7lL3DE4hHRJcYIaTU3jTBEYL9V1fVG4vPI7UPI_kE0PtC4M', width: '1920', height: '1280'},
-            {href: 'https://lh3.googleusercontent.com/W_JLVmbOfjXxUUJEeum3LbpoXFSX_K7ghJVWSodxmJdlIAPougKkmHu2sDMRBHuDjw_b-UBo90LFFP0SDTZCmeVReTQ-FYfcqNryexU0kINqdr3geRxnEVohz0_-HLuEyAgRtWl_5OY', width: '1920', height: '1280'},
-            {href: 'https://lh3.googleusercontent.com/4S0Y6OIFJPlCE521rW8LBRWv1F0BGBw38ZBwhRnIJyhVkdtFR6euhAIbT7h9AHNWUbbKP0RruYTt7BLb-VX0jK6tywNFrxnw4BoqTWT-OUain1HY-p9UCPFfS-oWRhAJKa5LzzGIw94', width: '1920', height: '1280'},
-            {href: 'https://lh3.googleusercontent.com/NwRsrvDaMrbcufwqep33FkUBtMkb1MkkjwT-ZRNI0Xueq8mVW1hyLdd8Yp9Am4XJ8s2v1G6CslV7dF9kXKi3jNnU6yj2LSQWZCtoxkszTGwjeR60ppHHccJwYDo2YYG29nkeLVCUuoY', width: '1920', height: '1280'},
-            {href: 'https://lh3.googleusercontent.com/qGR6F-tht64X0TmXtbST1tB37KiCrNA0GC2inSZjcVNWwJSoUdQyqlKXneI0iFYgIQdoFXxKLhlB616CSCJXM2TaZevdKFmZ__feXfxUJ1WXsNFYk9ZLZ_NlGa4rhoBDlbky4Tv6eSg', width: '1280', height: '1920'},
+            {href: 'https://lh3.googleusercontent.com/mWMGglVG2EEt1Aa7_4yXEzIE0CCU43Uph-EjaPYc9rCMycP6BZ8AmRmU8WErh6aReJRNFTk9r5ToCY9_J6aRnQMC2VhkdIv1iXXdekiFRDjz0MhJsC10ho1qtO0STLPYuXFAlmEMoN4', width: '1920', height: '1280', caption: '© Paulus van Dorsten for NFF'},
+            {href: 'https://lh3.googleusercontent.com/ZiJXCT_uYkP9Yp53hRh2uNVLMwmw2Alwr6blRtXLTUbZO29OXNtT2ntTPraR0aiguX_ivJnOB-7rO9FcGtILX-qceuWrUjv_vJC4D5J_StBEw24MuUpBnE8FjrWOzaGDzRykbTvykh8', width: '1280', height: '1920', caption: '© Paulus van Dorsten for NFF'},
+            {href: 'https://lh3.googleusercontent.com/67XMwH6l_rZLxa7zKVPa_y-bHYGT2pATJBeAVAq0dtmBOZ5wMT6olAhumNF8FA63GM3uaFhX6zZWyeWosGtyAdsn13kd7lL3DE4hHRJcYIaTU3jTBEYL9V1fVG4vPI7UPI_kE0PtC4M', width: '1920', height: '1280', caption: '© Paulus van Dorsten for NFF'},
+            {href: 'https://lh3.googleusercontent.com/W_JLVmbOfjXxUUJEeum3LbpoXFSX_K7ghJVWSodxmJdlIAPougKkmHu2sDMRBHuDjw_b-UBo90LFFP0SDTZCmeVReTQ-FYfcqNryexU0kINqdr3geRxnEVohz0_-HLuEyAgRtWl_5OY', width: '1920', height: '1280', caption: '© Paulus van Dorsten for NFF'},
+            {href: 'https://lh3.googleusercontent.com/4S0Y6OIFJPlCE521rW8LBRWv1F0BGBw38ZBwhRnIJyhVkdtFR6euhAIbT7h9AHNWUbbKP0RruYTt7BLb-VX0jK6tywNFrxnw4BoqTWT-OUain1HY-p9UCPFfS-oWRhAJKa5LzzGIw94', width: '1920', height: '1280', caption: '© Paulus van Dorsten for NFF'},
+            {href: 'https://lh3.googleusercontent.com/NwRsrvDaMrbcufwqep33FkUBtMkb1MkkjwT-ZRNI0Xueq8mVW1hyLdd8Yp9Am4XJ8s2v1G6CslV7dF9kXKi3jNnU6yj2LSQWZCtoxkszTGwjeR60ppHHccJwYDo2YYG29nkeLVCUuoY', width: '1920', height: '1280', caption: '© Paulus van Dorsten for NFF'},
+            {href: 'https://lh3.googleusercontent.com/qGR6F-tht64X0TmXtbST1tB37KiCrNA0GC2inSZjcVNWwJSoUdQyqlKXneI0iFYgIQdoFXxKLhlB616CSCJXM2TaZevdKFmZ__feXfxUJ1WXsNFYk9ZLZ_NlGa4rhoBDlbky4Tv6eSg', width: '1280', height: '1920', caption: '© Paulus van Dorsten for NFF'},
             {href: 'https://lh3.googleusercontent.com/r62TLMsz5DLXQ3-327w-lBfa9cM14Zg4BBN2zjF0XuKfwzQfzL3f7HQp0PuAzW0lsjnU_hOK_dJDvGwSQ02oRX8qFaQ1b54rXrIohBn_xCRW4Dz1ZgDAfqvFxwVQQbusz0fyV8Jh_z8', width: '1920', height: '1436'},
             {href: 'https://lh3.googleusercontent.com/dWSRd8qXAUKH3DIkmLufGuvEYSacnLvusAiH_PWd4jCvqjwUvtHJeaQSKMXsvGrruaIKPegpfqKHx0DYQG1bbC6KdDOUG7C3r7eRPkwI9SCADUZ-OOkYYNXOFyx4RM5DY98U_owf_lY', width: '1920', height: '1436'},
             {href: 'https://lh3.googleusercontent.com/eXd-EjRYs8aeptZx74IKZloJ1OZ0Q1A77Ut3LWZes6ZTXN3dVoW_EmpKCe1mIhreqZLdGYJrpJPiNEqTRqfo72YPgaZ8_hum9-VK7E58f4lOdpAiHEZtIEe1kc2ZNScRpZm8K63FDBg', width: '1920', height: '1436'},
@@ -146,26 +153,26 @@
             {href: 'https://lh3.googleusercontent.com/G-ukONrvTmjYbKlmlCT9eg4RpVaBkVWPLL39F0LMyAZf5ZvRiWrm0R7I3im508ZmghOPXphGI8imqNJX_IugW2-qT6GUjp1PpFoUnwaWwluDuiyYas1q2xWDIXH3J0s50nfZ_Dd3oU0', width: '1920', height: '1280'},
             {href: 'https://lh3.googleusercontent.com/6cm_to2fbrhN7h909rc2TQrlH1I0yUbqPcEUOLhzEpWIPnAFFsuRDIVwT4mscukARGpmNjRGIETLXt8yPnsA2Yw5wrtehUHHfY5Cc_J2bM4NFxZXxzd-JNfgWzogmtX3CoxiQzJbN1M', width: '1920', height: '1280'},
             {href: 'https://lh3.googleusercontent.com/03xQjFd-dnM4xlhrQbPRYRIgdpjjpq9C3SbRXEVW049qwohWa_HtewITtIdgQF4aVWq817i0s3QFcDoeUPcTf_MrcfFGKBi90ZzD1NAfLfWsgbwPi448hnN5YmDPR6Axs6lD26eAZcQ', width: '1920', height: '1232'},
-            {href: 'https://lh3.googleusercontent.com/CQEhIjOj11NXuvYapSNmiNGJKkPzR-LSjF3WOM-fdmT6FHeMN4LYVffup_aXqhY4C54FFGky7o8KZPObNpzRgcUl4SqokKmMj4g4A2GG4ycmPi5knOprnKmBQn3YMccqfwFygQHvuQQ', width: '1920', height: '1280'},
-            {href: 'https://lh3.googleusercontent.com/QOC4TMWe4OTIsLC1UlI65oLZwzF0qzBmc-n-1H16m89AtHdhEWDXKH8pCurBhX18YGfIs9YZz006LHsv2P5Jefmhs61FDJXB5RVRKcZVu9jaJIAQQw46hsmhneuczLnSWEa0kZZZSio', width: '1920', height: '1280'},
-            {href: 'https://lh3.googleusercontent.com/jyyZEizZkj4Dqa2cNURvlpZ_bWHKXrKjvpKqxqu4T59sBgm96SBltaGlsKib4jC-UqZb1JgWLGWfolq6e6uo6ZhrRRgCnY8m2Z9A5D7zDBOuSBUMMnk_T_lLgW9ErJ9Ac4jD7frHgmM', width: '1920', height: '1280'},
+            {href: 'https://lh3.googleusercontent.com/CQEhIjOj11NXuvYapSNmiNGJKkPzR-LSjF3WOM-fdmT6FHeMN4LYVffup_aXqhY4C54FFGky7o8KZPObNpzRgcUl4SqokKmMj4g4A2GG4ycmPi5knOprnKmBQn3YMccqfwFygQHvuQQ', width: '1920', height: '1280', caption: 'Photo © Ramon Mangold for NFF'},
+            {href: 'https://lh3.googleusercontent.com/QOC4TMWe4OTIsLC1UlI65oLZwzF0qzBmc-n-1H16m89AtHdhEWDXKH8pCurBhX18YGfIs9YZz006LHsv2P5Jefmhs61FDJXB5RVRKcZVu9jaJIAQQw46hsmhneuczLnSWEa0kZZZSio', width: '1920', height: '1280', caption: 'Photo © Ramon Mangold for NFF'},
+            {href: 'https://lh3.googleusercontent.com/jyyZEizZkj4Dqa2cNURvlpZ_bWHKXrKjvpKqxqu4T59sBgm96SBltaGlsKib4jC-UqZb1JgWLGWfolq6e6uo6ZhrRRgCnY8m2Z9A5D7zDBOuSBUMMnk_T_lLgW9ErJ9Ac4jD7frHgmM', width: '1920', height: '1280', caption: 'Photo © Ramon Mangold for NFF'},
             {href: 'https://lh3.googleusercontent.com/dLm5uh3S1dD4L1BwZRoUXXDCywulCi5VSIuL0dITjWX8FTbt_rgyX-G0U42M16pFp9AJ0_CBimj0SiHa2rIu6n6ASIc_Zmlw1h4yVvDJRw80mRG6eKgGM6mjf3zs908g2U12MWQjnng', width: '1920', height: '1280'},
             {href: 'https://lh3.googleusercontent.com/EOVspFKv3PMW6qIJfafOrSXJ7GtoOCecYZy5ittl_E1tnxzRLQfM7MO_ROOkqKgvous31JIGtzkT9otpqN_Mjl533weAGhinJemreZ-Ai7AGJt__s2oVje8_-QHOfO9Vzj58N_8YpJY', width: '1920', height: '1280'},
             {href: 'https://lh3.googleusercontent.com/352dNAqJwmsu31gGHzFwf6du_yT-KgK5thrEDtqV_D-LX26LvxvpCDwGiaGr8GXkoqiI4CgzeN2oQEzV57OmGhRSswlD8tJaOX2fnK8UXScMAca_22JtKTPNCQllbEzm71MXv1c_fmM', width: '1920', height: '1280'},
-            {href: 'https://lh3.googleusercontent.com/R6zYvyaiVHgVCgOyJR8I8mfcW-bkoynjMbb1BRaWmw5XJuQzyerRYHSC0gpoUoqm6-6etdg3wdof7Pt9K2yFzJa2ztdhWIMs0PNEk3isyGICm8W58coqm4uGaQ57ielCBsxIqHyMF3c', width: '1920', height: '1280'},
+            {href: 'https://lh3.googleusercontent.com/R6zYvyaiVHgVCgOyJR8I8mfcW-bkoynjMbb1BRaWmw5XJuQzyerRYHSC0gpoUoqm6-6etdg3wdof7Pt9K2yFzJa2ztdhWIMs0PNEk3isyGICm8W58coqm4uGaQ57ielCBsxIqHyMF3c', width: '1920', height: '1280', caption: 'Photo © Ramon Mangold for NFF'},
             {href: 'https://lh3.googleusercontent.com/mAjGme0nJiey5CYwBjgm7Hs4Ew2cVNtbKqQd-vc-vCTumD89TjNj2uHXyBAE5op3noVlRWL30M1d-Po43PaZdP8SQoUPGfQmgD_3aPZDYPV2gNtPEQwvCZEY8T-fAm4sQkwMCCEkiBg', width: '1920', height: '1280'},
             {href: 'https://lh3.googleusercontent.com/xmgu8MsvFw1vqg36O5-imHTuYmo7zvY2BAoKCCXo-N_MFN8ZdBq5hdMeMcC0IBClHWq4pFWVzuPR7ZlNd_IRK-XVMVOhz8v_n-bNzEpL2hajiWbdUzcKgNBzZ4_0lgrGntAu7HY87-g', width: '1920', height: '1280'},
-            {href: 'https://lh3.googleusercontent.com/13eMFcIFg0I0rPn5mFkI8nZ5cTzP8htVtudEN4-rLO3i-sIHtqXuEqZGcrLrCsm7BlR66NCQHp80ezkDTbVFrwLMiyEddtylAEOZVv9YpeSY0zSYGJDbMnEz9Jr5oA-7NQ7UQ-0vWwY', width: '1920', height: '853'},
+            {href: 'https://lh3.googleusercontent.com/13eMFcIFg0I0rPn5mFkI8nZ5cTzP8htVtudEN4-rLO3i-sIHtqXuEqZGcrLrCsm7BlR66NCQHp80ezkDTbVFrwLMiyEddtylAEOZVv9YpeSY0zSYGJDbMnEz9Jr5oA-7NQ7UQ-0vWwY', width: '1920', height: '853', caption: 'Photo © Ramon Mangold for NFF'},
             {href: 'https://lh3.googleusercontent.com/AIfGWvvXXX4vNUyXO9rjHp_Z8-kAJpesFCEvoGQWA5RxwNNklqyCYBsg4IraPVX_YjSYtfjoAaPNR1UWUVa3vzQ-etUaM85C6_K5_hFiH-1SuJbNcF1c1JHYzBQkxwJ907yHAMvsz7g', width: '1920', height: '1280'},
             {href: 'https://lh3.googleusercontent.com/kr1vzmpCZ7EyiY9t1SgI43h6yBI-fc4CNQGFXVnxH4BgzajI5OJ6tmx892ta6K3GuOXsO0GY5H9GEUIQKoY6wxdvqYHLqWoqBH6AhCqVXMcfJdTHeBHgHPi-UI80YxCBCgn5Iw0UAaw', width: '1920', height: '1280'},
-            {href: 'https://lh3.googleusercontent.com/_WZP-WzoeQh_DPl8HXOgaZp6-mFRg8IzKOIUT-_8uEXrDx6ItieWhY88n-LZdKxihKB5Yku64ohWIheUZpfxJ2jBKprCAQJtgoHrqR2ap8g3CTtyT-4jRj00YTYWC4XgEbLjNSymDVM', width: '1920', height: '1280'},
-            {href: 'https://lh3.googleusercontent.com/Xh02QxjSk4Umzdl66EVKJkIVJCSh8wpyXMXhZuSe-8RPKTaiuaGdi5Mn5yWIWAOerYZdSUV1ttxpzl8IZzKannIqDxHB2nrRU2qksi4CAn5ia_T2nPJBjDr5PklocYraBGd3ExQXm_I', width: '1920', height: '1280'},
+            {href: 'https://lh3.googleusercontent.com/_WZP-WzoeQh_DPl8HXOgaZp6-mFRg8IzKOIUT-_8uEXrDx6ItieWhY88n-LZdKxihKB5Yku64ohWIheUZpfxJ2jBKprCAQJtgoHrqR2ap8g3CTtyT-4jRj00YTYWC4XgEbLjNSymDVM', width: '1920', height: '1280', caption: 'Photo © Ramon Mangold for NFF'},
+            {href: 'https://lh3.googleusercontent.com/Xh02QxjSk4Umzdl66EVKJkIVJCSh8wpyXMXhZuSe-8RPKTaiuaGdi5Mn5yWIWAOerYZdSUV1ttxpzl8IZzKannIqDxHB2nrRU2qksi4CAn5ia_T2nPJBjDr5PklocYraBGd3ExQXm_I', width: '1920', height: '1280', caption: 'Photo © Ramon Mangold for NFF'},
             {href: 'https://lh3.googleusercontent.com/b1SZSoYUQQE8GOSYXxsKQV6d7IhxsVDcY2-7n7q8T-DiWeohDyKrWRz_tbzM7Ie70vFkjdnS0XAIwk8XcYZN5eKhCSpgOq2utlgieV3V8h53k4n5OT75zo6dOt5ZtQv085_ZHI2J2L4', width: '1920', height: '1280'},
             {href: 'https://lh3.googleusercontent.com/ae9DgOLcqz3JQHOSFz2OmdgfcckpxLzAkSj1e3uFAFJHLVYNHlC7vtGmom2-Y3fh7ZvgbOpltxtxShjca9MW5LrLdJNXXl2hDwhhhzLw5RMdv8aoTx3hKXGNwabqJhZrMGK7_pqkQAQ', width: '1920', height: '1280'},
             {href: 'https://lh3.googleusercontent.com/bP07pFPyM2hC9Pd_s0haaJgtv9Vh9MDiiOteCVGqiHAMdaBKCKdAMrWPiqaYH76yWbB2smqNme5Z1_fzow2t-zK5ooKSW7OkZaG0Tux-lB5fgpBv1mpSk6lXHgcDGnFTBr3yXw02L2Y', width: '1920', height: '1280'},
             {href: 'https://lh3.googleusercontent.com/PWomn4K7MLUIjD0R8JTVpQ1yYh1zk2kvajraaT1YMX0KCVbS6JIMPtV2QpmsQ9uuh6BTA_4B6lrZBO1DXKUv308Agq-pHIHOGqyEYhcyd5YQZkL71VVOu7ZUkdOvha9dhPh4sTD9G-o', width: '1920', height: '1280'},
             {href: 'https://lh3.googleusercontent.com/tZwBxOkwqQwhpuOKzQ34QXz-b5JJfwoFZlI6VA5Idf5jI1H0qdXqpsT7FohRhsTtkCVIz2082ytK-wOnXoBD32MB-E0X9TL9dZtujyfL-gzW3Tfx-vv9Ie8PR92IkkbqaClAbUb1ss4', width: '1920', height: '1280'},
-            {href: 'https://lh3.googleusercontent.com/SmYBfLafOgPZ2-AFDPENVprSvISEReiU4Evqok-dp-nRu19GEQOkocWXPRfuINrAEdFy3ZQtS__miuwf1U9fmJaCeA81pTC3gc2bj7uTV0Wex1i6f5CnRdvArViANaZoZbLY0hSmSVg', width: '1920', height: '1280'},
+            {href: 'https://lh3.googleusercontent.com/SmYBfLafOgPZ2-AFDPENVprSvISEReiU4Evqok-dp-nRu19GEQOkocWXPRfuINrAEdFy3ZQtS__miuwf1U9fmJaCeA81pTC3gc2bj7uTV0Wex1i6f5CnRdvArViANaZoZbLY0hSmSVg', width: '1920', height: '1280', caption: 'Photo © Ramon Mangold for NFF'},
             {href: 'https://lh3.googleusercontent.com/r44Zny8O1dk1PFZoY1v_iKg6VDPpeQa-u_ZdM27uvh7o1eQTmVYfez0fmdDLcJh48nmYTGXklcYcoYJ2XdbW9lPaeOyRRUo4iQ2VgidWOj5DdXY_XhYmDCA475bc8MPZP9_lAkIQeDg', width: '1920', height: '1280'},
             {href: 'https://lh3.googleusercontent.com/jL7PgVBtZNR-yRsGBdD1_-tcCsAyV-bXHy-o2gHb0_lIEdzeFJjZfvpv9s6gJ38X0yeBEu6D-kw-F2Gww1vbjLnhQS4BA8Y8YEt17dqMzF4_FiawVXQe8Mp64XacfFiqRRUnOJmqk_M', width: '1920', height: '1436'},
             {href: 'https://lh3.googleusercontent.com/PSbB-yefXfJqPRErgCXaQrXYmAgxdjns19TfydFxi_Y8C1tH7vQc03wwGP9HYfHtzPovn9QIGItJvTGV1XpYbD_pjhPwNxSc7woj-29d9KfsqbtbvHl3n7TXSA_ztadesuwoKwEtyj0', width: '1920', height: '1280'},
@@ -181,6 +188,7 @@
                 :src="`${photo.href}=h120`"
                 alt="Story Jam: New Neighbours"
               />
+              <span v-if="photo.caption" class="pswp-caption-content">{{photo.caption}}</span>
             </a>
           </div>
         </div>
