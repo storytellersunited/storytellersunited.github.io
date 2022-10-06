@@ -35,8 +35,7 @@
     });
 
     const captionPlugin = new PhotoSwipeDynamicCaption(lightbox, {
-      // Plugins options, for example:
-      type: 'below',
+      type: 'auto', // 'auto', 'below', 'aside'
     });
 
     lightbox.init();
@@ -189,6 +188,7 @@
                 alt="Story Jam: New Neighbours"
               />
               <span v-if="photo.caption" class="pswp-caption-content">{{photo.caption}}</span>
+              <span v-else class="pswp-caption-content"></span>
             </a>
           </div>
         </div>
