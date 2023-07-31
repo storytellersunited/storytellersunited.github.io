@@ -1,414 +1,810 @@
 <!DOCTYPE html>
 <html lang="en" class="overflow-x-hidden">
-<head>
+  <head>
     <title>Storytellers United</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
-    <meta content="utf-8" http-equiv="encoding">
-    
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
+    <meta content="utf-8" http-equiv="encoding" />
+
     <!--  Essential META Tags -->
     <meta property="og:title" content="Storytellers United" />
-    <meta property="og:description" content="A friendly community of innovative storytellers with diversity at its core">
+    <meta
+      property="og:description"
+      content="A friendly community of innovative storytellers with diversity at its core"
+    />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://storytellers.link/" />
-    <meta property="og:image" content="https://storytellers.link/img/og-image-storytellersunited.png" />
-    <meta name="twitter:card" content="summary_large_image">
+    <meta
+      property="og:image"
+      content="https://storytellers.link/img/og-image-storytellersunited.png"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
     <!--  Non-Essential, But Recommended -->
-    <meta property="og:site_name" content="Storytellers United">
-    <meta name="twitter:image:alt" content="Storytellers United: A friendly community of innovative storytellers with diversity at its core">
+    <meta property="og:site_name" content="Storytellers United" />
+    <meta
+      name="twitter:image:alt"
+      content="Storytellers United: A friendly community of innovative storytellers with diversity at its core"
+    />
 
-    <link rel="stylesheet" href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css"/>
-    <link rel="stylesheet" type="text/css" href="./css/main.css">
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="./css/main.css" />
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
-</head>
-<body class="sans-serif">
-  <div class="alert pa3 bg-su-dark-orange white tc">
-    <span class="closebtn ml2 white fw6 fr f3 lh-copy pointer dim" style="line-height: 18px" onclick="this.parentElement.style.display='none';">&times;</span>
-    <span class="fw6 f4 f3-l">
-      👁 See the outcomes of <a class="white" href="/events/story-jam-new-neighbours">Story Jam: New Neighbours</a>&nbsp;👈
-    </span>
-  </div> 
-  <header class="pa3 pa4-m pa5-l bg-su-light-orange white">
-    <nav>
-      <img 
-        src="./img/logo-storytellersunited-200px.png"
-        alt="Logo Storytellers United"
-        class="mw3"
+  </head>
+  <body class="sans-serif">
+    <div class="alert pa3 bg-su-dark-orange white tc">
+      <span
+        class="closebtn ml2 white fw6 fr f3 lh-copy pointer dim"
+        style="line-height: 18px"
+        onclick="this.parentElement.style.display='none';"
+        >&times;</span
       >
-    </nav>
-    <div class="tc tl-l">
-      <h1 class="f2 f1-m f-headline-l text-shadow-black">Storytellers United</h1>
-      <h2 class="f3 f2-m f1-l fw3 text-shadow-black">A friendly community of innovative storytellers with diversity at its core</h2>
-      <a href="./invite" class="dib mv3 mv4-l bg-su-dark-orange no-underline white pv2 ph3 f4 f3-ns fw6 br3 boxshadow-hover" data-goatcounter-click="request-invite">Request an invite</a>
-      <div class="dib-l ml5-l mb3 mb0-ns">
-        <a href="https://storytellersunited.slack.com/" class="white f4 f3-ns fw3 hover-no-underline" target="_blank" data-goatcounter-click="sign-in">or sign in</a>
+      <span class="fw6 f4 f3-l">
+        👁 OPEN CALL
+        <a class="white" href="/events/story-jam-new-neighbours"
+          >Story Jam: New Neighbours</a
+        >&nbsp;👈
+      </span>
+    </div>
+    <header class="pa3 pa4-m pa5-l bg-su-light-orange white">
+      <nav>
+        <img
+          src="./img/logo-storytellersunited-200px.png"
+          alt="Logo Storytellers United"
+          class="mw3"
+        />
+      </nav>
+      <div class="tc tl-l">
+        <h1 class="f2 f1-m f-headline-l text-shadow-black">
+          Storytellers United
+        </h1>
+        <h2 class="f3 f2-m f1-l fw3 text-shadow-black">
+          A friendly community of innovative storytellers with diversity at its
+          core
+        </h2>
+        <a
+          href="./invite"
+          class="dib mv3 mv4-l bg-su-dark-orange no-underline white pv2 ph3 f4 f3-ns fw6 br3 boxshadow-hover"
+          data-goatcounter-click="request-invite"
+          >Request an invite</a
+        >
+        <div class="dib-l ml5-l mb3 mb0-ns">
+          <a
+            href="https://storytellersunited.slack.com/"
+            class="white f4 f3-ns fw3 hover-no-underline"
+            target="_blank"
+            data-goatcounter-click="sign-in"
+            >or sign in</a
+          >
+        </div>
       </div>
-    </div>
-  </header>
-  <section id="intro" class="pa3 pa4-m pa5-l bg-white black">
-    <h2 class="f3 f2-m f1-l">Telling stories born on the web</h2>    
-    <p class="measure f3">We are an international community of media makers, technologists and designers interested in innovative forms of storytelling.</p>
-    <p class="measure f4">Humans have been storytellers since we first gathered around the campfire. As our media has developed through the ages, the way we tell stories has evolved. The web enables stories to be interactive, dynamic and participatory, empowering experiences previously left untold.</p>
-    
-    <div class="mw8">
-      <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/326545790?color=F4A726&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
-    </div>
+    </header>
+    <section id="intro" class="pa3 pa4-m pa5-l bg-white black">
+      <h2 class="f3 f2-m f1-l">Telling stories born on the web</h2>
+      <p class="measure f3">
+        We are an international community of media makers, technologists and
+        designers interested in innovative forms of storytelling.
+      </p>
+      <p class="measure f4">
+        Humans have been storytellers since we first gathered around the
+        campfire. As our media has developed through the ages, the way we tell
+        stories has evolved. The web enables stories to be interactive, dynamic
+        and participatory, empowering experiences previously left untold.
+      </p>
 
-    <div class="flex flex-wrap mt4 mt5-l f4">
-      <div class="w-100 w-50-ns pr4 pb4">
-        <i class="z-0 absolute w5 h-auto su-dark-orange o-20 r-340 ml-5 mt-3" data-feather="slack"></i>
-        <div class="relative">
-          <p class="measure text-shadow-white">We are <strong>900+ strong on Slack</strong>, hailing from different timezones, skillsets and professional backgrounds. We love sharing: from upcoming events to projects we're working on and from useful tools to exciting opportunities.</p>
-          <a href="./invite" class="dib mv2 mv3-l bg-su-dark-orange no-underline white pv2 ph3 f4 fw6 br3 boxshadow-hover" data-goatcounter-click="join-slack">Join us on Slack</a>
+      <div class="mw8">
+        <div style="padding:56.25% 0 0 0;position:relative;">
+          <iframe
+            src="https://player.vimeo.com/video/326545790?color=F4A726&title=0&byline=0&portrait=0"
+            style="position:absolute;top:0;left:0;width:100%;height:100%;"
+            frameborder="0"
+            allow="autoplay; fullscreen"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <script src="https://player.vimeo.com/api/player.js"></script>
+      </div>
+
+      <div class="flex flex-wrap mt4 mt5-l f4">
+        <div class="w-100 w-50-ns pr4 pb4">
+          <i
+            class="z-0 absolute w5 h-auto su-dark-orange o-20 r-340 ml-5 mt-3"
+            data-feather="slack"
+          ></i>
+          <div class="relative">
+            <p class="measure text-shadow-white">
+              We are <strong>900+ strong on Slack</strong>, hailing from
+              different timezones, skillsets and professional backgrounds. We
+              love sharing: from upcoming events to projects we're working on
+              and from useful tools to exciting opportunities.
+            </p>
+            <a
+              href="./invite"
+              class="dib mv2 mv3-l bg-su-dark-orange no-underline white pv2 ph3 f4 fw6 br3 boxshadow-hover"
+              data-goatcounter-click="join-slack"
+              >Join us on Slack</a
+            >
+          </div>
+        </div>
+        <div class="w-100 w-50-ns pr4 pb4">
+          <i
+            class="z-0 absolute w5 h-auto su-dark-orange o-20 r-340 ml-5 mt-3"
+            data-feather="zap"
+          ></i>
+          <div class="z-5 relative">
+            <p class="measure text-shadow-white">
+              We partner with organisations to explore the future of
+              storytelling in quick, practical, multi-disciplinary sprints. We
+              call these events <strong>'Hack Jams'</strong>: they mix story,
+              code and creativity with fun and community. Hack Jams bring
+              together teams, combining different skills to create innovative
+              story prototypes that are born on the web.
+            </p>
+            <a
+              href="mailto:hello@storytellers.link?subject=More%20about%20SU%20Hack%20Jams&body=Hi%2C%0D%0A%0D%0AI%20came%20across%20the%20Storytellers%20United%20page%20and%20would%20like%20to%20know%20more%20about%20the%20Hack%20Jam%20events.%0D%0A%0D%0AThe%20reason%20I'm%20curious%20is%20..."
+              target="_blank"
+              class="su-dark-orange text-shadow-white hover-no-underline"
+              data-goatcounter-click="contact-us"
+              >Contact us about hosting an event</a
+            >
+          </div>
         </div>
       </div>
-      <div class="w-100 w-50-ns pr4 pb4">
-        <i class="z-0 absolute w5 h-auto su-dark-orange o-20 r-340 ml-5 mt-3" data-feather="zap"></i>
-        <div class="z-5 relative">
-          <p class="measure text-shadow-white">We partner with organisations to explore the future of storytelling in quick, practical, multi-disciplinary sprints. We call these events <strong>'Hack Jams'</strong>: they mix story, code and creativity with fun and community. Hack Jams bring together teams, combining different skills to create innovative story prototypes that are born on the web.</p>
-          <a href="mailto:hello@storytellers.link?subject=More%20about%20SU%20Hack%20Jams&body=Hi%2C%0D%0A%0D%0AI%20came%20across%20the%20Storytellers%20United%20page%20and%20would%20like%20to%20know%20more%20about%20the%20Hack%20Jam%20events.%0D%0A%0D%0AThe%20reason%20I'm%20curious%20is%20..." target="_blank" class="su-dark-orange text-shadow-white hover-no-underline" data-goatcounter-click="contact-us">Contact us about hosting an event</a>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section id="events" class="pa3 pa4-m pa5-l bg-su-washed-orange black">
-    <h2 class="f3 f2-m f1-l">📅 Events</h2>
-    <p class="measure-wide f4">We exchange expertise and inspiration through <a class="su-dark-orange" href="https://gradu.al/storytellersunited/" target="_blank">internal skill sharing sessions</a>.</p>
-    <p class="measure-wide f4">Also check out our <a class="su-dark-orange" href="/calendar">Community Calendar</a> with events from the worlds of innovative storytelling, future media, web documentary, object based broadcasting, data-driven narrative, immersive journalism & more...</p>
-    <ul class="list pa0 ma0 flex flex-wrap">
-      <li class="w-100 w-50-ns mw6 pa3">
-        <article class="bg-white-80 br3">
-          <img src="./events/story-jam-new-neighbours/img/story-jam-new-neighbours.png" class="db w-100 br3 br--top" alt="SU Community Call November 2021">
-          <div class="pa2 ph3-ns pb3-ns">
-            <div class="dt w-100 mt1">
-              <div class="dtc">
-                <h1 class="f5 f4-m f3-l mv0">Story Jam: New Neighbours</h1>
-              </div>
-              <div class="dtc tr">
-                <h2 class="f5 f4-l mv0">Sept 2022</h2>
-              </div>
-            </div>
-            <p class="f6 lh-copy measure mt2 mid-gray">
-              On 19-21 September Storytellers United organises Story Jam: New Neighbours, in cooperation with Sound & Vision and the Nederlands Film Festival. During three days, participants work together in multidisciplinary teams under the guidance of coaches on new intercultural story prototypes. 
-            </p>
-            <a class="dib mv2 mv3-l bg-su-dark-orange no-underline white pv2 ph3 f4 fw6 br3 boxshadow-hover" href="./events/story-jam-new-neighbours">Read more</a>
-          </div>
-        </article>
-      </li>
-      <li class="w-100 w-50-ns mw6 pa3">
-        <article class="bg-white-80 br3">
-          <img src="./events/community-call-nov2021/img/su-community-call-nov2021.png" class="db w-100 br3 br--top" alt="SU Community Call November 2021">
-          <div class="pa2 ph3-ns pb3-ns">
-            <div class="dt w-100 mt1">
-              <div class="dtc">
-                <h1 class="f5 f4-m f3-l mv0">SU Community Call</h1>
-              </div>
-              <div class="dtc tr">
-                <h2 class="f5 f4-l mv0">Nov 2021</h2>
-              </div>
-            </div>
-            <p class="f6 lh-copy measure mt2 mid-gray">
-              We’ll hear about projects that have recently sprouted from the community and discuss ideas for activities to make this community even more fun and supportive :)
-            </p>
-            <a class="dib mv2 mv3-l bg-su-dark-orange no-underline white pv2 ph3 f4 fw6 br3 boxshadow-hover" href="./events/community-call-nov2021">Read more</a>
-          </div>
-        </article>
-      </li>
-      <li class="w-100 w-50-ns mw6 pa3">
-        <article class="bg-white-80 br3">
-          <img src="./img/UntoldStories_animsmall.gif" class="db w-100 br3 br--top" alt="Untold Stories Lab Key Visual">
-          <div class="pa2 ph3-ns pb3-ns">
-            <div class="dt w-100 mt1">
-              <div class="dtc">
-                <h1 class="f5 f4-m f3-l mv0">Untold Stories Lab</h1>
-              </div>
-              <div class="dtc tr">
-                <h2 class="f5 f4-l mv0">July 2021</h2>
-              </div>
-            </div>
-            <p class="f6 lh-copy measure mt2 mid-gray">
-              Over the course of one week we will investigate the value hidden in film archives and explore new ways of surfacing stories that have never been told before. During the Lab, a select group of participants gets exclusive access to try the interactive online video installation <a class="su-dark-orange" href="https://www.untoldstori.es/" target="_blank">Untold Stories</a> and help steer functionality and design. 
-            </p>
-            <a class="dib mv2 mv3-l bg-su-dark-orange no-underline white pv2 ph3 f4 fw6 br3 boxshadow-hover" href="./events/untoldstorieslab">Read more</a>
-          </div>
-        </article>
-      </li>
-      <li class="w-100 w-50-ns mw6 pa3">
-        <article class="bg-white-80 br3">
-          <img src="./img/mozfest2019.jpg" class="db w-100 br3 br--top" alt="top down group photo of Mozilla Festival participants gathered at the main stage">
-          <div class="pa2 ph3-ns pb3-ns">
-            <div class="dt w-100 mt1">
-              <div class="dtc">
-                <h1 class="f5 f4-m f3-l mv0">Meetup @ MozFest</h1>
-              </div>
-              <div class="dtc tr">
-                <h2 class="f5 f4-l mv0">Oct 2019</h2>
-              </div>
-            </div>
-            <p class="f6 lh-copy measure mt2 mid-gray">
-              The Internet Health movement gathers once a years for Mozilla Festival and attracts many storytellers from all over the world. We gathered to meet up in person and share stories and laughs.
-            </p>
-          </div>
-        </article>
-      </li>
-      <li class="w-100 w-50-ns mw6 pa3">
-        <article class="bg-white-80 br3">
-          <img src="./img/su-hackjam-manchester.jpg" class="db w-100 br3 br--top" alt="group photo of 40 participants at a hack jam event">
-          <div class="pa2 ph3-ns pb3-ns">
-            <div class="dt w-100 mt1">
-              <div class="dtc">
-                <h1 class="f5 f4-m f3-l mv0">Manchester Hack Jam</h1>
-              </div>
-              <div class="dtc tr">
-                <h2 class="f5 f4-l mv0">Feb 2019</h2>
-              </div>
-            </div>
-            <p class="f6 lh-copy measure mt2 mid-gray">
-              Hack Jam exploring responsive storytelling experiences, featuring unreleased cutting-edge tools and expert mentors from research and industry. In partnership with BBC R&D and York University.
-            </p>
-          </div>
-        </article>
-      </li>
-    </ul>
-  </section>
-  <section id="latest" class="pa3 pa4-m pa5-l bg-su-light-blue black">
-    <h2 class="f3 f2-m f1-l">✍️ Latest from the community</h2>
+    </section>
+    <section id="events" class="pa3 pa4-m pa5-l bg-su-washed-orange black">
+      <h2 class="f3 f2-m f1-l">📅 Events</h2>
+      <p class="measure-wide f4">
+        We exchange expertise and inspiration through
+        <a
+          class="su-dark-orange"
+          href="https://gradu.al/storytellersunited/"
+          target="_blank"
+          >internal skill sharing sessions</a
+        >.
+      </p>
+      <p class="measure-wide f4">
+        Also check out our
+        <a class="su-dark-orange" href="/calendar">Community Calendar</a> with
+        events from the worlds of innovative storytelling, future media, web
+        documentary, object based broadcasting, data-driven narrative, immersive
+        journalism & more...
+      </p>
       <ul class="list pa0 ma0 flex flex-wrap">
-        <li class="w-100 w-50-m mw8 pa3">
-            <article class="bg-white-80 br3 ba-hover-dark-blue">
-              <a href="https://lab.hyperaud.io/mozfest2021/interviews/alexa_steinbruck/" target="_blank" class="db no-underline black">
-                <div class="flex flex-column flex-row-l">
-                  <div class="w-100 w-40-l">
-                    <img src="/img/interview-alexa-steinbrueck.jpg" alt="Screenshot of a woman on a video call" class="w-100 h-100 br3  br--top-nl br--left-l objfit-cover">
-                  </div>
-                  <div class="w-100 w-60-l pa3">
-                    <h3 class="mt0 lh-title">Douglas Arellanes interviews Alexa Steinbruck</h3>
-                    <p class="f6 f5-l lh-copy">
-                      In advance of her participation at the MozFest Creative AI Space, Alexa speaks to Douglas Arellanes about her project Latent Riot, irony, the X Lab, 'GANism', aesthetics of exclusion, and how to talk about AI.
-                    </p>
-                    <p class="f6 lh-copy mv0 i">by <img data-username="Douglas Arellanes" class="br-100 w2 dib v-mid"> Douglas Arellanes &amp; <img data-username="Alexa" class="br-100 w2 dib v-mid"> Alexa Steinbrück</p>
-                  </div>
+        <li class="w-100 w-50-ns mw6 pa3">
+          <article class="bg-white-80 br3">
+            <img
+              src="./events/story-jam-new-neighbours/img/story-jam-new-neighbours.png"
+              class="db w-100 br3 br--top"
+              alt="SU Community Call November 2021"
+            />
+            <div class="pa2 ph3-ns pb3-ns">
+              <div class="dt w-100 mt1">
+                <div class="dtc">
+                  <h1 class="f5 f4-m f3-l mv0">Story Jam: New Neighbours</h1>
                 </div>
-              </a>
-            </article>
+                <div class="dtc tr">
+                  <h2 class="f5 f4-l mv0">Sept 2022</h2>
+                </div>
+              </div>
+              <p class="f6 lh-copy measure mt2 mid-gray">
+                On 19-21 September Storytellers United organises Story Jam: New
+                Neighbours, in cooperation with Sound & Vision and the
+                Nederlands Film Festival. During three days, participants work
+                together in multidisciplinary teams under the guidance of
+                coaches on new intercultural story prototypes.
+              </p>
+              <a
+                class="dib mv2 mv3-l bg-su-dark-orange no-underline white pv2 ph3 f4 fw6 br3 boxshadow-hover"
+                href="./events/story-jam-new-neighbours"
+                >Read more</a
+              >
+            </div>
+          </article>
         </li>
-        <li class="w-100 w-50-m mw8 pa3">
-            <article class="bg-white-80 br3 ba-hover-dark-blue">
-              <a href="https://medium.com/storytellers-united/open-dialogue-conversation-and-storytelling-a-meta-interview-702b5c68e45d" target="_blank" class="db no-underline black">
-                <div class="flex flex-column flex-row-l">
-                  <div class="w-100 w-40-l">
-                    <img src="https://miro.medium.com/max/1400/1*WgL_PFym9hx8RI51T56v2A.jpeg" alt="Screenshot of two people on a video call" class="w-100 h-100 br3  br--top-nl br--left-l objfit-cover">
-                  </div>
-                  <div class="w-100 w-60-l pa3">
-                    <h3 class="mt0 lh-title">Open dialogue, conversation and storytelling — a meta interview</h3>
-                    <p class="f6 f5-l lh-copy">
-                      TheirStory is an online platform that helps with facilitating, recording and digitally archiving meaningful conversations now and for future generations.
-                    </p>
-                    <p class="f6 lh-copy mv0 i">by <img data-username="Alexa" class="br-100 w2 dib v-mid"> Alexa Steinbrück &amp; <img data-username="zack" class="br-100 w2 dib v-mid"> Zack Ellis</p>
-                  </div>
+        <li class="w-100 w-50-ns mw6 pa3">
+          <article class="bg-white-80 br3">
+            <img
+              src="./events/community-call-nov2021/img/su-community-call-nov2021.png"
+              class="db w-100 br3 br--top"
+              alt="SU Community Call November 2021"
+            />
+            <div class="pa2 ph3-ns pb3-ns">
+              <div class="dt w-100 mt1">
+                <div class="dtc">
+                  <h1 class="f5 f4-m f3-l mv0">SU Community Call</h1>
                 </div>
-              </a>
-            </article>
+                <div class="dtc tr">
+                  <h2 class="f5 f4-l mv0">Nov 2021</h2>
+                </div>
+              </div>
+              <p class="f6 lh-copy measure mt2 mid-gray">
+                We’ll hear about projects that have recently sprouted from the
+                community and discuss ideas for activities to make this
+                community even more fun and supportive :)
+              </p>
+              <a
+                class="dib mv2 mv3-l bg-su-dark-orange no-underline white pv2 ph3 f4 fw6 br3 boxshadow-hover"
+                href="./events/community-call-nov2021"
+                >Read more</a
+              >
+            </div>
+          </article>
         </li>
-        <li class="w-100 w-50-m mw8 pa3">
-            <article class="bg-white-80 br3 ba-hover-dark-blue">
-              <a href="https://medium.com/storytellers-united/nomad-reconnecting-with-somali-heritage-9e5061fef167" target="_blank" class="db no-underline black">
-                <div class="flex flex-column flex-row-l">
-                  <div class="w-100 w-40-l">
-                    <img src="https://miro.medium.com/max/3200/0*VZURo37Q_K7wc6Ap" alt="Photo of a person wearing an AR headset interactive with holographic objects" class="w-100 h-100 br3  br--top-nl br--left-l objfit-cover">
-                  </div>
-                  <div class="w-100 w-60-l pa3">
-                    <h3 class="mt0 lh-title">Nomad — Reconnecting with Somali Heritage</h3>
-                    <p class="f6 f5-l lh-copy">
-                      Centered on workshops engaging Somali communities in London, Nomad explores the creative use of immersive and web-based technology to contextualise archival Somali objects with the people and traditions to which they belong.
-                    </p>
-                    <p class="f6 lh-copy mv0 i">by <img data-username="Alexa" class="br-100 w2 dib v-mid"> Alexa Steinbrück &amp; <img data-username="Sophie" class="br-100 w2 dib v-mid"> Sophie Dixon</p>
-                  </div>
+        <li class="w-100 w-50-ns mw6 pa3">
+          <article class="bg-white-80 br3">
+            <img
+              src="./img/UntoldStories_animsmall.gif"
+              class="db w-100 br3 br--top"
+              alt="Untold Stories Lab Key Visual"
+            />
+            <div class="pa2 ph3-ns pb3-ns">
+              <div class="dt w-100 mt1">
+                <div class="dtc">
+                  <h1 class="f5 f4-m f3-l mv0">Untold Stories Lab</h1>
                 </div>
-              </a>
-            </article>
+                <div class="dtc tr">
+                  <h2 class="f5 f4-l mv0">July 2021</h2>
+                </div>
+              </div>
+              <p class="f6 lh-copy measure mt2 mid-gray">
+                Over the course of one week we will investigate the value hidden
+                in film archives and explore new ways of surfacing stories that
+                have never been told before. During the Lab, a select group of
+                participants gets exclusive access to try the interactive online
+                video installation
+                <a
+                  class="su-dark-orange"
+                  href="https://www.untoldstori.es/"
+                  target="_blank"
+                  >Untold Stories</a
+                >
+                and help steer functionality and design.
+              </p>
+              <a
+                class="dib mv2 mv3-l bg-su-dark-orange no-underline white pv2 ph3 f4 fw6 br3 boxshadow-hover"
+                href="./events/untoldstorieslab"
+                >Read more</a
+              >
+            </div>
+          </article>
         </li>
-        <li class="w-100 w-50-m mw8 pa3">
-            <article class="bg-white-80 br3 ba-hover-dark-blue">
-              <a href="https://medium.com/storytellers-united/inhabiting-the-image-captured-an-interactive-cinema-installation-de7fa97dd510" target="_blank" class="db no-underline black">
-                <div class="flex flex-column flex-row-l">
-                  <div class="w-100 w-40-l">
-                    <img src="https://miro.medium.com/max/1400/1*9MB13FkqFy5wYV0a-EzbIg.jpeg" alt="A digital rendering of a person dressed in red crawling next to a white silhouette" class="w-100 h-100 br3  br--top-nl br--left-l objfit-cover">
-                  </div>
-                  <div class="w-100 w-60-l pa3">
-                    <h3 class="mt0 lh-title">Inhabiting the image: “Captured” — an interactive cinema installation</h3>
-                    <p class="f6 f5-l lh-copy">
-                      Captured is an interactive installation, which captures your face and creates a new identity for you in a collective scenario taking place in the virtual world.
-                    </p>
-                    <p class="f6 lh-copy mv0 i">by <img data-username="Alexa" class="br-100 w2 dib v-mid"> Alexa Steinbrück, <img data-username="Alap Parikh" class="br-100 w2 dib v-mid"> Alap Parikh, Hanna Haaslahti, &amp; Tyler Henry</p>
-                  </div>
+        <li class="w-100 w-50-ns mw6 pa3">
+          <article class="bg-white-80 br3">
+            <img
+              src="./img/mozfest2019.jpg"
+              class="db w-100 br3 br--top"
+              alt="top down group photo of Mozilla Festival participants gathered at the main stage"
+            />
+            <div class="pa2 ph3-ns pb3-ns">
+              <div class="dt w-100 mt1">
+                <div class="dtc">
+                  <h1 class="f5 f4-m f3-l mv0">Meetup @ MozFest</h1>
                 </div>
-              </a>
-            </article>
+                <div class="dtc tr">
+                  <h2 class="f5 f4-l mv0">Oct 2019</h2>
+                </div>
+              </div>
+              <p class="f6 lh-copy measure mt2 mid-gray">
+                The Internet Health movement gathers once a years for Mozilla
+                Festival and attracts many storytellers from all over the world.
+                We gathered to meet up in person and share stories and laughs.
+              </p>
+            </div>
+          </article>
+        </li>
+        <li class="w-100 w-50-ns mw6 pa3">
+          <article class="bg-white-80 br3">
+            <img
+              src="./img/su-hackjam-manchester.jpg"
+              class="db w-100 br3 br--top"
+              alt="group photo of 40 participants at a hack jam event"
+            />
+            <div class="pa2 ph3-ns pb3-ns">
+              <div class="dt w-100 mt1">
+                <div class="dtc">
+                  <h1 class="f5 f4-m f3-l mv0">Manchester Hack Jam</h1>
+                </div>
+                <div class="dtc tr">
+                  <h2 class="f5 f4-l mv0">Feb 2019</h2>
+                </div>
+              </div>
+              <p class="f6 lh-copy measure mt2 mid-gray">
+                Hack Jam exploring responsive storytelling experiences,
+                featuring unreleased cutting-edge tools and expert mentors from
+                research and industry. In partnership with BBC R&D and York
+                University.
+              </p>
+            </div>
+          </article>
         </li>
       </ul>
-  </section>
-  <section id="partners" class="pa3 pa4-m pa5-l bg-white black">
-    <h2 class="f3 f2-m f1-l">🤝 Awesome orgs we've partnered with</h2>
-    <ul class="list pa0 ma0 flex flex-wrap justify-around">
-      <li class="pa2 pa3-m pa4-l flex items-center">
-        <img class="mw4 maxh3" src="/img/logo-bbcrd.png" alt="BBC R&D" title="BBC R&D">
-      </li>
-      <li class="pa2 pa3-m pa4-l flex items-center">
-        <img class="mw4 maxh3" src="/img/logo-university_of_york.png" alt="University of York" title="University of York">
-      </li>
-      <li class="pa2 pa3-m pa4-l flex items-center">
-        <img class="mw4 maxh3" src="/img/logo-mozilla-festival.png" alt="Mozilla Festival" title="Mozilla Festival">
-      </li>
-      <li class="pa2 pa3-m pa4-l flex items-center">
-        <img class="mw4 maxh3" src="/img/logo-i-Docs_LOGO-300x300.png" alt="i-Docs Symposium, Bristol" title="i-Docs Symposium, Bristol">
-      </li>
-      <li class="pa2 pa3-m pa4-l flex items-center">
-        <img class="mw4 maxh3" src="/img/logo-university_of_warwick.png" alt="University of Warwick" title="University of Warwick">
-      </li>
-      <li class="pa2 pa3-m pa4-l flex items-center">
-        <img class="mw4 maxh3" src="/img/logo-brighton_digital_festival.png" alt="Brighton Digital Festival" title="Brighton Digital Festival">
-      </li>
-      <li class="pa2 pa3-m pa4-l flex items-center">
-        <img class="mw4 maxh3" src="/img/logo-docsbarcelona.png" alt="Docs Barcelona" title="Docs Barcelona">
-      </li>
-      <li class="pa2 pa3-m pa4-l flex items-center">
-        <img class="mw4 maxh3" src="/img/logo-idrops.png" alt="iDrops ,Leuven" title="iDrops ,Leuven">
-      </li>
-      <li class="pa2 pa3-m pa4-l flex items-center">
-        <img class="mw4 maxh3" src="/img/logo-open-city-doc-fest.png" alt="Open City Docs Fest, London" title="Open City Docs Fest, London">
-      </li>
-      <li class="pa2 pa3-m pa4-l flex items-center">
-        <img class="mw4 maxh3" src="/img/logo-lighthouse.jpg" alt="Lighthouse" title="Lighthouse, Brighton">
-      </li>
-    </ul>
-  </section>
-  <section id="ambassadors" class="pa3 pa4-m pa5-l bg-su-dark-orange white">
-    <h2 class="f3 f2-m f1-l">🙌 Ambassadors</h2>
-    <ul class="list ma0 pa0 flex flex-wrap flex justify-around justify-start-l">
-      <li>
+    </section>
+    <section id="latest" class="pa3 pa4-m pa5-l bg-su-light-blue black">
+      <h2 class="f3 f2-m f1-l">✍️ Latest from the community</h2>
+      <ul class="list pa0 ma0 flex flex-wrap">
+        <li class="w-100 w-50-m mw8 pa3">
+          <article class="bg-white-80 br3 ba-hover-dark-blue">
+            <a
+              href="https://lab.hyperaud.io/mozfest2021/interviews/alexa_steinbruck/"
+              target="_blank"
+              class="db no-underline black"
+            >
+              <div class="flex flex-column flex-row-l">
+                <div class="w-100 w-40-l">
+                  <img
+                    src="/img/interview-alexa-steinbrueck.jpg"
+                    alt="Screenshot of a woman on a video call"
+                    class="w-100 h-100 br3  br--top-nl br--left-l objfit-cover"
+                  />
+                </div>
+                <div class="w-100 w-60-l pa3">
+                  <h3 class="mt0 lh-title">
+                    Douglas Arellanes interviews Alexa Steinbruck
+                  </h3>
+                  <p class="f6 f5-l lh-copy">
+                    In advance of her participation at the MozFest Creative AI
+                    Space, Alexa speaks to Douglas Arellanes about her project
+                    Latent Riot, irony, the X Lab, 'GANism', aesthetics of
+                    exclusion, and how to talk about AI.
+                  </p>
+                  <p class="f6 lh-copy mv0 i">
+                    by
+                    <img
+                      data-username="Douglas Arellanes"
+                      class="br-100 w2 dib v-mid"
+                    />
+                    Douglas Arellanes &amp;
+                    <img data-username="Alexa" class="br-100 w2 dib v-mid" />
+                    Alexa Steinbrück
+                  </p>
+                </div>
+              </div>
+            </a>
+          </article>
+        </li>
+        <li class="w-100 w-50-m mw8 pa3">
+          <article class="bg-white-80 br3 ba-hover-dark-blue">
+            <a
+              href="https://medium.com/storytellers-united/open-dialogue-conversation-and-storytelling-a-meta-interview-702b5c68e45d"
+              target="_blank"
+              class="db no-underline black"
+            >
+              <div class="flex flex-column flex-row-l">
+                <div class="w-100 w-40-l">
+                  <img
+                    src="https://miro.medium.com/max/1400/1*WgL_PFym9hx8RI51T56v2A.jpeg"
+                    alt="Screenshot of two people on a video call"
+                    class="w-100 h-100 br3  br--top-nl br--left-l objfit-cover"
+                  />
+                </div>
+                <div class="w-100 w-60-l pa3">
+                  <h3 class="mt0 lh-title">
+                    Open dialogue, conversation and storytelling — a meta
+                    interview
+                  </h3>
+                  <p class="f6 f5-l lh-copy">
+                    TheirStory is an online platform that helps with
+                    facilitating, recording and digitally archiving meaningful
+                    conversations now and for future generations.
+                  </p>
+                  <p class="f6 lh-copy mv0 i">
+                    by
+                    <img data-username="Alexa" class="br-100 w2 dib v-mid" />
+                    Alexa Steinbrück &amp;
+                    <img data-username="zack" class="br-100 w2 dib v-mid" />
+                    Zack Ellis
+                  </p>
+                </div>
+              </div>
+            </a>
+          </article>
+        </li>
+        <li class="w-100 w-50-m mw8 pa3">
+          <article class="bg-white-80 br3 ba-hover-dark-blue">
+            <a
+              href="https://medium.com/storytellers-united/nomad-reconnecting-with-somali-heritage-9e5061fef167"
+              target="_blank"
+              class="db no-underline black"
+            >
+              <div class="flex flex-column flex-row-l">
+                <div class="w-100 w-40-l">
+                  <img
+                    src="https://miro.medium.com/max/3200/0*VZURo37Q_K7wc6Ap"
+                    alt="Photo of a person wearing an AR headset interactive with holographic objects"
+                    class="w-100 h-100 br3  br--top-nl br--left-l objfit-cover"
+                  />
+                </div>
+                <div class="w-100 w-60-l pa3">
+                  <h3 class="mt0 lh-title">
+                    Nomad — Reconnecting with Somali Heritage
+                  </h3>
+                  <p class="f6 f5-l lh-copy">
+                    Centered on workshops engaging Somali communities in London,
+                    Nomad explores the creative use of immersive and web-based
+                    technology to contextualise archival Somali objects with the
+                    people and traditions to which they belong.
+                  </p>
+                  <p class="f6 lh-copy mv0 i">
+                    by
+                    <img data-username="Alexa" class="br-100 w2 dib v-mid" />
+                    Alexa Steinbrück &amp;
+                    <img data-username="Sophie" class="br-100 w2 dib v-mid" />
+                    Sophie Dixon
+                  </p>
+                </div>
+              </div>
+            </a>
+          </article>
+        </li>
+        <li class="w-100 w-50-m mw8 pa3">
+          <article class="bg-white-80 br3 ba-hover-dark-blue">
+            <a
+              href="https://medium.com/storytellers-united/inhabiting-the-image-captured-an-interactive-cinema-installation-de7fa97dd510"
+              target="_blank"
+              class="db no-underline black"
+            >
+              <div class="flex flex-column flex-row-l">
+                <div class="w-100 w-40-l">
+                  <img
+                    src="https://miro.medium.com/max/1400/1*9MB13FkqFy5wYV0a-EzbIg.jpeg"
+                    alt="A digital rendering of a person dressed in red crawling next to a white silhouette"
+                    class="w-100 h-100 br3  br--top-nl br--left-l objfit-cover"
+                  />
+                </div>
+                <div class="w-100 w-60-l pa3">
+                  <h3 class="mt0 lh-title">
+                    Inhabiting the image: “Captured” — an interactive cinema
+                    installation
+                  </h3>
+                  <p class="f6 f5-l lh-copy">
+                    Captured is an interactive installation, which captures your
+                    face and creates a new identity for you in a collective
+                    scenario taking place in the virtual world.
+                  </p>
+                  <p class="f6 lh-copy mv0 i">
+                    by
+                    <img data-username="Alexa" class="br-100 w2 dib v-mid" />
+                    Alexa Steinbrück,
+                    <img
+                      data-username="Alap Parikh"
+                      class="br-100 w2 dib v-mid"
+                    />
+                    Alap Parikh, Hanna Haaslahti, &amp; Tyler Henry
+                  </p>
+                </div>
+              </div>
+            </a>
+          </article>
+        </li>
+      </ul>
+    </section>
+    <section id="partners" class="pa3 pa4-m pa5-l bg-white black">
+      <h2 class="f3 f2-m f1-l">🤝 Awesome orgs we've partnered with</h2>
+      <ul class="list pa0 ma0 flex flex-wrap justify-around">
+        <li class="pa2 pa3-m pa4-l flex items-center">
+          <img
+            class="mw4 maxh3"
+            src="/img/logo-bbcrd.png"
+            alt="BBC R&D"
+            title="BBC R&D"
+          />
+        </li>
+        <li class="pa2 pa3-m pa4-l flex items-center">
+          <img
+            class="mw4 maxh3"
+            src="/img/logo-university_of_york.png"
+            alt="University of York"
+            title="University of York"
+          />
+        </li>
+        <li class="pa2 pa3-m pa4-l flex items-center">
+          <img
+            class="mw4 maxh3"
+            src="/img/logo-mozilla-festival.png"
+            alt="Mozilla Festival"
+            title="Mozilla Festival"
+          />
+        </li>
+        <li class="pa2 pa3-m pa4-l flex items-center">
+          <img
+            class="mw4 maxh3"
+            src="/img/logo-i-Docs_LOGO-300x300.png"
+            alt="i-Docs Symposium, Bristol"
+            title="i-Docs Symposium, Bristol"
+          />
+        </li>
+        <li class="pa2 pa3-m pa4-l flex items-center">
+          <img
+            class="mw4 maxh3"
+            src="/img/logo-university_of_warwick.png"
+            alt="University of Warwick"
+            title="University of Warwick"
+          />
+        </li>
+        <li class="pa2 pa3-m pa4-l flex items-center">
+          <img
+            class="mw4 maxh3"
+            src="/img/logo-brighton_digital_festival.png"
+            alt="Brighton Digital Festival"
+            title="Brighton Digital Festival"
+          />
+        </li>
+        <li class="pa2 pa3-m pa4-l flex items-center">
+          <img
+            class="mw4 maxh3"
+            src="/img/logo-docsbarcelona.png"
+            alt="Docs Barcelona"
+            title="Docs Barcelona"
+          />
+        </li>
+        <li class="pa2 pa3-m pa4-l flex items-center">
+          <img
+            class="mw4 maxh3"
+            src="/img/logo-idrops.png"
+            alt="iDrops ,Leuven"
+            title="iDrops ,Leuven"
+          />
+        </li>
+        <li class="pa2 pa3-m pa4-l flex items-center">
+          <img
+            class="mw4 maxh3"
+            src="/img/logo-open-city-doc-fest.png"
+            alt="Open City Docs Fest, London"
+            title="Open City Docs Fest, London"
+          />
+        </li>
+        <li class="pa2 pa3-m pa4-l flex items-center">
+          <img
+            class="mw4 maxh3"
+            src="/img/logo-lighthouse.jpg"
+            alt="Lighthouse"
+            title="Lighthouse, Brighton"
+          />
+        </li>
+      </ul>
+    </section>
+    <section id="ambassadors" class="pa3 pa4-m pa5-l bg-su-dark-orange white">
+      <h2 class="f3 f2-m f1-l">🙌 Ambassadors</h2>
+      <ul
+        class="list ma0 pa0 flex flex-wrap flex justify-around justify-start-l"
+      >
+        <li>
           <article class="tc pa2 pa3-m pa4-l">
-            <img class="br-100 w3 w4-ns dib" src="https://ca.slack-edge.com/T14SUV8BA-U14SLMJ20-ab75d1919845-192" alt="profile picture of @phivk">
+            <img
+              class="br-100 w3 w4-ns dib"
+              src="https://ca.slack-edge.com/T14SUV8BA-U14SLMJ20-ab75d1919845-192"
+              alt="profile picture of @phivk"
+            />
             <h3 class="f6 f5-ns">Philo van Kemenade</h3>
-            <a href="https://twitter.com/phivk" class="link white dim f6 f5-ns fw3" target="_blank">
+            <a
+              href="https://twitter.com/phivk"
+              class="link white dim f6 f5-ns fw3"
+              target="_blank"
+            >
               @phivk
             </a>
           </article>
-      </li>
-      <li>
+        </li>
+        <li>
           <article class="tc pa2 pa3-m pa4-l">
-            <img class="br-100 w3 w4-ns dib" src="https://ca.slack-edge.com/T14SUV8BA-UD4FRNJ06-4d06a9fa5d68-192" alt="profile picture of @alexasteinbrueck">
+            <img
+              class="br-100 w3 w4-ns dib"
+              src="https://ca.slack-edge.com/T14SUV8BA-UD4FRNJ06-4d06a9fa5d68-192"
+              alt="profile picture of @alexasteinbrueck"
+            />
             <h3 class="f6 f5-ns">Alexa Steinbrück</h3>
-            <a href="https://twitter.com/alexabruck" class="link white dim f6 f5-ns fw3" target="_blank">
+            <a
+              href="https://twitter.com/alexabruck"
+              class="link white dim f6 f5-ns fw3"
+              target="_blank"
+            >
               @alexabruck
             </a>
           </article>
-      </li>
-      <li>
+        </li>
+        <li>
           <article class="tc pa2 pa3-m pa4-l">
-            <img class="br-100 w3 w4-ns dib" src="https://ca.slack-edge.com/T14SUV8BA-U1G6ZN493-g39cbf5b846d-192" alt="profile picture of @cubicgarden">
+            <img
+              class="br-100 w3 w4-ns dib"
+              src="https://ca.slack-edge.com/T14SUV8BA-U1G6ZN493-g39cbf5b846d-192"
+              alt="profile picture of @cubicgarden"
+            />
             <h3 class="f6 f5-ns">Ian Forrester</h3>
-            <a href="https://twitter.com/cubicgarden" class="link white dim f6 f5-ns fw3" target="_blank">
+            <a
+              href="https://twitter.com/cubicgarden"
+              class="link white dim f6 f5-ns fw3"
+              target="_blank"
+            >
               @cubicgarden
             </a>
           </article>
-      </li>
-      <li>
+        </li>
+        <li>
           <article class="tc pa2 pa3-m pa4-l">
-            <img class="br-100 w3 w4-ns dib" src="https://ca.slack-edge.com/T14SUV8BA-UFZFPJ78X-0c761abfd160-192" alt="profile picture of @marshacourneya">
+            <img
+              class="br-100 w3 w4-ns dib"
+              src="https://ca.slack-edge.com/T14SUV8BA-UFZFPJ78X-0c761abfd160-192"
+              alt="profile picture of @marshacourneya"
+            />
             <h3 class="f6 f5-ns">Marsha Courneya</h3>
-            <a href="https://twitter.com/marshacourneya" class="link white dim f6 f5-ns fw3" target="_blank">
+            <a
+              href="https://twitter.com/marshacourneya"
+              class="link white dim f6 f5-ns fw3"
+              target="_blank"
+            >
               @marshacourneya
             </a>
           </article>
-      </li>
-      <li>
+        </li>
+        <li>
           <article class="tc pa2 pa3-m pa4-l">
-            <img class="br-100 w3 w4-ns dib" src="https://ca.slack-edge.com/T14SUV8BA-UAEDN437U-gfc9cdb2d9c1-192" alt="profile picture of @jkosem">
+            <img
+              class="br-100 w3 w4-ns dib"
+              src="https://ca.slack-edge.com/T14SUV8BA-UAEDN437U-gfc9cdb2d9c1-192"
+              alt="profile picture of @jkosem"
+            />
             <h3 class="f6 f5-ns">Jim Kosem</h3>
-            <a href="https://twitter.com/jkosem" class="link white dim f6 f5-ns fw3" target="_blank">
+            <a
+              href="https://twitter.com/jkosem"
+              class="link white dim f6 f5-ns fw3"
+              target="_blank"
+            >
               @jkosem
             </a>
           </article>
-      </li>
-      <li>
+        </li>
+        <li>
           <article class="tc pa2 pa3-m pa4-l">
-            <img class="br-100 w3 w4-ns dib" src="https://ca.slack-edge.com/T14SUV8BA-UQXAUND36-955577bfb192-192" alt="profile picture of @deedelidee">
+            <img
+              class="br-100 w3 w4-ns dib"
+              src="https://ca.slack-edge.com/T14SUV8BA-UQXAUND36-955577bfb192-192"
+              alt="profile picture of @deedelidee"
+            />
             <h3 class="f6 f5-ns">Paulien Dresscher</h3>
-            <a href="https://twitter.com/deedelidee" class="link white dim f6 f5-ns fw3" target="_blank">
+            <a
+              href="https://twitter.com/deedelidee"
+              class="link white dim f6 f5-ns fw3"
+              target="_blank"
+            >
               @deedelidee
             </a>
           </article>
-      </li>
-      <li>
+        </li>
+        <li>
           <article class="tc pa2 pa3-m pa4-l">
-            <img class="br-100 w3 w4-ns dib" src="https://ca.slack-edge.com/T14SUV8BA-U1GLFNZTL-9e7b852766d7-192" alt="profile picture of @openhypervideo">
+            <img
+              class="br-100 w3 w4-ns dib"
+              src="https://ca.slack-edge.com/T14SUV8BA-U1GLFNZTL-9e7b852766d7-192"
+              alt="profile picture of @openhypervideo"
+            />
             <h3 class="f6 f5-ns">Joscha Jäger</h3>
-            <a href="https://twitter.com/openhypervideo" class="link white dim f6 f5-ns fw3" target="_blank">
+            <a
+              href="https://twitter.com/openhypervideo"
+              class="link white dim f6 f5-ns fw3"
+              target="_blank"
+            >
               @openhypervideo
             </a>
           </article>
-      </li>
-      <li>
-        <article class="tc pa2 pa3-m pa4-l">
-          <img class="br-100 w3 w4-ns dib" src="https://ca.slack-edge.com/T14SUV8BA-UAX2YQV2R-8ab84e1fbcff-192" alt="profile picture of Anna Desponds">
-          <h3 class="f6 f5-ns">Anna Desponds</h3>
+        </li>
+        <li>
+          <article class="tc pa2 pa3-m pa4-l">
+            <img
+              class="br-100 w3 w4-ns dib"
+              src="https://ca.slack-edge.com/T14SUV8BA-UAX2YQV2R-8ab84e1fbcff-192"
+              alt="profile picture of Anna Desponds"
+            />
+            <h3 class="f6 f5-ns">Anna Desponds</h3>
+          </article>
+        </li>
+      </ul>
+    </section>
+    <footer
+      id="join-the-conversation"
+      class="pa3 pa4-m pa5-l bg-su-dark-blue white"
+    >
+      <h2 class="f3 f2-m f1-l">🤗 Join the conversation</h2>
+      <div class="flex flex-wrap flex justify-around justify-start-l">
+        <article class="w-50 w-25-m w-auto-l tc pa3 pa5-l">
+          <a
+            href="/invite"
+            class="link white dim"
+            data-goatcounter-click="conversation-slack"
+          >
+            <i class="w3 h3" data-feather="slack"></i>
+            <h3>Slack</h3>
+          </a>
         </article>
-      </li>
-    </ul>
-  </section>
-  <footer id="join-the-conversation" class="pa3 pa4-m pa5-l bg-su-dark-blue white">
-    <h2 class="f3 f2-m f1-l">🤗 Join the conversation</h2>
-    <div class="flex flex-wrap flex justify-around justify-start-l">
-      <article class="w-50 w-25-m w-auto-l tc pa3 pa5-l">
-        <a href="/invite" class="link white dim" data-goatcounter-click="conversation-slack">
-          <i class="w3 h3" data-feather="slack"></i>
-          <h3>Slack</h3>
-        </a>
-      </article>
-      <article class="w-50 w-25-m w-auto-l tc pa3 pa5-l">
-        <a href="https://twitter.com/storyunite" class="link white dim" target="_blank" data-goatcounter-click="conversation-twitter">
-          <i class="w3 h3" data-feather="twitter"></i>
-          <h3>Twitter</h3>
-        </a>
-      </article>
-      <article class="w-50 w-25-m w-auto-l tc pa3 pa5-l">
-        <a href="https://medium.com/storytellers-united" class="link white dim" target="_blank" data-goatcounter-click="conversation-medium">
-          <i class="w3 h3" data-feather="edit-3"></i>
-          <h3>Medium</h3>
-        </a>
-      </article>
-      <article class="w-50 w-25-m w-auto-l tc pa3 pa5-l">
-        <a href=" mailto:hello@storytellers.link?subject=Storytellers%20United&body=Hi!%0D%0A%0D%0AI%20came%20across%20the%20Storytellers%20United%20page%2C%20and%20thought%20... " class="link white dim" target="_blank" data-goatcounter-click="conversation-Email us">
-          <i class="w3 h3" data-feather="mail"></i>
-          <h3>Email us</h3>
-        </a>
-      </article>
-    </div>
-    <div class="mt5 f6">
-      <a class="dib white hover-no-underline mr3 mr4-m mr5-l mb3" href="/calendar">Community Calendar</a>
-      <a class="dib white hover-no-underline mr3 mr4-m mr5-l mb3" href="/feedback">Feedback & Suggestions</a>
-      <a class="dib white hover-no-underline mr3 mr4-m mr5-l mb3" href="https://gradu.al/storytellersunited/" target="_blank">Gradual Skillsharing<i class="w1 v-mid pl1" data-feather="external-link"></i></a>
-      <a class="dib white hover-no-underline mr3 mr4-m mr5-l mb3" href="https://github.com/storytellersunited" target="_blank">GitHub<i class="w1 v-mid pl1" data-feather="external-link"></i></a>
-    </div>
-  </footer>
-  <script>
-    fetch('https://storytellers.link/api/members.json')
-      .then(response => response.json())
-      .then(members => {
-        var profilePics = document.querySelectorAll('img[data-username]');
-        for (var i = 0; i < profilePics.length; i++) {
-          let username = profilePics[i].getAttribute('data-username')
-          try {
-            profilePics[i].setAttribute('alt', `profile picture of ${username}`)
-            profilePics[i].setAttribute('src', members[username].profilePic)
-          } catch (e) {
-            console.error('error:', e.message);
+        <article class="w-50 w-25-m w-auto-l tc pa3 pa5-l">
+          <a
+            href="https://twitter.com/storyunite"
+            class="link white dim"
+            target="_blank"
+            data-goatcounter-click="conversation-twitter"
+          >
+            <i class="w3 h3" data-feather="twitter"></i>
+            <h3>Twitter</h3>
+          </a>
+        </article>
+        <article class="w-50 w-25-m w-auto-l tc pa3 pa5-l">
+          <a
+            href="https://medium.com/storytellers-united"
+            class="link white dim"
+            target="_blank"
+            data-goatcounter-click="conversation-medium"
+          >
+            <i class="w3 h3" data-feather="edit-3"></i>
+            <h3>Medium</h3>
+          </a>
+        </article>
+        <article class="w-50 w-25-m w-auto-l tc pa3 pa5-l">
+          <a
+            href=" mailto:hello@storytellers.link?subject=Storytellers%20United&body=Hi!%0D%0A%0D%0AI%20came%20across%20the%20Storytellers%20United%20page%2C%20and%20thought%20... "
+            class="link white dim"
+            target="_blank"
+            data-goatcounter-click="conversation-Email us"
+          >
+            <i class="w3 h3" data-feather="mail"></i>
+            <h3>Email us</h3>
+          </a>
+        </article>
+      </div>
+      <div class="mt5 f6">
+        <a
+          class="dib white hover-no-underline mr3 mr4-m mr5-l mb3"
+          href="/calendar"
+          >Community Calendar</a
+        >
+        <a
+          class="dib white hover-no-underline mr3 mr4-m mr5-l mb3"
+          href="/feedback"
+          >Feedback & Suggestions</a
+        >
+        <a
+          class="dib white hover-no-underline mr3 mr4-m mr5-l mb3"
+          href="https://gradu.al/storytellersunited/"
+          target="_blank"
+          >Gradual Skillsharing<i
+            class="w1 v-mid pl1"
+            data-feather="external-link"
+          ></i
+        ></a>
+        <a
+          class="dib white hover-no-underline mr3 mr4-m mr5-l mb3"
+          href="https://github.com/storytellersunited"
+          target="_blank"
+          >GitHub<i class="w1 v-mid pl1" data-feather="external-link"></i
+        ></a>
+      </div>
+    </footer>
+    <script>
+      fetch("https://storytellers.link/api/members.json")
+        .then((response) => response.json())
+        .then((members) => {
+          var profilePics = document.querySelectorAll("img[data-username]");
+          for (var i = 0; i < profilePics.length; i++) {
+            let username = profilePics[i].getAttribute("data-username");
+            try {
+              profilePics[i].setAttribute(
+                "alt",
+                `profile picture of ${username}`
+              );
+              profilePics[i].setAttribute("src", members[username].profilePic);
+            } catch (e) {
+              console.error("error:", e.message);
+            }
           }
-        }
-      });
-  </script>
-  <script>feather.replace()</script>
-  <script data-goatcounter="https://storyunite.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
-</body>
+        });
+    </script>
+    <script>
+      feather.replace();
+    </script>
+    <script
+      data-goatcounter="https://storyunite.goatcounter.com/count"
+      async
+      src="//gc.zgo.at/count.js"
+    ></script>
+  </body>
 </html>
