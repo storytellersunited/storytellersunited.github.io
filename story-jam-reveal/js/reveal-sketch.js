@@ -9,7 +9,7 @@ let startTime = 0,
   endTime = 0; // when the current animation started and ends
 let animationDuration = 500; // animations take this many milliseconds
 
-let diameter = 200;
+let diameter;
 let c1, c2, c3, c4;
 let p1, p2, p3, p4;
 
@@ -17,6 +17,7 @@ function setup() {
   console.log("setup()");
   let revealCanvas = document.getElementById("reveal-canvas");
   let canvasWidth = calcCanvasWidth();
+  diameter = calcDiameter(canvasWidth);
   createCanvas(canvasWidth, 500, revealCanvas);
 
   cBG = color("#1646C1");
@@ -55,6 +56,7 @@ function draw() {
 
 function windowResized() {
   let canvasWidth = calcCanvasWidth();
+  diameter = calcDiameter(canvasWidth);
   resizeCanvas(canvasWidth, 500);
 }
 
@@ -121,6 +123,10 @@ function calcCanvasWidth() {
     canvasWidth = 0.8 * windowWidth;
   }
   return canvasWidth;
+}
+
+function calcDiameter(canvasWidth) {
+  return 0.25 * canvasWidth;
 }
 
 function easeOutCubic(x) {
