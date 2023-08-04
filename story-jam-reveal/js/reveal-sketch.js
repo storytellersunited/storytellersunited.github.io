@@ -16,7 +16,8 @@ let p1, p2, p3, p4;
 function setup() {
   console.log("setup()");
   let revealCanvas = document.getElementById("reveal-canvas");
-  createCanvas(0.9 * windowWidth, 500, revealCanvas);
+  let canvasWidth = calcCanvasWidth();
+  createCanvas(canvasWidth, 500, revealCanvas);
 
   cBG = color("#1646C1");
   c1 = color("#FF5A17");
@@ -50,6 +51,11 @@ function draw() {
   drawLine(p2, p3);
   drawLine(p3, p4);
   drawLine(p4, p1);
+}
+
+function windowResized() {
+  let canvasWidth = calcCanvasWidth();
+  resizeCanvas(canvasWidth, 500);
 }
 
 class Point {
@@ -105,6 +111,16 @@ function movePoints() {
   p2.move();
   p3.move();
   p4.move();
+}
+
+function calcCanvasWidth() {
+  let canvasWidth = windowWidth;
+  if (windowWidth > 1400) {
+    canvasWidth = 0.6 * windowWidth;
+  } else if (windowWidth > 960) {
+    canvasWidth = 0.8 * windowWidth;
+  }
+  return canvasWidth;
 }
 
 function easeOutCubic(x) {
