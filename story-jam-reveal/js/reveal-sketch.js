@@ -9,7 +9,7 @@ let startTime = 0,
   endTime = 0; // when the current animation started and ends
 let animationDuration = 500; // animations take this many milliseconds
 
-let radius = 200;
+let diameter = 200;
 let c1, c2, c3, c4;
 let p1, p2, p3, p4;
 
@@ -61,8 +61,8 @@ function windowResized() {
 class Point {
   constructor(
     color,
-    x = 0.1 * width + random(0.8 * width),
-    y = 0.2 * height + random(0.6 * height)
+    x = 0.5 * diameter + random(width - diameter),
+    y = 0.5 * diameter + random(height - diameter)
   ) {
     this.color = color;
     this.startState = {
@@ -82,8 +82,8 @@ class Point {
   move() {
     this.startState = this.currentState;
     this.endState = {
-      x: 0.1 * width + random(0.8 * width),
-      y: 0.2 * height + random(0.6 * height),
+      x: 0.5 * diameter + random(width - diameter),
+      y: 0.5 * diameter + random(height - diameter),
     };
   }
 }
@@ -96,7 +96,7 @@ function drawLine(p1, p2) {
     fill(curColor);
     curXPos = lerp(p1.currentState.x, p2.currentState.x, portion);
     curYPos = lerp(p1.currentState.y, p2.currentState.y, portion);
-    circle(curXPos, curYPos, radius);
+    circle(curXPos, curYPos, diameter);
   }
 }
 
