@@ -43,6 +43,9 @@
       href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css"
     />
     <link rel="stylesheet" type="text/css" href="/css/main.css" />
+    <link rel="stylesheet" type="text/css" href="./css/reveal.css" />
+    <script src="./js/p5.min.js"></script>
+    <script src="./js/reveal-sketch.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
     <script
       src="https://unpkg.com/petite-vue@0.4.1/dist/petite-vue.iife.js"
@@ -88,13 +91,22 @@
         </nav>
       </header>
 
-      <section class="tc">
-        <h1 class="f2 f1-ns mb2">Story Jam: <span class="fw3">REVEAL</span></h1>
-        <h2 class="f3 f2-ns fw1 i mt0">The secret life of media</h2>
-        <div class="f3 f2-ns mb3">15 - 17 September 2023</div>
-        <div class="f4 f3-ns fw1 mb4">
-          part of the Netherlands Film Festival
+      <section class="relative">
+        <canvas id="reveal-canvas"></canvas>
+        <div class="absolute top-0 tc w-100 vcenter">
+          <h1 class="f2 f1-ns hk-gothic ma0">
+            Story Jam
+          </h1>
+          <h1 class="f1 f-headline-ns su-darker-blue hk-gothic ma0">REVEAL</h1>
+          <h2 class="f3 f2-ns fw4 ma0 mb2 avenir">The secret life of media</h2>
+          <div class="f5 f4-ns fw4 mb4 avenir">
+            part of the Netherlands Film Festival
+          </div>
+          <div class="f4 f3-ns mb3 hk-gothic">15 - 17 September 2023</div>
         </div>
+      </section>
+
+      <section class="tc">
         <div class="mb4">
           <a
             class="dib mh2 mv2 mv3-l bg-su-dark-orange no-underline white pv2 ph3 f4 f3-ns fw6 br3 boxshadow-hover"
@@ -149,11 +161,6 @@
             </li>
           </ul>
         </nav>
-        <img
-          class="w-100 mb4 mw8"
-          src="./img/story-jam-reveal.png"
-          alt="Story Jam: Reveal"
-        />
 
         <div class="measure-wide tl center f4">
           <h2 class="mt5" id="in-short">In short</h2>

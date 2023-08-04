@@ -1,0 +1,8 @@
+@font-face {
+    font-family: hk-gothic;
+    src: url(hk-gothic.ttf);
+}
+
+.hk-gothic {
+    font-family: hk-gothic;
+}

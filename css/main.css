@@ -13,6 +13,9 @@
 .su-dark-orange {
   color: var(--color-su-dark-orange);
 }
+.su-darker-blue {
+  color: var(--color-su-darker-blue);
+}
 .bg-su-light-orange {
   background-color: var(--color-su-light-orange);
 }
@@ -81,4 +84,9 @@
 
 .maxh3 {
   max-height: 4rem;
+}
+
+.vcenter {
+  top: 50%;
+  transform: translateY(-50%);
 }
