@@ -8,13 +8,13 @@
 let startTime = 0,
   endTime = 0; // when the current animation started and ends
 let animationDuration = 500; // animations take this many milliseconds
+let intervalId;
 
 let diameter;
 let c1, c2, c3, c4;
 let p1, p2, p3, p4;
 
 function setup() {
-  console.log("setup()");
   let revealCanvas = document.getElementById("reveal-canvas");
   let canvasWidth = calcCanvasWidth();
   diameter = calcDiameter(canvasWidth);
@@ -34,7 +34,7 @@ function setup() {
   p3 = new Point(c3);
   p4 = new Point(c4);
 
-  setInterval(movePoints, 1000);
+  intervalId = setInterval(movePoints, 1000);
 }
 
 function draw() {
@@ -64,7 +64,7 @@ class Point {
   constructor(
     color,
     x = 0.5 * diameter + random(width - diameter),
-    y = 0.5 * diameter + random(height - diameter)
+    y = 0.5 * diameter + random(height - diameter),
   ) {
     this.color = color;
     this.startState = {
@@ -88,6 +88,14 @@ class Point {
       y: 0.5 * diameter + random(height - diameter),
     };
   }
+
+  moveTo(x, y) {
+    this.startState = this.currentState;
+    this.endState = {
+      x: x,
+      y: y,
+    };
+  }
 }
 
 function drawLine(p1, p2) {
@@ -104,6 +112,8 @@ function drawLine(p1, p2) {
 
 function mousePressed() {
   movePoints();
+  clearInterval(intervalId);
+  intervalId = setInterval(movePoints, 1000);
 }
 
 function movePoints() {
@@ -113,6 +123,15 @@ function movePoints() {
   p2.move();
   p3.move();
   p4.move();
+}
+
+function takePosition() {
+  startTime = millis();
+  endTime = startTime + animationDuration;
+  p1.moveTo(200, 600);
+  p2.moveTo(80, 200);
+  p3.moveTo(620, 480);
+  p4.moveTo(500, 80);
 }
 
 function calcCanvasWidth() {
@@ -126,7 +145,8 @@ function calcCanvasWidth() {
 }
 
 function calcDiameter(canvasWidth) {
-  return 0.25 * canvasWidth;
+  let minumumDiameter = 100;
+  return Math.max(0.2 * canvasWidth, minumumDiameter);
 }
 
 function easeOutCubic(x) {
