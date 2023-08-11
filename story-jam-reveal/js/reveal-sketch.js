@@ -9,6 +9,7 @@ let startTime = 0,
   endTime = 0; // when the current animation started and ends
 let animationDuration = 500; // animations take this many milliseconds
 let intervalId;
+let looping;
 
 let diameter;
 let c1, c2, c3, c4;
@@ -111,9 +112,19 @@ function drawLine(p1, p2) {
 }
 
 function mousePressed() {
+  // toggleLoop();
   movePoints();
   clearInterval(intervalId);
   intervalId = setInterval(movePoints, 1000);
+}
+
+function toggleLoop() {
+  looping = !looping;
+  if (looping) {
+    noLoop();
+  } else {
+    loop();
+  }
 }
 
 function movePoints() {
