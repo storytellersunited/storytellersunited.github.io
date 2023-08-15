@@ -9,17 +9,17 @@ let startTime = 0,
   endTime = 0; // when the current animation started and ends
 let animationDuration = 500; // animations take this many milliseconds
 let intervalId;
-let looping;
+let looping = true;
 
 let diameter;
 let c1, c2, c3, c4;
 let p1, p2, p3, p4;
 
 function setup() {
-  let revealCanvas = document.getElementById("reveal-canvas");
+  let canvasElement = document.querySelector('#reveal-canvas');
   let canvasWidth = calcCanvasWidth();
   diameter = calcDiameter(canvasWidth);
-  createCanvas(canvasWidth, 500, revealCanvas);
+  createCanvas(canvasWidth, 500, canvasElement);
 
   cBG = color("#1646C1");
   c1 = color("#FF5A17");
@@ -36,6 +36,8 @@ function setup() {
   p4 = new Point(c4);
 
   intervalId = setInterval(movePoints, 1000);
+
+  trackVisible(canvasElement);
 }
 
 function draw() {
@@ -112,7 +114,6 @@ function drawLine(p1, p2) {
 }
 
 function mousePressed() {
-  // toggleLoop();
   movePoints();
   clearInterval(intervalId);
   intervalId = setInterval(movePoints, 1000);
@@ -121,9 +122,9 @@ function mousePressed() {
 function toggleLoop() {
   looping = !looping;
   if (looping) {
-    noLoop();
-  } else {
     loop();
+  } else {
+    noLoop();
   }
 }
 
@@ -163,3 +164,20 @@ function calcDiameter(canvasWidth) {
 function easeOutCubic(x) {
   return 1 - pow(1 - x, 3);
 }
+
+function trackVisible(element) {
+  document.addEventListener('scroll', function () {
+    let visible = elementIsVisibleInViewport(element);
+    if (visible !== looping) {
+      toggleLoop();
+    }      
+  }, { passive: true}
+  );
+}
+
+const elementIsVisibleInViewport = (el) => {
+  const { top, left, bottom, right } = el.getBoundingClientRect();
+  const { innerHeight, innerWidth } = window;
+  return ((top > 0 && top < innerHeight) ||
+        (bottom > 0 && bottom < innerHeight));
+};
