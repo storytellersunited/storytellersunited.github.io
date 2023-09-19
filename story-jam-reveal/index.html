@@ -109,11 +109,11 @@
         <nav class="f6">
           <span class="o-50">Jump to: </span>
           <ul class="list dib pa0 mt0">
-            <!-- <li class="dib pa2">
+            <li class="dib pa2">
               <a class="su-dark-orange" href="#prototypes"
                 >Explore the prototypes</a
               >
-            </li> -->
+            </li>
             <!-- <li class="dib pa2">
               <a class="su-dark-orange" href="#photos">Photo gallery</a>
             </li> -->
@@ -169,6 +169,24 @@
             🚀 Develop innovative stories under healthy time pressure, with
             inspiring input and professional guidance.
           </p>
+
+          <h2 id="prototypes">Explore the prototypes</h2>
+          <p>
+          Seven teams worked for three days to brainstorm, design and develop an innovative storytelling prototype answering to the theme REVEAL: The secret life of media. Explore the projects below.
+          </p>
+          <div class="full-width ph3 flex justify-center flex-wrap f5" v-scope="{ projectIds: [
+            '65071dbda2e0884549283008',
+            '65071159a2e0884549283007',
+            '650704f5a2e0884549283006',
+            '6506fbdda2e0884549282fff',
+            '6506fbb1a2e0884549282ffe',
+            '6506f1c4a2e0884549282ff9',
+            '6506d7f5a2e0884549282ff7',
+          ]}">
+            <article v-for="projectId in projectIds" class="w-100 w-50-m w-25-l mw6 tc pv2 pa2-sm pa3-ns">
+              <iframe :src="`https://hackdash.org/embed/projects/${projectId}?hide=prg`" width="100%" height="450" frameborder="0" allowtransparency="true" title="Hackdash"></iframe>
+            </article>
+          </div>
 
           <h2 class="mt5" id="whats-the-story">What's the story?</h2>
           <p class="f3">
@@ -274,11 +292,6 @@
           </p>
 
           <p class="f3 fw4">Applications now closed</p>
-          <!-- <a
-            class="dib mv2 mv3-l bg-su-dark-orange no-underline white pv2 ph3 f4 f3-ns fw6 br3 boxshadow-hover"
-            href="./apply/"
-            >Apply now</a
-          > -->
 
           <h2 class="mt5" id="where-and-when">Where & When?</h2>
           <article>
