@@ -52,6 +52,7 @@
       defer
       init
     ></script>
+    <script src="https://cdn.jsdelivr.net/npm/add-to-calendar-button@2" async defer></script>
     <!-- <link
       rel="stylesheet"
       href="https://unpkg.com/photoswipe@5.2.2/dist/photoswipe.css"
@@ -104,7 +105,27 @@
             href="./apply/"
             >Apply now!</a
           > -->
-          <p class="f3 fw4">Applications now closed</p>
+          <!-- <p class="f3 fw4">Applications now closed</p> -->
+          <div class="mw7 center bg-su-dark-orange white br3 dib tc tl-l">
+            <div
+              class="flex justify-between items-center items-center-l flex-column flex-row-l"
+            >
+              <div class="pa3 ph4-ns">
+                <h2 class="mv3">Project Presentations @ NFF</h2>
+                <p class="f5 measure">
+                  On Sept 24th Story Jam teams will present their projects and creative process on stage at NFF Professionals. Share a chat and a drink with the makers and try out the prototypes!
+                </p>
+              </div>
+              <div class="pa3 ph4-ns tc flex flex-wrap justify-center">
+                <a
+                  class="f5 fw6 grow no-underline br3 pv2 ph3 ma2 dib white ba b--white bw1"
+                  href="https://www.filmfestival.nl/en/event/nff-prof-talk-story-jam"
+                  target="_blank"
+                  >More info & free registration</a
+                >
+              </div>
+            </div>
+          </div>
         </div>
         <nav class="f6">
           <span class="o-50">Jump to: </span>
@@ -273,7 +294,7 @@
             </div>
           </div>
 
-          <h2 class="mt5" id="take-part">Take part</h2>
+          <!-- <h2 class="mt5" id="take-part">Take part</h2>
           <p>
             Applications to the open call were open until 22 August. The selection of participants will be announced by 25 August. Participation is free of charge, catering will be provided.
           </p>
@@ -289,9 +310,7 @@
             members. We ask you to have an open mind about the ideas you bring
             in and actively work to let them be enriched by new perspectives of
             others in your team.
-          </p>
-
-          <p class="f3 fw4">Applications now closed</p>
+          </p> -->
 
           <h2 class="mt5" id="where-and-when">Where & When?</h2>
           <article>
@@ -308,11 +327,24 @@
               target="_blank"
               >Hekman Foyer, Stadsschouwburg</a
             >, Utrecht <br />
-            <a
-            class="dib mv2 mv3-l bg-su-dark-orange no-underline white pv2 ph3 f4 f3-ns fw6 br3 boxshadow-hover"
-            href="https://www.filmfestival.nl/en/event/nff-prof-talk-story-jam"
-            >More info & free registration</a
-          >
+            <div class="flex items-center">
+              <a
+                class="dib mv2 mv3-l mr3 bg-su-dark-orange no-underline white pa3 f4 fw6 br3 boxshadow-hover"
+                href="https://www.filmfestival.nl/en/event/nff-prof-talk-story-jam"
+                >More info & free registration
+              </a> 
+              <add-to-calendar-button
+                name="NFF Prof Talk: Story Jam"
+                options="'Apple','Google','iCal'"
+                location="Hekman Foyer, Stadsschouwburg Utrecht"
+                startDate="2023-09-24"
+                endDate="2023-09-24"
+                startTime="19:00"
+                endTime="21:00"
+                timeZone="Europe/Amsterdam"
+                description="On Sept 24th each Story Jam team will share their projects and creative process. Afterwards, there will be an opportunity to test the stories and talk to the makers over drinks. All welcome, bring your friends![br]More info & free registration:[br]→ [url]https://www.filmfestival.nl/en/event/nff-prof-talk-story-jam"
+              ></add-to-calendar-button>
+            </div>
           </article>
           <article>
             <h3 class="mb1">Story Jam REVEAL: The secret life of media</h3>
