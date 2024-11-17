@@ -41,29 +41,39 @@
       href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css"
     />
     <link rel="stylesheet" type="text/css" href="/css/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
   </head>
   <body class="sans-serif bg-su-washed-orange">
-    <div class="pa3 pa4-m pa5-l">
-      <header>
-        <nav class="flex justify-between items-center">
-          <a href="/">
-            <img
-              src="/img/logo-storytellersunited-200px.png"
-              alt="Logo Storytellers United"
-              class="mw3"
-            />
-          </a>
-          <a
-            class="no-underline f4 fw4 black br-pill ph3 pv2 bg-animate hover-bg-black-20"
-            href="/"
-            >← back</a
-          >
-        </nav>
-      </header>
-
-      <section class="tc">
+    <header class="bg-su-dark-orange">
+      <nav class="flex justify-between items-center pa3 pa4-m pa5-l">
+        <a href="/">
+          <img
+            src="/img/logo-storytellersunited-200px.png"
+            alt="Logo Storytellers United"
+            class="mw3"
+          />
+        </a>
+        <a
+          class="no-underline f4 fw4 white br-pill ph3 pv2 bg-animate hover-bg-white-20"
+          href="/"
+          >← back</a
+        >
+      </nav>
+      <div class="tc pb5 white">
         <h1 class="f2 f1-ns">Stories & Drinks @ IDFA</h1>
+        <p class="f4">
+          Join us for an evening of stories and drinks at the International
+          Documentary Film Festival Amsterdam (IDFA) 2024.
+        </p>
+      </div>
+    </header>
+
+    <div class="pa3 pa4-m pa5-l">
+      <section class="tc">
         <div class="center tl measure">
           <ul class="list f4">
             <li class="mb2">📅 20 November 2024</li>
@@ -80,12 +90,11 @@
         </div>
 
         <img
-          class="mb4 br4 mw6"
+          class="mb4 br4 w-100 mw6"
           src="/events/stories-and-drinks-idfa-2024/img/su-drinks-idfa-2024.jpg"
           alt="SU Community Call"
         />
         <div class="measure-wide center f3">
-          <p class="f3">Dear storytellers!</p>
           <p>
             It's time for one of the documentary highlights of the year:
             <a
@@ -162,7 +171,7 @@
             class="link white dim"
             data-goatcounter-click="conversation-slack"
           >
-            <i class="w3 h3" data-feather="slack"></i>
+            <i class="f1 fab fa-slack w3 h3"></i>
             <h3>Slack</h3>
           </a>
         </article>
@@ -173,7 +182,7 @@
             target="_blank"
             data-goatcounter-click="conversation-twitter"
           >
-            <i class="w3 h3" data-feather="twitter"></i>
+            <i class="f1 fab fa-twitter w3 h3"></i>
             <h3>Twitter</h3>
           </a>
         </article>
@@ -184,7 +193,7 @@
             target="_blank"
             data-goatcounter-click="conversation-medium"
           >
-            <i class="w3 h3" data-feather="edit-3"></i>
+            <i class="f1 fab fa-medium w3 h3"></i>
             <h3>Medium</h3>
           </a>
         </article>
@@ -195,7 +204,7 @@
             target="_blank"
             data-goatcounter-click="conversation-Email us"
           >
-            <i class="w3 h3" data-feather="mail"></i>
+            <i class="f1 fas fa-envelope w3 h3"></i>
             <h3>Email us</h3>
           </a>
         </article>
