@@ -43,7 +43,11 @@
       href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css"
     />
     <link rel="stylesheet" type="text/css" href="/css/main.css" />
-    <link rel="stylesheet" type="text/css" href="/story-jam-reveal/css/reveal.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/story-jam-reveal/css/reveal.css"
+    />
     <script src="/story-jam-reveal/js/p5.min.js"></script>
     <script src="/story-jam-reveal/js/reveal-sketch.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
@@ -52,7 +56,11 @@
       defer
       init
     ></script>
-    <script src="https://cdn.jsdelivr.net/npm/add-to-calendar-button@2" async defer></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/add-to-calendar-button@2"
+      async
+      defer
+    ></script>
     <!-- <link
       rel="stylesheet"
       href="https://unpkg.com/photoswipe@5.2.2/dist/photoswipe.css"
@@ -84,9 +92,7 @@
       <section class="full-width h-500px tc">
         <canvas id="reveal-canvas"></canvas>
         <div class="absolute top-0 tc w-100 vcenter">
-          <h1 class="f2 f1-ns hk-gothic ma0">
-            Story Jam
-          </h1>
+          <h1 class="f2 f1-ns hk-gothic ma0">Story Jam</h1>
           <h1 class="f1 f-headline-ns su-darker-blue hk-gothic ma0">REVEAL</h1>
           <h2 class="f3 f2-ns fw4 ma0 mb2 avenir">The secret life of media</h2>
           <img
@@ -149,20 +155,30 @@
         </nav>
 
         <div class="measure-wide tl center f4">
-          
-          <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/877993904?badge=0&amp;autopause=0&amp;quality_selector=1&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Story Jam REVEAL: The secret life of media"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+          <div style="padding: 56.25% 0 0 0; position: relative">
+            <iframe
+              src="https://player.vimeo.com/video/877993904?badge=0&amp;autopause=0&amp;quality_selector=1&amp;player_id=0&amp;app_id=58479"
+              frameborder="0"
+              allow="autoplay; fullscreen; picture-in-picture"
+              style="
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+              "
+              title="Story Jam REVEAL: The secret life of media"
+            ></iframe>
+          </div>
+          <script src="https://player.vimeo.com/api/player.js"></script>
 
           <h2 class="mt5" id="in-short">In short</h2>
-          <p>
-            Join Story Jam REVEAL 15 - 17 September in Utrecht to:
-          </p>
+          <p>Join Story Jam REVEAL 15 - 17 September in Utrecht to:</p>
           <p>
             💪 Make social impact with stories that reveal, at the intersection
             of storytelling, media and technology.
           </p>
-          <p>
-            🎨 Collaborate with storytellers across different disciplines.
-          </p>
+          <p>🎨 Collaborate with storytellers across different disciplines.</p>
           <p>
             🚀 Develop innovative stories under healthy time pressure, with
             inspiring input and professional guidance.
@@ -170,15 +186,34 @@
 
           <h2 id="presentations">Watch the project presentations</h2>
           <p>
-           After three days of jamming, seven teams presented their projects to a live audience at the Netherlands Film Festival. Watch their presentations below.
+            After three days of jamming, seven teams presented their projects to
+            a live audience at the Netherlands Film Festival. Watch their
+            presentations below.
           </p>
-          <div style='padding:56.25% 0 0 0;position:relative;'><iframe src='https://vimeo.com/showcase/10996174/embed' allowfullscreen frameborder='0' style='position:absolute;top:0;left:0;width:100%;height:100%;'></iframe></div>
+          <div style="padding: 56.25% 0 0 0; position: relative">
+            <iframe
+              src="https://vimeo.com/showcase/10996174/embed"
+              allowfullscreen
+              frameborder="0"
+              style="
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+              "
+            ></iframe>
+          </div>
 
           <h2 id="prototypes">Explore the prototypes</h2>
           <p>
-          Seven teams worked for three days to brainstorm, design and develop an innovative storytelling prototype answering to the theme REVEAL: The secret life of media. Explore the projects below.
+            Seven teams worked for three days to brainstorm, design and develop
+            an innovative storytelling prototype answering to the theme REVEAL:
+            The secret life of media. Explore the projects below.
           </p>
-          <div class="full-width ph3 flex justify-center flex-wrap f5" v-scope="{ projectIds: [
+          <div
+            class="full-width ph3 flex justify-center flex-wrap f5"
+            v-scope="{ projectIds: [
             '6506f1c4a2e0884549282ff9',
             '6506fbb1a2e0884549282ffe',
             '65071159a2e0884549283007',
@@ -186,9 +221,20 @@
             '65071dbda2e0884549283008',
             '6506d7f5a2e0884549282ff7',
             '6506fbdda2e0884549282fff',
-          ]}">
-            <article v-for="projectId in projectIds" class="w-100 w-50-m w-25-l mw6 tc pv2 pa2-sm pa3-ns">
-              <iframe :src="`https://hackdash.org/embed/projects/${projectId}?hide=prg`" width="100%" height="450" frameborder="0" allowtransparency="true" title="Hackdash"></iframe>
+          ]}"
+          >
+            <article
+              v-for="projectId in projectIds"
+              class="w-100 w-50-m w-25-l mw6 tc pv2 pa2-sm pa3-ns"
+            >
+              <iframe
+                :src="`https://hackdash.org/embed/projects/${projectId}?hide=prg`"
+                width="100%"
+                height="450"
+                frameborder="0"
+                allowtransparency="true"
+                title="Hackdash"
+              ></iframe>
             </article>
           </div>
 
@@ -299,11 +345,14 @@
           <article>
             <h3 class="mb1">Public Project Presentations</h3>
             <p>
-            On Sept 24th each Story Jam team will share their projects and creative process. Afterwards, there will be an opportunity to test the stories and talk to the makers over drinks. All welcome, bring your friends!
+              On Sept 24th each Story Jam team will share their projects and
+              creative process. Afterwards, there will be an opportunity to test
+              the stories and talk to the makers over drinks. All welcome, bring
+              your friends!
             </p>
 
-            NFF Prof Talk: Story Jam <br>
-            24 September 19:00 - 21:00 <br>
+            NFF Prof Talk: Story Jam <br />
+            24 September 19:00 - 21:00 <br />
             <a
               href="https://g.page/ssbutrecht?share"
               class="su-dark-orange no-underline"
@@ -315,7 +364,7 @@
                 class="dib mv2 mv3-l mr3 bg-su-dark-orange no-underline white pa3 f4 fw6 br3 boxshadow-hover"
                 href="https://www.filmfestival.nl/en/event/nff-prof-talk-story-jam"
                 >More info & free registration
-              </a> 
+              </a>
               <add-to-calendar-button
                 name="NFF Prof Talk: Story Jam"
                 options="'Apple','Google','iCal'"
@@ -353,8 +402,25 @@
           </article>
           <article>
             <h3 class="mb1">Open Call Launch</h3>
-            <p>31 July, 17:00 - 18:30, Online. Launching the open call for participating in Story Jam REVEAL, with lightning talks by Maf'j Alvarez, Dasha Ilina and Pim Schachtschabel.</p>
-            <div style='padding:56.25% 0 0 0;position:relative;'><iframe src='https://vimeo.com/showcase/10996211/embed' allowfullscreen frameborder='0' style='position:absolute;top:0;left:0;width:100%;height:100%;'></iframe></div>
+            <p>
+              31 July, 17:00 - 18:30, Online. Launching the open call for
+              participating in Story Jam REVEAL, with lightning talks by Maf'j
+              Alvarez, Dasha Ilina and Pim Schachtschabel.
+            </p>
+            <div style="padding: 56.25% 0 0 0; position: relative">
+              <iframe
+                src="https://vimeo.com/showcase/10996211/embed"
+                allowfullscreen
+                frameborder="0"
+                style="
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  width: 100%;
+                  height: 100%;
+                "
+              ></iframe>
+            </div>
           </article>
 
           <h2 class="mt5" id="previously">Previously</h2>
@@ -373,13 +439,19 @@
             in the video below.
           </p>
           <div class="mw8 center">
-            <div style="padding:56.25% 0 0 0;position:relative;">
+            <div style="padding: 56.25% 0 0 0; position: relative">
               <iframe
                 src="https://player.vimeo.com/video/768693318?h=5fffe6bb47&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;color=F4A726&amp;title=0&amp;byline=0&amp;portrait=0"
                 frameborder="0"
                 allow="autoplay; fullscreen; picture-in-picture"
                 allowfullscreen
-                style="position:absolute;top:0;left:0;width:100%;height:100%;"
+                style="
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  width: 100%;
+                  height: 100%;
+                "
                 title="Story Jam: New Neighbours"
               ></iframe>
             </div>
@@ -458,7 +530,7 @@
               <img
                 :src="mentor.image"
                 class="br-100 h4 w4 dib"
-                style="object-fit: cover;"
+                style="object-fit: cover"
                 :alt="mentor.name"
               />
               <h1 class="f3 mb2">{{mentor.name}}</h1>
@@ -478,7 +550,7 @@
           {
             name: 'Philo van Kemenade',
             title: `<a href='https://phivk.com/' target='_blank' class='su-dark-orange no-underline'>Cultural Technologist &amp; Community Organiser</a>`,
-            image: 'https://phivk.com/bio/img/philo_van_kemenade.jpg',
+            image: 'https://phivk.com/about/img/philo-van-kemenade-cf.jpg',
             bio: `<p>Philo van Kemenade creates tools, stories and things in between to amplify human connection with arts and culture. He helps cultural heritage organisations innovate to make their digital collections more accessible. In 2013, Philo initiated the Storytellers United network to create space for interdisciplinary practice around innovative forms of storytelling. He has a background in Artificial Intelligence and Cognitive Science. Currently based in his home town Amsterdam, Philo has previously lived in Japan, the UK, Slovakia and Austria.</p>`,
           },
           {
@@ -496,7 +568,7 @@
               <img
                 :src="organiser.image"
                 class="br-100 h4 w4 dib"
-                style="object-fit: cover;"
+                style="object-fit: cover"
                 :alt="organiser.name"
               />
               <h1 class="f3 mb2">{{organiser.name}}</h1>
@@ -572,23 +644,25 @@
           <h2 class="mt5" id="supported-by">Supported by</h2>
           <div class="flex">
             <div class="mr4">
-              <img src="/story-jam-reveal/img/logo-sci-white.gif" alt="Creative Industries Fund">
+              <img
+                src="/story-jam-reveal/img/logo-sci-white.gif"
+                alt="Creative Industries Fund"
+              />
             </div>
             <div>
-              Story Jam REVEAL is made possible by a grant from the Digital Culture track of the 
+              Story Jam REVEAL is made possible by a grant from the Digital
+              Culture track of the
               <a
                 class="su-dark-orange hover-no-underline"
                 href="https://www.stimuleringsfonds.nl/"
                 target="_blank"
                 rel="noopener"
                 >Creative Industries Fund NL</a
-              >. We are able to offer participation to Story Jam for free thanks to this financial support.
-            </div>  
+              >. We are able to offer participation to Story Jam for free thanks
+              to this financial support.
+            </div>
           </div>
-          <p class="f5">
-            
-            
-          </p>
+          <p class="f5"></p>
         </div>
         <section
           class="full-width flex flex-wrap justify-around items-center pv5 mt5 bg-white"

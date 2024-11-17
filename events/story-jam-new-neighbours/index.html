@@ -1,120 +1,218 @@
 <!DOCTYPE html>
-<html lang="en"> 
-<head> 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"> 
-  <title>Story Jam: New Neighbours &middot; Storytellers United</title>
-  <!--  Essential META Tags -->
-  <meta property="og:title" content="Story Jam: New Neighbours" />
-  <meta property="og:description" content="Make social impact with stories that connect, at the intersection of storytelling and technology. Collaborate with storytellers from different disciplines and cultural backgrounds. Develop innovative stories under healthy time pressure, with inspiring input and professional guidance.">
-  <meta name="description" content="Make social impact with stories that connect, at the intersection of storytelling and technology. Collaborate with storytellers from different disciplines and cultural backgrounds. Develop innovative stories under healthy time pressure, with inspiring input and professional guidance.">
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://storytellers.link/events/story-jam-new-neighbours" />
-  <meta property="og:image" content="https://storytellers.link/events/story-jam-new-neighbours/img/story-jam-new-neighbours.png" />
-  <meta name="twitter:card" content="summary_large_image">
-  <!--  Non-Essential, But Recommended -->
-  <meta property="og:site_name" content="Storytellers United">
-  <meta name="twitter:image:alt" content="Story Jam: New Neighbours">
-  <!-- Slack Unfurling -->
-  <meta name="twitter:label1" value="Where" />
-  <meta name="twitter:data1" value="Utrecht, the Netherlands" />
-  <meta name="twitter:label2" value="When" />
-  <meta name="twitter:data2" value="19 - 21 September 2022" />
+<html lang="en">
+  <head>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    />
+    <title>Story Jam: New Neighbours &middot; Storytellers United</title>
+    <!--  Essential META Tags -->
+    <meta property="og:title" content="Story Jam: New Neighbours" />
+    <meta
+      property="og:description"
+      content="Make social impact with stories that connect, at the intersection of storytelling and technology. Collaborate with storytellers from different disciplines and cultural backgrounds. Develop innovative stories under healthy time pressure, with inspiring input and professional guidance."
+    />
+    <meta
+      name="description"
+      content="Make social impact with stories that connect, at the intersection of storytelling and technology. Collaborate with storytellers from different disciplines and cultural backgrounds. Develop innovative stories under healthy time pressure, with inspiring input and professional guidance."
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://storytellers.link/events/story-jam-new-neighbours"
+    />
+    <meta
+      property="og:image"
+      content="https://storytellers.link/events/story-jam-new-neighbours/img/story-jam-new-neighbours.png"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <!--  Non-Essential, But Recommended -->
+    <meta property="og:site_name" content="Storytellers United" />
+    <meta name="twitter:image:alt" content="Story Jam: New Neighbours" />
+    <!-- Slack Unfurling -->
+    <meta name="twitter:label1" value="Where" />
+    <meta name="twitter:data1" value="Utrecht, the Netherlands" />
+    <meta name="twitter:label2" value="When" />
+    <meta name="twitter:data2" value="19 - 21 September 2022" />
 
-  <link rel="stylesheet" href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css"/>
-  <link rel="stylesheet" type="text/css" href="/css/main.css">
-  <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
-  <script src="https://unpkg.com/petite-vue@0.4.1/dist/petite-vue.iife.js" defer init></script>
-  <script type="module">
-    import PhotoSwipeLightbox from 'https://unpkg.com/photoswipe/dist/photoswipe-lightbox.esm.js';
-    import PhotoSwipeDynamicCaption from 'https://unpkg.com/photoswipe-dynamic-caption-plugin/photoswipe-dynamic-caption-plugin.esm.js';
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="/css/main.css" />
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script
+      src="https://unpkg.com/petite-vue@0.4.1/dist/petite-vue.iife.js"
+      defer
+      init
+    ></script>
+    <script type="module">
+      import PhotoSwipeLightbox from "https://unpkg.com/photoswipe/dist/photoswipe-lightbox.esm.js";
+      import PhotoSwipeDynamicCaption from "https://unpkg.com/photoswipe-dynamic-caption-plugin/photoswipe-dynamic-caption-plugin.esm.js";
 
-    const lightbox = new PhotoSwipeLightbox({
-      gallery: '#my-gallery',
-      children: 'a',
-      pswpModule: () => import('https://unpkg.com/photoswipe'),
-    });
+      const lightbox = new PhotoSwipeLightbox({
+        gallery: "#my-gallery",
+        children: "a",
+        pswpModule: () => import("https://unpkg.com/photoswipe"),
+      });
 
-    const captionPlugin = new PhotoSwipeDynamicCaption(lightbox, {
-      type: 'auto', // 'auto', 'below', 'aside'
-    });
+      const captionPlugin = new PhotoSwipeDynamicCaption(lightbox, {
+        type: "auto", // 'auto', 'below', 'aside'
+      });
 
-    lightbox.init();
-  </script>
-  <link rel="stylesheet" href="https://unpkg.com/photoswipe@5.2.2/dist/photoswipe.css"/>
-  <link rel="stylesheet" href="https://unpkg.com/photoswipe-dynamic-caption-plugin/photoswipe-dynamic-caption-plugin.css">
-  <style>
-    .full-width {
-      width: 100vw;
-      position: relative;
-      left: 50%;
-      right: 50%;
-      margin-left: -50vw;
-      margin-right: -50vw;
-    }
-  </style>
-</head> 
-<body class="sans-serif bg-su-washed-orange">
-  <div class="pa3 pa4-m pa5-l">
-    <header>
-      <nav class="flex justify-between items-center">
-        <a href="/">
-          <img 
-          src="/img/logo-storytellersunited-200px.png"
-          alt="Logo Storytellers United"
-          class="mw3"
+      lightbox.init();
+    </script>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/photoswipe@5.2.2/dist/photoswipe.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/photoswipe-dynamic-caption-plugin/photoswipe-dynamic-caption-plugin.css"
+    />
+    <style>
+      .full-width {
+        width: 100vw;
+        position: relative;
+        left: 50%;
+        right: 50%;
+        margin-left: -50vw;
+        margin-right: -50vw;
+      }
+    </style>
+  </head>
+  <body class="sans-serif bg-su-washed-orange">
+    <div class="pa3 pa4-m pa5-l">
+      <header>
+        <nav class="flex justify-between items-center">
+          <a href="/">
+            <img
+              src="/img/logo-storytellersunited-200px.png"
+              alt="Logo Storytellers United"
+              class="mw3"
+            />
+          </a>
+          <a
+            class="no-underline f4 fw4 black br-pill ph3 pv2 bg-animate hover-bg-black-20"
+            href="../../"
+            >← back</a
           >
-        </a>
-        <a class="no-underline f4 fw4 black br-pill ph3 pv2 bg-animate hover-bg-black-20" href="../../">← back</a>
-      </nav>
-    </header>
+        </nav>
+      </header>
 
-    <section class="tc">
-      <h1 class="f2 f1-ns">Story Jam: <span class="fw3">New Neighbours</span></h1>
-      <div class="f3 f2-ns mb3">19 - 21 September 2022</div>
-      <div class="f4 f3-ns fw1 mb4">part of the Netherlands Film Festival</div>
-      <div class="mb4">
-        <!-- <a class="dib mv2 mv3-l bg-su-dark-orange no-underline white pv2 ph3 f4 f3-ns fw6 br3 boxshadow-hover" href="./apply/">Apply by August <span style="text-decoration: line-through;">22</span> 29</a> -->
-        <!-- <p class="f3 fw4">Applications now closed</p> -->
-      </div>
-      <nav class="f6">
-        <span class="o-50">Jump to: </span>
-        <ul class="list dib pa0 mt0">
-          <li class="dib pa2"><a class="su-dark-orange" href="#prototypes">Explore the prototypes</a></li>
-          <li class="dib pa2"><a class="su-dark-orange" href="#photos">Photo gallery</a></li>
-          <li class="dib pa2"><a class="su-dark-orange" href="#what-will-we-do">What will we do?</a></li>
-          <li class="dib pa2"><a class="su-dark-orange" href="#with-whom">With whom?</a></li>
-          <li class="dib pa2"><a class="su-dark-orange" href="#why-now">Why now?</a></li>
-          <li class="dib pa2"><a class="su-dark-orange" href="#in-short">In short</a></li>
-          <li class="dib pa2"><a class="su-dark-orange" href="#where-and-when">Where & When?</a></li>
-          <li class="dib pa2"><a class="su-dark-orange" href="#programme">Programme</a></li>
-          <li class="dib pa2"><a class="su-dark-orange" href="#mentors-and-speakers">Mentors and Speakers</a></li>
-          <li class="dib pa2"><a class="su-dark-orange" href="#about-the-organisers">About the organisers</a></li>
-        </ul>
-      </nav>
-      <!-- <img class="w-100 mb4 mw8" src="./img/story-jam-new-neighbours.png" alt="Story Jam: New Neighbours"> -->
-      <div class="mw8 center">
-        <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/768693318?h=5fffe6bb47&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;color=F4A726&amp;title=0&amp;byline=0&amp;portrait=0" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Story Jam: New Neighbours"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
-      </div>
-      <div class="measure-wide tl center f4">
-        <h2 id="prototypes">Explore the prototypes</h2>
-        <p>
-        Five teams worked for three days to brainstorm, design and develop a prototype of an innovative, interdisciplinary, intercultural storytelling project. Explore their documentation below.
-        </p>
-        <div class="full-width ph3 ph4-m ph5-l flex justify-center flex-wrap f5" v-scope="{ projectIds: [
+      <section class="tc">
+        <h1 class="f2 f1-ns">
+          Story Jam: <span class="fw3">New Neighbours</span>
+        </h1>
+        <div class="f3 f2-ns mb3">19 - 21 September 2022</div>
+        <div class="f4 f3-ns fw1 mb4">
+          part of the Netherlands Film Festival
+        </div>
+        <div class="mb4">
+          <!-- <a class="dib mv2 mv3-l bg-su-dark-orange no-underline white pv2 ph3 f4 f3-ns fw6 br3 boxshadow-hover" href="./apply/">Apply by August <span style="text-decoration: line-through;">22</span> 29</a> -->
+          <!-- <p class="f3 fw4">Applications now closed</p> -->
+        </div>
+        <nav class="f6">
+          <span class="o-50">Jump to: </span>
+          <ul class="list dib pa0 mt0">
+            <li class="dib pa2">
+              <a class="su-dark-orange" href="#prototypes"
+                >Explore the prototypes</a
+              >
+            </li>
+            <li class="dib pa2">
+              <a class="su-dark-orange" href="#photos">Photo gallery</a>
+            </li>
+            <li class="dib pa2">
+              <a class="su-dark-orange" href="#what-will-we-do"
+                >What will we do?</a
+              >
+            </li>
+            <li class="dib pa2">
+              <a class="su-dark-orange" href="#with-whom">With whom?</a>
+            </li>
+            <li class="dib pa2">
+              <a class="su-dark-orange" href="#why-now">Why now?</a>
+            </li>
+            <li class="dib pa2">
+              <a class="su-dark-orange" href="#in-short">In short</a>
+            </li>
+            <li class="dib pa2">
+              <a class="su-dark-orange" href="#where-and-when">Where & When?</a>
+            </li>
+            <li class="dib pa2">
+              <a class="su-dark-orange" href="#programme">Programme</a>
+            </li>
+            <li class="dib pa2">
+              <a class="su-dark-orange" href="#mentors-and-speakers"
+                >Mentors and Speakers</a
+              >
+            </li>
+            <li class="dib pa2">
+              <a class="su-dark-orange" href="#about-the-organisers"
+                >About the organisers</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <!-- <img class="w-100 mb4 mw8" src="./img/story-jam-new-neighbours.png" alt="Story Jam: New Neighbours"> -->
+        <div class="mw8 center">
+          <div style="padding: 56.25% 0 0 0; position: relative">
+            <iframe
+              src="https://player.vimeo.com/video/768693318?h=5fffe6bb47&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;color=F4A726&amp;title=0&amp;byline=0&amp;portrait=0"
+              frameborder="0"
+              allow="autoplay; fullscreen; picture-in-picture"
+              allowfullscreen
+              style="
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+              "
+              title="Story Jam: New Neighbours"
+            ></iframe>
+          </div>
+          <script src="https://player.vimeo.com/api/player.js"></script>
+        </div>
+        <div class="measure-wide tl center f4">
+          <h2 id="prototypes">Explore the prototypes</h2>
+          <p>
+            Five teams worked for three days to brainstorm, design and develop a
+            prototype of an innovative, interdisciplinary, intercultural
+            storytelling project. Explore their documentation below.
+          </p>
+          <div
+            class="full-width ph3 ph4-m ph5-l flex justify-center flex-wrap f5"
+            v-scope="{ projectIds: [
           '632ae1446d202d739f69ce01',
           '6329f37c6d202d739f69cdf6',
           '632b1aea6d202d739f69ce03',
           '632adf2a6d202d739f69cdff',
           '632adaf16d202d739f69cdfc',
-        ]}">
-          <article v-for="projectId in projectIds" class="w-100 w-50-m w-third-l mw6 tc pv2 pa2-sm pa3-m pa4-l">
-            <iframe :src="`https://hackdash.org/embed/projects/${projectId}?hide=prg`" width="100%" height="450" frameborder="0" allowtransparency="true" title="Hackdash"></iframe>
-          </article>
-        </div>
+        ]}"
+          >
+            <article
+              v-for="projectId in projectIds"
+              class="w-100 w-50-m w-third-l mw6 tc pv2 pa2-sm pa3-m pa4-l"
+            >
+              <iframe
+                :src="`https://hackdash.org/embed/projects/${projectId}?hide=prg`"
+                width="100%"
+                height="450"
+                frameborder="0"
+                allowtransparency="true"
+                title="Hackdash"
+              ></iframe>
+            </article>
+          </div>
 
-        <h2 id="photos">Photo gallery</h2>
-        <div class="full-width ph3 ph4-m ph5-l tc">
-          <div class="pswp-gallery" id="my-gallery" v-scope="{ photos: [
+          <h2 id="photos">Photo gallery</h2>
+          <div class="full-width ph3 ph4-m ph5-l tc">
+            <div
+              class="pswp-gallery"
+              id="my-gallery"
+              v-scope="{ photos: [
             {href: 'https://lh3.googleusercontent.com/KdC0ajXi41orniWmk5jIkBg2kyKTkeQZqorW52kQlNfSQoHKKt36suE8LTFTlA7U68cKhiMTmxq-wmPjfFHHAwPe_drGq22nt1HaVk6mxrNNlj0xabqGPOP6SyrOydnpEREYzDWgt6Q', width: '1920', height: '1436'},
             {href: 'https://lh3.googleusercontent.com/mWMGglVG2EEt1Aa7_4yXEzIE0CCU43Uph-EjaPYc9rCMycP6BZ8AmRmU8WErh6aReJRNFTk9r5ToCY9_J6aRnQMC2VhkdIv1iXXdekiFRDjz0MhJsC10ho1qtO0STLPYuXFAlmEMoN4', width: '1920', height: '1280', caption: '© Paulus van Dorsten for NFF'},
             {href: 'https://lh3.googleusercontent.com/ZiJXCT_uYkP9Yp53hRh2uNVLMwmw2Alwr6blRtXLTUbZO29OXNtT2ntTPraR0aiguX_ivJnOB-7rO9FcGtILX-qceuWrUjv_vJC4D5J_StBEw24MuUpBnE8FjrWOzaGDzRykbTvykh8', width: '1280', height: '1920', caption: '© Paulus van Dorsten for NFF'},
@@ -168,134 +266,311 @@
             {href: 'https://lh3.googleusercontent.com/r44Zny8O1dk1PFZoY1v_iKg6VDPpeQa-u_ZdM27uvh7o1eQTmVYfez0fmdDLcJh48nmYTGXklcYcoYJ2XdbW9lPaeOyRRUo4iQ2VgidWOj5DdXY_XhYmDCA475bc8MPZP9_lAkIQeDg', width: '1920', height: '1280'},
             {href: 'https://lh3.googleusercontent.com/jL7PgVBtZNR-yRsGBdD1_-tcCsAyV-bXHy-o2gHb0_lIEdzeFJjZfvpv9s6gJ38X0yeBEu6D-kw-F2Gww1vbjLnhQS4BA8Y8YEt17dqMzF4_FiawVXQe8Mp64XacfFiqRRUnOJmqk_M', width: '1920', height: '1436'},
             {href: 'https://lh3.googleusercontent.com/PSbB-yefXfJqPRErgCXaQrXYmAgxdjns19TfydFxi_Y8C1tH7vQc03wwGP9HYfHtzPovn9QIGItJvTGV1XpYbD_pjhPwNxSc7woj-29d9KfsqbtbvHl3n7TXSA_ztadesuwoKwEtyj0', width: '1920', height: '1280'},
-          ]}">
-            <a
-              v-for="photo in photos"
-              :href="`${photo.href}=w1920`"
-              :data-pswp-width="photo.width"
-              :data-pswp-height="photo.height"
-              target="_blank"
+          ]}"
             >
-              <img
-                :src="`${photo.href}=h120`"
-                alt="Story Jam: New Neighbours"
-              />
-              <span v-if="photo.caption" class="pswp-caption-content">{{photo.caption}}</span>
-              <span v-else class="pswp-caption-content"></span>
-            </a>
-          </div>
-        </div>
-
-        <h2 id="what-will-we-do">What will we do?</h2>
-        <p class="f3">On 19-21 September Storytellers United organises Story Jam: New Neighbours, in cooperation with Sound &amp; Vision and the Netherlands Film Festival. During three days, you work together in multidisciplinary teams under the guidance of coaches on new intercultural story prototypes.&nbsp;</p>
-        <p>The stories we will be developing are:</p>
-        <ul>
-          <li><strong>Intercultural</strong>: developed with Dutch newcomers about the added value of cultural cross-pollination.</li>
-          <li><strong>Interdisciplinary</strong>: told from the various expertises that team members bring together.</li>
-          <li><strong>Innovative</strong>: experimental in the application of new technology and media for storytelling.</li>
-        </ul>
-        <p>Each prototype casts a different light on the multicultural society of the Netherlands and uses the medium that best suits the makers and their story. Projects can for example take the form of a web experience, but also be VR, performance, app or installation. After three days of working together, the teams will share their results publicly during the Netherlands Film Festival.</p>
-        <p>See <a href="#programme" class="su-dark-orange no-underline">an outline of the programme below</a>.</p>
-
-        <h2 id="with-whom">With whom?</h2>
-        <p>We warmly invite creatives of all professional backgrounds with an interest in innovative forms of storytelling to take part. Perhaps you do photography, develop websites, produce podcasts, make theatre, are into data visualisation, create immersive experiences in VR or AR, excel at designing user interfaces or you enjoy editing videos for online platforms. Whatever experience you bring, you certainly have an open mind and enjoy collaborating across disciplines.</p>
-        <p>We especially encourage you to join if you have moved to the Netherlands from another country. With this Story Jam we want to build on the unique perspectives from people who are new to this country and celebrate intercultural collaboration, experiences and stories.</p>
-        
-        <h2 id="why-now">Why now?</h2>
-        <p>Influenced by migratory flows, including wars, political unrest and climate crises, Dutch society is becoming increasingly diverse. Story Jam: New Neighbours focuses on new stories from these multicultural communities and the social and economic value they bring to the table. How can we support each other and what can these connections and collaborations bring? How can we celebrate social and cultural richness? What can different backgrounds learn from each other? And how can intercultural stories help?</p>
-        <p>With this Story Jam, we want to challenge stereotypes and expose commonly held myths, put migrants' voices at the centre of discussions about migration and deliver innovative messages to promote the integration of Dutch newcomers into local communities.</p>
-
-        <div class="mw9 center bg-su-dark-orange white br3 dib tc tl-l">
-          <div class="flex justify-between items-center items-center-l flex-column flex-row-l">
-            <div class="pa3 ph4-ns">
-              <h2 class="mv3">Like to know more?</h2>
-              <p class="f5 measure">Storytellers United is an international network of professional storytellers across a wide range of backgrounds. Curious to learn more about this event or other Storytellers United activities?</p>
-            </div>
-            <div class="pa3 ph4-ns tc flex flex-wrap justify-center">
-              <a class="f5 fw6 grow no-underline br3 pv2 ph3 ma2 dib bg-white su-dark-orange" href="https://medium.com/storytellers-united/everything-you-want-to-know-about-story-jam-new-neighbours-a5a936d9c668" target="_blank">Read more about the Story Jam</a>
-              <a class="f5 fw6 grow no-underline br3 pv2 ph3 ma2 dib white ba b--white bw1" href="/invite" target="_blank">Join us on Slack</a>
+              <a
+                v-for="photo in photos"
+                :href="`${photo.href}=w1920`"
+                :data-pswp-width="photo.width"
+                :data-pswp-height="photo.height"
+                target="_blank"
+              >
+                <img
+                  :src="`${photo.href}=h120`"
+                  alt="Story Jam: New Neighbours"
+                />
+                <span v-if="photo.caption" class="pswp-caption-content"
+                  >{{photo.caption}}</span
+                >
+                <span v-else class="pswp-caption-content"></span>
+              </a>
             </div>
           </div>
-        </div>
 
-        <h2 id="in-short">In short</h2>
-        <p>💪 Make social impact with stories that connect, at the intersection of storytelling and technology.</p>
-        <p>🎨 Collaborate with storytellers from different disciplines and cultural backgrounds.</p>
-        <p>🚀 Develop innovative stories under healthy time pressure, with inspiring input and professional guidance.</p>
+          <h2 id="what-will-we-do">What will we do?</h2>
+          <p class="f3">
+            On 19-21 September Storytellers United organises Story Jam: New
+            Neighbours, in cooperation with Sound &amp; Vision and the
+            Netherlands Film Festival. During three days, you work together in
+            multidisciplinary teams under the guidance of coaches on new
+            intercultural story prototypes.&nbsp;
+          </p>
+          <p>The stories we will be developing are:</p>
+          <ul>
+            <li>
+              <strong>Intercultural</strong>: developed with Dutch newcomers
+              about the added value of cultural cross-pollination.
+            </li>
+            <li>
+              <strong>Interdisciplinary</strong>: told from the various
+              expertises that team members bring together.
+            </li>
+            <li>
+              <strong>Innovative</strong>: experimental in the application of
+              new technology and media for storytelling.
+            </li>
+          </ul>
+          <p>
+            Each prototype casts a different light on the multicultural society
+            of the Netherlands and uses the medium that best suits the makers
+            and their story. Projects can for example take the form of a web
+            experience, but also be VR, performance, app or installation. After
+            three days of working together, the teams will share their results
+            publicly during the Netherlands Film Festival.
+          </p>
+          <p>
+            See
+            <a href="#programme" class="su-dark-orange no-underline"
+              >an outline of the programme below</a
+            >.
+          </p>
 
-        <h2 id="take-part">Take part</h2>
-        <p><!-- Would you like to join? Register before <span style="text-decoration: line-through;">22</span> EXTENDED: 29 August using the <a href="./apply" class="su-dark-orange no-underline">application form</a>. The selection of participants will be announced no later than 5 September.  -->Participation is free of charge, catering will be provided.</p>
-        <p>Teams will be carefully formed to ensure a variety of skills, based on the information submitted in applications. Applications are sent on an individual basis. In case you want to apply with a team, please clearly mention this and include all team members in the application form.</p>
-        <p>You're warmly invited to bring project ideas into the co-creation process. Please keep in mind that each team will start with an ideation process to determine a focus that is shared by all team members. We ask you to have an open mind about the ideas you bring in and actively work to let them be enriched by new perspectives of others in your team.</p>
+          <h2 id="with-whom">With whom?</h2>
+          <p>
+            We warmly invite creatives of all professional backgrounds with an
+            interest in innovative forms of storytelling to take part. Perhaps
+            you do photography, develop websites, produce podcasts, make
+            theatre, are into data visualisation, create immersive experiences
+            in VR or AR, excel at designing user interfaces or you enjoy editing
+            videos for online platforms. Whatever experience you bring, you
+            certainly have an open mind and enjoy collaborating across
+            disciplines.
+          </p>
+          <p>
+            We especially encourage you to join if you have moved to the
+            Netherlands from another country. With this Story Jam we want to
+            build on the unique perspectives from people who are new to this
+            country and celebrate intercultural collaboration, experiences and
+            stories.
+          </p>
 
-        <!-- <a class="dib mv2 mv3-l bg-su-dark-orange no-underline white pv2 ph3 f4 f3-ns fw6 br3 boxshadow-hover" href="./apply/">Apply now</a> -->
+          <h2 id="why-now">Why now?</h2>
+          <p>
+            Influenced by migratory flows, including wars, political unrest and
+            climate crises, Dutch society is becoming increasingly diverse.
+            Story Jam: New Neighbours focuses on new stories from these
+            multicultural communities and the social and economic value they
+            bring to the table. How can we support each other and what can these
+            connections and collaborations bring? How can we celebrate social
+            and cultural richness? What can different backgrounds learn from
+            each other? And how can intercultural stories help?
+          </p>
+          <p>
+            With this Story Jam, we want to challenge stereotypes and expose
+            commonly held myths, put migrants' voices at the centre of
+            discussions about migration and deliver innovative messages to
+            promote the integration of Dutch newcomers into local communities.
+          </p>
 
-        <h2 id="where-and-when">Where & When?</h2>
-        <article>
-          <h3 class="mb1">Kick off event</h3>
-          8 September, 17:00 - 20:00 <br>
-          <a href="https://goo.gl/maps/DDVePMeZA1Lfdayt7" class="su-dark-orange no-underline" target="_blank">Sound & Vision</a>, Hilversum
-        </article>
-        <article>
-          <h3 class="mb1">Story Jam: New Neighbours</h3>
-          19 – 21 September, three full days (more details below) <br>
-          <a href="https://goo.gl/maps/qDBeZ2gfym3HrADi6" class="su-dark-orange no-underline" target="_blank" rel="noopener">IMPAKT - Centre for Media Culture</a>, Utrecht
-        </article>
-        <article>
-          <h3 class="mb1">Public Presentation</h3>
-          24 September, 15:00 - 17:00<br>
-          <a href="https://g.page/ssbutrecht?share" class="su-dark-orange no-underline" target="_blank">Hekman Foyer, Stadsschouwburg</a>, Utrecht <br>
-          All welcome, bring your friends!
-        </article>
+          <div class="mw9 center bg-su-dark-orange white br3 dib tc tl-l">
+            <div
+              class="flex justify-between items-center items-center-l flex-column flex-row-l"
+            >
+              <div class="pa3 ph4-ns">
+                <h2 class="mv3">Like to know more?</h2>
+                <p class="f5 measure">
+                  Storytellers United is an international network of
+                  professional storytellers across a wide range of backgrounds.
+                  Curious to learn more about this event or other Storytellers
+                  United activities?
+                </p>
+              </div>
+              <div class="pa3 ph4-ns tc flex flex-wrap justify-center">
+                <a
+                  class="f5 fw6 grow no-underline br3 pv2 ph3 ma2 dib bg-white su-dark-orange"
+                  href="https://medium.com/storytellers-united/everything-you-want-to-know-about-story-jam-new-neighbours-a5a936d9c668"
+                  target="_blank"
+                  >Read more about the Story Jam</a
+                >
+                <a
+                  class="f5 fw6 grow no-underline br3 pv2 ph3 ma2 dib white ba b--white bw1"
+                  href="/invite"
+                  target="_blank"
+                  >Join us on Slack</a
+                >
+              </div>
+            </div>
+          </div>
 
-        <h2 id="programme">Programme</h2>
-        <p>Below is a rough outline of the programme, subject to change.</p>
-        <p>👉 Have a look at <a href="./programme/" class="su-dark-orange">the full programme</a> for more details.</p>
-        <h4>Mon 19 Sept</h4>
-        <ul class="f5">
-          <li>Walk in, breakfast, coffee &amp; tea</li>
-          <li>Welcome, introduction and goal setting</li>
-          <li>Brainstorm in teams: Discover insights into the problem</li>
-          <li>Lunch</li>
-          <li>Brainstorm in teams: Define the area to focus on</li>
-          <li>PPP stand-up: teams give a short 2 min update on Progress, Problems &amp; Plans. Other teams can be asked for input and offer feedback.</li>
-          <li>End of day goal: a clear concept carried by the entire team</li>
-        </ul>
-        <h4>Tue 20 Sept</h4>
-        <ul class="f5">
-          <li>Walk in, breakfast, coffee &amp; tea</li>
-          <li>Working in teams: Develop potential solutionsIdeally the clear concept enables teams to divide work. Some participants are designing, others are out recording, others are developing.</li>
-          <li>Lunch</li>
-          <li>Working in teams: Deliver solutions that work</li>
-          <li>PPP stand-up: teams give a short 2 min update on Progress, Problems &amp; Plans. Other teams can be asked for input and offer feedback.</li>
-          <li>End of day goal: a first prototype (think hacky solutions, duct tape, placeholder content)</li>
-        </ul>
-        <h4>Wed 21 Sept</h4>
-        <ul class="f5">
-          <li>Walk in, breakfast, coffee &amp; tea</li>
-          <li>Working in teams: Develop &amp; Deliver iteration</li>
-          <li>Lunch</li>
-          <li>Finishing touches</li>
-          <li>Internal demo to other teams: tell the story!</li>
-          <li>End of day goal: a working prototype demoed in front of a live audience</li>
-        </ul>
-        <h4>Thu 22 Sept</h4>
-        <ul class="f5">
-          <li>Opening <a href="https://www.filmfestival.nl/en/event/storyspace/" class="su-dark-orange no-underline" target="_blank">NFF Storyspace</a></li>
-        </ul>
-        <h4>Fri 23 Sept</h4>
-        <ul class="f5">
-          <li><a href="https://www.filmfestival.nl/en/professionals/nff-conferentie/" class="su-dark-orange no-underline" target="_blank">NFF Professionals conference</a></li>
-        </ul>
-        <h4>Sat 24 Sept</h4>
-        <ul class="f5">
-          <li><a href="https://www.filmfestival.nl/en/festival-2/nff-digitale-cultuur/" class="su-dark-orange no-underline" target="_blank">Presentations Gouden Kalf Digital Culture</a></li>
-          <li>Public Presentations & Live Demos Story Jam <br> 15:00 - 17:00, <a href="https://g.page/ssbutrecht?share" class="su-dark-orange no-underline" target="_blank">Hekman Foyer, Stadsschouwburg</a>, Utrecht <br>All welcome, bring your friends! </li>
-        </ul>
+          <h2 id="in-short">In short</h2>
+          <p>
+            💪 Make social impact with stories that connect, at the intersection
+            of storytelling and technology.
+          </p>
+          <p>
+            🎨 Collaborate with storytellers from different disciplines and
+            cultural backgrounds.
+          </p>
+          <p>
+            🚀 Develop innovative stories under healthy time pressure, with
+            inspiring input and professional guidance.
+          </p>
 
-        <h2 id="mentors-and-speakers">Mentors and Speakers</h2>
-        <p>During the Story Jam and the preceding kick off event, you are supported by a team of mentors and speakers who bring a diverse range of experience and expertise. More mentors and speakers will be announced in the run-up to the event.</p>
-        <div class="full-width pa3 pa4-m pa5-l flex justify-center flex-wrap f5" v-scope="{ mentors: [
+          <h2 id="take-part">Take part</h2>
+          <p>
+            <!-- Would you like to join? Register before <span style="text-decoration: line-through;">22</span> EXTENDED: 29 August using the <a href="./apply" class="su-dark-orange no-underline">application form</a>. The selection of participants will be announced no later than 5 September.  -->Participation
+            is free of charge, catering will be provided.
+          </p>
+          <p>
+            Teams will be carefully formed to ensure a variety of skills, based
+            on the information submitted in applications. Applications are sent
+            on an individual basis. In case you want to apply with a team,
+            please clearly mention this and include all team members in the
+            application form.
+          </p>
+          <p>
+            You're warmly invited to bring project ideas into the co-creation
+            process. Please keep in mind that each team will start with an
+            ideation process to determine a focus that is shared by all team
+            members. We ask you to have an open mind about the ideas you bring
+            in and actively work to let them be enriched by new perspectives of
+            others in your team.
+          </p>
+
+          <!-- <a class="dib mv2 mv3-l bg-su-dark-orange no-underline white pv2 ph3 f4 f3-ns fw6 br3 boxshadow-hover" href="./apply/">Apply now</a> -->
+
+          <h2 id="where-and-when">Where & When?</h2>
+          <article>
+            <h3 class="mb1">Kick off event</h3>
+            8 September, 17:00 - 20:00 <br />
+            <a
+              href="https://goo.gl/maps/DDVePMeZA1Lfdayt7"
+              class="su-dark-orange no-underline"
+              target="_blank"
+              >Sound & Vision</a
+            >, Hilversum
+          </article>
+          <article>
+            <h3 class="mb1">Story Jam: New Neighbours</h3>
+            19 – 21 September, three full days (more details below) <br />
+            <a
+              href="https://goo.gl/maps/qDBeZ2gfym3HrADi6"
+              class="su-dark-orange no-underline"
+              target="_blank"
+              rel="noopener"
+              >IMPAKT - Centre for Media Culture</a
+            >, Utrecht
+          </article>
+          <article>
+            <h3 class="mb1">Public Presentation</h3>
+            24 September, 15:00 - 17:00<br />
+            <a
+              href="https://g.page/ssbutrecht?share"
+              class="su-dark-orange no-underline"
+              target="_blank"
+              >Hekman Foyer, Stadsschouwburg</a
+            >, Utrecht <br />
+            All welcome, bring your friends!
+          </article>
+
+          <h2 id="programme">Programme</h2>
+          <p>Below is a rough outline of the programme, subject to change.</p>
+          <p>
+            👉 Have a look at
+            <a href="./programme/" class="su-dark-orange">the full programme</a>
+            for more details.
+          </p>
+          <h4>Mon 19 Sept</h4>
+          <ul class="f5">
+            <li>Walk in, breakfast, coffee &amp; tea</li>
+            <li>Welcome, introduction and goal setting</li>
+            <li>Brainstorm in teams: Discover insights into the problem</li>
+            <li>Lunch</li>
+            <li>Brainstorm in teams: Define the area to focus on</li>
+            <li>
+              PPP stand-up: teams give a short 2 min update on Progress,
+              Problems &amp; Plans. Other teams can be asked for input and offer
+              feedback.
+            </li>
+            <li>End of day goal: a clear concept carried by the entire team</li>
+          </ul>
+          <h4>Tue 20 Sept</h4>
+          <ul class="f5">
+            <li>Walk in, breakfast, coffee &amp; tea</li>
+            <li>
+              Working in teams: Develop potential solutionsIdeally the clear
+              concept enables teams to divide work. Some participants are
+              designing, others are out recording, others are developing.
+            </li>
+            <li>Lunch</li>
+            <li>Working in teams: Deliver solutions that work</li>
+            <li>
+              PPP stand-up: teams give a short 2 min update on Progress,
+              Problems &amp; Plans. Other teams can be asked for input and offer
+              feedback.
+            </li>
+            <li>
+              End of day goal: a first prototype (think hacky solutions, duct
+              tape, placeholder content)
+            </li>
+          </ul>
+          <h4>Wed 21 Sept</h4>
+          <ul class="f5">
+            <li>Walk in, breakfast, coffee &amp; tea</li>
+            <li>Working in teams: Develop &amp; Deliver iteration</li>
+            <li>Lunch</li>
+            <li>Finishing touches</li>
+            <li>Internal demo to other teams: tell the story!</li>
+            <li>
+              End of day goal: a working prototype demoed in front of a live
+              audience
+            </li>
+          </ul>
+          <h4>Thu 22 Sept</h4>
+          <ul class="f5">
+            <li>
+              Opening
+              <a
+                href="https://www.filmfestival.nl/en/event/storyspace/"
+                class="su-dark-orange no-underline"
+                target="_blank"
+                >NFF Storyspace</a
+              >
+            </li>
+          </ul>
+          <h4>Fri 23 Sept</h4>
+          <ul class="f5">
+            <li>
+              <a
+                href="https://www.filmfestival.nl/en/professionals/nff-conferentie/"
+                class="su-dark-orange no-underline"
+                target="_blank"
+                >NFF Professionals conference</a
+              >
+            </li>
+          </ul>
+          <h4>Sat 24 Sept</h4>
+          <ul class="f5">
+            <li>
+              <a
+                href="https://www.filmfestival.nl/en/festival-2/nff-digitale-cultuur/"
+                class="su-dark-orange no-underline"
+                target="_blank"
+                >Presentations Gouden Kalf Digital Culture</a
+              >
+            </li>
+            <li>
+              Public Presentations & Live Demos Story Jam <br />
+              15:00 - 17:00,
+              <a
+                href="https://g.page/ssbutrecht?share"
+                class="su-dark-orange no-underline"
+                target="_blank"
+                >Hekman Foyer, Stadsschouwburg</a
+              >, Utrecht <br />All welcome, bring your friends!
+            </li>
+          </ul>
+
+          <h2 id="mentors-and-speakers">Mentors and Speakers</h2>
+          <p>
+            During the Story Jam and the preceding kick off event, you are
+            supported by a team of mentors and speakers who bring a diverse
+            range of experience and expertise. More mentors and speakers will be
+            announced in the run-up to the event.
+          </p>
+          <div
+            class="full-width pa3 pa4-m pa5-l flex justify-center flex-wrap f5"
+            v-scope="{ mentors: [
           {
             name: 'Yiğit Aksakoğlu',
             title: `<a href=https://mahalle.art/ target=_blank class=su-dark-orange no-underline>Founder Mahalle Art &amp; Kultur</a>`,
@@ -359,18 +634,32 @@
               <p>In collaboration with <a href='https://emiliebaltz.com/' target='_blank' class='su-dark-orange no-underline'>Emilie Baltz</a> she created the futuristic cooking show called '<a href='https://www.klasien.nl/futurist-cookbook' target='_blank' class='su-dark-orange no-underline'>EAT TECH KITCHEN</a>' (winner IDFA Doclab Immersive Non-Fiction Award 2018) and in collaboration with Natalie Dixon she created '<a href='https://www.goodneighbours.net/' target='_blank' class='su-dark-orange no-underline'>Good Neighbours</a>': an interactive performance about intimate surveillance and the micro-politics of neighbourhoods (winner Dutch Design Award 2022, nominated for Gouden Kalf Digitale Cultuur 2022). During the recent lockdown she created '<a href='https://distancedisco.nl/' target='_blank' class='su-dark-orange no-underline'>DISTANCE DISCO</a>', a virtual dancefloor for techno romances!</p>
             `,
           },
-        ]}">
-          <article v-for="mentor in mentors" class="w-100 w-50-m w-third-l mw6 tc pv2 pa2-sm pa3-m pa4-l">
-            <img :src="mentor.image" class="br-100 h4 w4 dib" style="object-fit: cover;" :alt="mentor.name">
-            <h1 class="f3 mb2">{{mentor.name}}</h1>
-            <h2 v-html="mentor.title" class="f5 fw4 gray mt0 su-dark-orange"></h2>
-            <div v-html="mentor.bio" class="tl"></div>
-          </article>
-        </div>
+        ]}"
+          >
+            <article
+              v-for="mentor in mentors"
+              class="w-100 w-50-m w-third-l mw6 tc pv2 pa2-sm pa3-m pa4-l"
+            >
+              <img
+                :src="mentor.image"
+                class="br-100 h4 w4 dib"
+                style="object-fit: cover"
+                :alt="mentor.name"
+              />
+              <h1 class="f3 mb2">{{mentor.name}}</h1>
+              <h2
+                v-html="mentor.title"
+                class="f5 fw4 gray mt0 su-dark-orange"
+              ></h2>
+              <div v-html="mentor.bio" class="tl"></div>
+            </article>
+          </div>
 
-        <h2 id="about-the-organisers">About the organisers</h2>
+          <h2 id="about-the-organisers">About the organisers</h2>
 
-        <div class="full-width pa3 pa4-m flex justify-center flex-wrap flex-nowrap-l f5" v-scope="{ organisers: [
+          <div
+            class="full-width pa3 pa4-m flex justify-center flex-wrap flex-nowrap-l f5"
+            v-scope="{ organisers: [
           {
             name: 'Paulien Dresscher',
             title: `<a href='http://www.dresscher.nl/' target='_blank' class='su-dark-orange no-underline'> Researcher &amp; Curator</a>`,
@@ -380,19 +669,33 @@
           {
             name: 'Philo van Kemenade',
             title: `<a href='https://phivk.com/' target='_blank' class='su-dark-orange no-underline'>Cultural Technologist &amp; Community Organiser</a>`,
-            image: 'https://phivk.com/bio/img/philo_van_kemenade.jpg',
+            image: 'https://phivk.com/about/img/philo-van-kemenade-cf.jpg',
             bio: `<p>Philo van Kemenade creates tools, stories and things in between to amplify human connection with arts and culture. He helps cultural heritage organisations innovate to make their digital collections more accessible. In 2013, Philo initiated the Storytellers United network to create space for interdisciplinary practice around innovative forms of storytelling. He has a background in Artificial Intelligence and Cognitive Science. Currently based in his home town Amsterdam, Philo has previously lived in Japan, the UK, Slovakia and Austria.</p>`,
           },
-        ]}">
-          <article v-for="organiser in organisers" class="w-100 w-50-m w-third-l mw6 tc pv2 pa2-sm pa3-m pa4-l">
-            <img :src="organiser.image" class="br-100 h4 w4 dib" style="object-fit: cover;" :alt="organiser.name">
-            <h1 class="f3 mb2">{{organiser.name}}</h1>
-            <h2 v-html="organiser.title" class="f5 fw4 gray mt0 su-dark-orange"></h2>
-            <div v-html="organiser.bio" class="tl"></div>
-          </article>
-        </div>
+        ]}"
+          >
+            <article
+              v-for="organiser in organisers"
+              class="w-100 w-50-m w-third-l mw6 tc pv2 pa2-sm pa3-m pa4-l"
+            >
+              <img
+                :src="organiser.image"
+                class="br-100 h4 w4 dib"
+                style="object-fit: cover"
+                :alt="organiser.name"
+              />
+              <h1 class="f3 mb2">{{organiser.name}}</h1>
+              <h2
+                v-html="organiser.title"
+                class="f5 fw4 gray mt0 su-dark-orange"
+              ></h2>
+              <div v-html="organiser.bio" class="tl"></div>
+            </article>
+          </div>
 
-        <div class="full-width pa3 pa4-m flex justify-center flex-wrap flex-nowrap-l f5" v-scope="{ partners: [
+          <div
+            class="full-width pa3 pa4-m flex justify-center flex-wrap flex-nowrap-l f5"
+            v-scope="{ partners: [
           {
             name: 'Storytellers United',
             image: './img/logo-su.png',
@@ -414,61 +717,145 @@
               <p class='f5'>By providing a venue for this Story Jam, NFF wants to give a new impulse to the professional field in the Netherlands. It wants to be an inspiring platform and stage for up-and-coming talent and inspire new makers by bringing in national and international experts and opening up new networks.</p>
             `,
           },
-        ]}">
-          <article v-for="partner in partners" class="w-100 w-50-m w-third-l mw6 pv2 pa2-sm pa3-m pa4-l">
-            <h1 class="f3">{{partner.name}}</h1>
-            <img class="mw3 mw4-l fl pa2 pa3-l" :src="partner.image" :alt="`logo ${partner.name}`">
-            <div v-html="partner.bio"></div>
-          </article>
-        </div>
+        ]}"
+          >
+            <article
+              v-for="partner in partners"
+              class="w-100 w-50-m w-third-l mw6 pv2 pa2-sm pa3-m pa4-l"
+            >
+              <h1 class="f3">{{partner.name}}</h1>
+              <img
+                class="mw3 mw4-l fl pa2 pa3-l"
+                :src="partner.image"
+                :alt="`logo ${partner.name}`"
+              />
+              <div v-html="partner.bio"></div>
+            </article>
+          </div>
 
-        <h2 id="supported-by">Supported by</h2>
-        <p class="f5">Story Jam New Neighbours is made possible by a grant from the <a class="su-dark-orange hover-no-underline" href="https://www.stimuleringsfonds.nl/" target="_blank" rel="noopener">Creative Industries Fund NL</a>.</p>
-      </div>
-      <section class="full-width flex flex-wrap justify-around items-center pv5 mt5">
-        <div class="mw4 ma3"><img class="maxh4" src="./img/logo-su.png" alt="logo Storytellers United"></div>
-        <div class="mw4 ma3"><img class="maxh4" src="./img/logo-nff.png" alt="logo NFF"></div>
-        <div class="mw4 ma3"><img class="maxh4" src="./img/logo-beng.png" alt="logo B&G"></div>
-        <div class="mw4 ma3"><img class="maxh4" src="./img/logo-sci.png" alt="logo SCI"></div>
+          <h2 id="supported-by">Supported by</h2>
+          <p class="f5">
+            Story Jam New Neighbours is made possible by a grant from the
+            <a
+              class="su-dark-orange hover-no-underline"
+              href="https://www.stimuleringsfonds.nl/"
+              target="_blank"
+              rel="noopener"
+              >Creative Industries Fund NL</a
+            >.
+          </p>
+        </div>
+        <section
+          class="full-width flex flex-wrap justify-around items-center pv5 mt5"
+        >
+          <div class="mw4 ma3">
+            <img
+              class="maxh4"
+              src="./img/logo-su.png"
+              alt="logo Storytellers United"
+            />
+          </div>
+          <div class="mw4 ma3">
+            <img class="maxh4" src="./img/logo-nff.png" alt="logo NFF" />
+          </div>
+          <div class="mw4 ma3">
+            <img class="maxh4" src="./img/logo-beng.png" alt="logo B&G" />
+          </div>
+          <div class="mw4 ma3">
+            <img class="maxh4" src="./img/logo-sci.png" alt="logo SCI" />
+          </div>
+        </section>
       </section>
-    </section>
-  </div>
-  <footer id="join-the-conversation" class="pa3 pa4-m pa5-l bg-su-dark-blue white tc">
-    <div class="flex flex-wrap flex justify-center">
-      <article class="w-50 w-25-m w-auto-l tc pa3 pa5-l">
-        <a href="/invite" class="link white dim" data-goatcounter-click="conversation-slack">
-          <i class="w3 h3" data-feather="slack"></i>
-          <h3>Slack</h3>
-        </a>
-      </article>
-      <article class="w-50 w-25-m w-auto-l tc pa3 pa5-l">
-        <a href="https://twitter.com/storyunite" class="link white dim" target="_blank" data-goatcounter-click="conversation-twitter">
-          <i class="w3 h3" data-feather="twitter"></i>
-          <h3>Twitter</h3>
-        </a>
-      </article>
-      <article class="w-50 w-25-m w-auto-l tc pa3 pa5-l">
-        <a href="https://medium.com/storytellers-united" class="link white dim" target="_blank" data-goatcounter-click="conversation-medium">
-          <i class="w3 h3" data-feather="edit-3"></i>
-          <h3>Medium</h3>
-        </a>
-      </article>
-      <article class="w-50 w-25-m w-auto-l tc pa3 pa5-l">
-        <a href=" mailto:hello@storytellers.link?subject=Storytellers%20United&body=Hi!%0D%0A%0D%0AI%20came%20across%20the%20Storytellers%20United%20page%2C%20and%20thought%20... " class="link white dim" target="_blank" data-goatcounter-click="conversation-Email us">
-          <i class="w3 h3" data-feather="mail"></i>
-          <h3>Email us</h3>
-        </a>
-      </article>
     </div>
-    <div class="mt5 f6">
-      <a class="dib white hover-no-underline mr3 mr4-m mr5-l mb3" href="/calendar">Community Calendar</a>
-      <a class="dib white hover-no-underline mr3 mr4-m mr5-l mb3" href="/participation-guidelines">Participation Guidelines</a>
-      <a class="dib white hover-no-underline mr3 mr4-m mr5-l mb3" href="/feedback">Feedback &amp; Suggestions</a>
-      <a class="dib white hover-no-underline mr3 mr4-m mr5-l mb3" href="https://gradu.al/storytellersunited/" target="_blank">Gradual Skillsharing<i class="w1 v-mid pl1" data-feather="external-link"></i></a>
-      <a class="dib white hover-no-underline mr3 mr4-m mr5-l mb3" href="https://github.com/storytellersunited" target="_blank">GitHub<i class="w1 v-mid pl1" data-feather="external-link"></i></a>
-    </div>
-  </footer>
-  <script>feather.replace()</script>
-  <script data-goatcounter="https://storyunite.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
-</body> 
+    <footer
+      id="join-the-conversation"
+      class="pa3 pa4-m pa5-l bg-su-dark-blue white tc"
+    >
+      <div class="flex flex-wrap flex justify-center">
+        <article class="w-50 w-25-m w-auto-l tc pa3 pa5-l">
+          <a
+            href="/invite"
+            class="link white dim"
+            data-goatcounter-click="conversation-slack"
+          >
+            <i class="w3 h3" data-feather="slack"></i>
+            <h3>Slack</h3>
+          </a>
+        </article>
+        <article class="w-50 w-25-m w-auto-l tc pa3 pa5-l">
+          <a
+            href="https://twitter.com/storyunite"
+            class="link white dim"
+            target="_blank"
+            data-goatcounter-click="conversation-twitter"
+          >
+            <i class="w3 h3" data-feather="twitter"></i>
+            <h3>Twitter</h3>
+          </a>
+        </article>
+        <article class="w-50 w-25-m w-auto-l tc pa3 pa5-l">
+          <a
+            href="https://medium.com/storytellers-united"
+            class="link white dim"
+            target="_blank"
+            data-goatcounter-click="conversation-medium"
+          >
+            <i class="w3 h3" data-feather="edit-3"></i>
+            <h3>Medium</h3>
+          </a>
+        </article>
+        <article class="w-50 w-25-m w-auto-l tc pa3 pa5-l">
+          <a
+            href=" mailto:hello@storytellers.link?subject=Storytellers%20United&body=Hi!%0D%0A%0D%0AI%20came%20across%20the%20Storytellers%20United%20page%2C%20and%20thought%20... "
+            class="link white dim"
+            target="_blank"
+            data-goatcounter-click="conversation-Email us"
+          >
+            <i class="w3 h3" data-feather="mail"></i>
+            <h3>Email us</h3>
+          </a>
+        </article>
+      </div>
+      <div class="mt5 f6">
+        <a
+          class="dib white hover-no-underline mr3 mr4-m mr5-l mb3"
+          href="/calendar"
+          >Community Calendar</a
+        >
+        <a
+          class="dib white hover-no-underline mr3 mr4-m mr5-l mb3"
+          href="/participation-guidelines"
+          >Participation Guidelines</a
+        >
+        <a
+          class="dib white hover-no-underline mr3 mr4-m mr5-l mb3"
+          href="/feedback"
+          >Feedback &amp; Suggestions</a
+        >
+        <a
+          class="dib white hover-no-underline mr3 mr4-m mr5-l mb3"
+          href="https://gradu.al/storytellersunited/"
+          target="_blank"
+          >Gradual Skillsharing<i
+            class="w1 v-mid pl1"
+            data-feather="external-link"
+          ></i
+        ></a>
+        <a
+          class="dib white hover-no-underline mr3 mr4-m mr5-l mb3"
+          href="https://github.com/storytellersunited"
+          target="_blank"
+          >GitHub<i class="w1 v-mid pl1" data-feather="external-link"></i
+        ></a>
+      </div>
+    </footer>
+    <script>
+      feather.replace();
+    </script>
+    <script
+      data-goatcounter="https://storyunite.goatcounter.com/count"
+      async
+      src="//gc.zgo.at/count.js"
+    ></script>
+  </body>
 </html>
